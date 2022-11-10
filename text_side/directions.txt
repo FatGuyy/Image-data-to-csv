@@ -1,0 +1,1892 @@
+option 1 (named xxx)
+1st csv
+A Column
+A1 product_name
+A2 (Name (1st 2 words of file, the file names will be saved with _ ) (1st 2 word letters capital)signed XXX 8×10 Photo -PROOF- -CERTIFICATE- (last 4 numbers of file name)
+example
+Abby Cross signed XXX 8×10 Photo -PROOF- -CERTIFICATE- (A0001)
+
+B Column
+B1 sku
+b2 sku generated from last 4 numbers of file name and X and the date and 1st word and 1 letter of 2nd word 
+(1st Word)(1st letter 2nd word)(last 4 numbers)(date)(x)
+example AbbyC00011162022x
+
+C Column
+C1 price
+C2 29.95
+
+D Column
+D1 sale_price
+D2 22.95
+
+E Column
+E 1 photos
+E 2 photo whole file name | 1st 2 words of file name Proof.jpg
+example
+Abby_Cross_Signed_8x10_0001.jpg|Abby_Cross_Proof.jpg
+
+F Column
+f 1 video
+f 2 [video width="360" height="640" mp4="https://stalicali.com/wp-content/uploads/wpallimport/files/(INSERT 1ST 2 WORDS OF FILE NAME + Signing_Autographs_Video.mp4"][/video]
+example
+[video width="360" height="640" mp4="https://stalicali.com/wp-content/uploads/wpallimport/files/Abby_Cross_Signing_Autographs_Video.mp4"][/video]
+
+G Column
+G 1 name
+g2 1st 2 words of file name (1st letters capital)
+example 
+Abby Cross
+
+h column
+h 1 namelink
+h2 1st 2 words of file name, 1st letter of each captital seperated with -
+example
+Abby-Cross
+
+output csv should be named what the option is named + upload
+
+
+
+option 2 (named Reg Boob)SAME AS OPTION 1 ACCEPT COLUMN A, Column B has a Rb instead x
+1st csv
+A Column
+A1 product_name
+A2 (Name (1st 2 words of file, the file names will be saved with _ ) (1st 2 word letters capital)signed model B 8×10 Photo -PROOF- -CERTIFICATE-  (last 4 numbers of file name)
+example
+Abby Cross signed model B 8×10 Photo -PROOF- -CERTIFICATE- (A0001)
+
+B Column
+B1 sku
+b2 sku generated from last 4 numbers of file name and rb and the date and 1st word and 1 letter of 2nd word 
+(1st Word)(1st letter 2nd word)(last 4 numbers)(date)(rb)
+example AbbyC00011162022rb
+
+C Column
+C1 price
+C2 29.95
+
+D Column
+D1 sale_price
+D2 22.95
+
+E Column
+E 1 photos
+E 2 photo whole file name | 1st 2 words of file name Proof.jpg
+example
+Abby_Cross_Signed_8x10_0001.jpg|Abby_Cross_Proof.jpg
+
+F Column
+f 1 video
+f 2 [video width="360" height="640" mp4="https://stalicali.com/wp-content/uploads/wpallimport/files/(INSERT 1ST 2 WORDS OF FILE NAME + Signing_Autographs_Video.mp4"][/video]
+example
+[video width="360" height="640" mp4="https://stalicali.com/wp-content/uploads/wpallimport/files/Abby_Cross_Signing_Autographs_Video.mp4"][/video]
+
+G Column
+G 1 name
+g2 1st 2 words of file name (1st letters capital)
+example 
+Abby Cross
+
+h column
+h 1 namelink
+h2 1st 2 words of file name, 1st letter of each captital seperated with -
+example
+Abby-Cross
+
+
+output csv should be named what the option is named + upload
+
+
+option 3 (named REG)SAME AS OPTION 2 ACCEPT COLUMN A Has NO B after Model, Column B has a R instead x
+
+A Column
+A1 product_name
+A2 (Name (1st 2 words of file, the file names will be saved with _ ) (1st 2 word letters capital)signed model 8×10 Photo -PROOF- -CERTIFICATE-  (last 4 numbers of file name)
+example
+Abby Cross signed model 8×10 Photo -PROOF- -CERTIFICATE- (A0001)
+
+B Column
+B1 sku
+b2 sku generated from last 4 numbers of file name and R and the date and 1st word and 1 letter of 2nd word 
+(1st Word)(1st letter 2nd word)(last 4 numbers)(date)(r)
+example AbbyC00011162022r
+
+C Column
+C1 price
+C2 29.95
+
+D Column
+D1 sale_price
+D2 22.95
+
+E Column
+E 1 photos
+E 2 photo whole file name | 1st 2 words of file name Proof.jpg
+example
+Abby_Cross_Signed_8x10_0001.jpg|Abby_Cross_Proof.jpg
+
+F Column
+f 1 video
+f 2 [video width="360" height="640" mp4="https://stalicali.com/wp-content/uploads/wpallimport/files/(INSERT 1ST 2 WORDS OF FILE NAME + Signing_Autographs_Video.mp4"][/video]
+example
+[video width="360" height="640" mp4="https://stalicali.com/wp-content/uploads/wpallimport/files/Abby_Cross_Signing_Autographs_Video.mp4"][/video]
+
+G Column
+G 1 name
+g2 1st 2 words of file name (1st letters capital)
+example 
+Abby Cross
+
+h column
+h 1 namelink
+h2 1st 2 words of file name, 1st letter of each captital seperated with -
+example
+Abby-Cross
+
+output csv should be named what the option is named + upload
+
+
+
+option 4 (named Trans X) COLUMN A is different, Column B has a tsx, column c,d change price
+
+A Column
+A1 product_name
+A2 (Name (1st 2 words of file, the file names will be saved with _ ) (1st 2 word letters capital)signed TS TRANNY XXX 8×10 Photo -PROOF-(last 4 numbers of file name)
+example
+Abby Cross signed TS TRANNY XXX 8×10 Photo -PROOF- (A0001)
+
+B Column
+B1 sku
+b2 sku generated from last 4 numbers of file name and tsx and the date and 1st word and 1 letter of 2nd word 
+(1st Word)(1st letter 2nd word)(last 4 numbers)(date)(tsx)
+example AbbyC00011162022tsx
+
+C Column
+C1 price
+C2 54.95
+
+D Column
+D1 sale_price
+D2 37.95
+
+E Column
+E 1 photos
+E 2 photo whole file name | 1st 2 words of file name Proof.jpg
+example
+Abby_Cross_Signed_8x10_0001.jpg|Abby_Cross_Proof.jpg
+
+F Column
+f 1 video
+f 2 [video width="360" height="640" mp4="https://stalicali.com/wp-content/uploads/wpallimport/files/(INSERT 1ST 2 WORDS OF FILE NAME + Signing_Autographs_Video.mp4"][/video]
+example
+[video width="360" height="640" mp4="https://stalicali.com/wp-content/uploads/wpallimport/files/Abby_Cross_Signing_Autographs_Video.mp4"][/video]
+
+G Column
+G 1 name
+g2 1st 2 words of file name (1st letters capital)
+example 
+Abby Cross
+
+h column
+h 1 namelink
+h2 1st 2 words of file name, 1st letter of each captital seperated with -
+example
+Abby-Cross
+
+
+output csv should be named what the option is named + upload
+
+option 5 (named trans r)COLUMN A is different, Column B has a tsr, column c,d change price
+
+A Column
+A1 product_name
+A2 (Name (1st 2 words of file, the file names will be saved with _ ) (1st 2 word letters capital)signed TS model 8×10 Photo -PROOF- -CERTIFICATE-(last 4 numbers of file name)
+example
+Abby Cross signed TS model 8×10 Photo -PROOF- -CERTIFICATE- (A0001)
+
+B Column
+B1 sku
+b2 sku generated from last 4 numbers of file name and tsr and the date and 1st word and 1 letter of 2nd word 
+(1st Word)(1st letter 2nd word)(last 4 numbers)(date)(tsr)
+example AbbyC00011162022tsr
+
+C Column
+C1 price
+C2 54.95
+
+D Column
+D1 sale_price
+D2 37.95
+
+E Column
+E 1 photos
+E 2 photo whole file name | 1st 2 words of file name Proof.jpg
+example
+Abby_Cross_Signed_8x10_0001.jpg|Abby_Cross_Proof.jpg
+
+F Column
+f 1 video
+f 2 [video width="360" height="640" mp4="https://stalicali.com/wp-content/uploads/wpallimport/files/(INSERT 1ST 2 WORDS OF FILE NAME + Signing_Autographs_Video.mp4"][/video]
+example
+[video width="360" height="640" mp4="https://stalicali.com/wp-content/uploads/wpallimport/files/Abby_Cross_Signing_Autographs_Video.mp4"][/video]
+
+G Column
+G 1 name
+g2 1st 2 words of file name (1st letters capital)
+example 
+Abby Cross
+
+h column
+h 1 namelink
+h2 1st 2 words of file name, 1st letter of each captital seperated with -
+example
+Abby-Cross
+
+output csv should be named what the option is named + upload
+
+
+option 6 (named trans boob)COLUMN A is different, Column B has a tsrb, column c,d change price
+
+A Column
+A1 product_name
+A2 (Name (1st 2 words of file, the file names will be saved with _ ) (1st 2 word letters capital)signed TS model B 8×10 Photo -PROOF- -CERTIFICATE-(last 4 numbers of file name)
+example
+Abby Cross signed TS model B 8×10 Photo -PROOF- -CERTIFICATE- (A0001)
+
+B Column
+B1 sku
+b2 sku generated from last 4 numbers of file name and tsrb and the date and 1st word and 1 letter of 2nd word 
+(1st Word)(1st letter 2nd word)(last 4 numbers)(date)(tsrb)
+example AbbyC00011162022tsrb
+
+C Column
+C1 price
+C2 54.95
+
+D Column
+D1 sale_price
+D2 37.95
+
+E Column
+E 1 photos
+E 2 photo whole file name | 1st 2 words of file name Proof.jpg
+example
+Abby_Cross_Signed_8x10_0001.jpg|Abby_Cross_Proof.jpg
+
+F Column
+f 1 video
+f 2 [video width="360" height="640" mp4="https://stalicali.com/wp-content/uploads/wpallimport/files/(INSERT 1ST 2 WORDS OF FILE NAME + Signing_Autographs_Video.mp4"][/video]
+example
+[video width="360" height="640" mp4="https://stalicali.com/wp-content/uploads/wpallimport/files/Abby_Cross_Signing_Autographs_Video.mp4"][/video]
+
+G Column
+G 1 name
+g2 1st 2 words of file name (1st letters capital)
+example 
+Abby Cross
+
+h column
+h 1 namelink
+h2 1st 2 words of file name, 1st letter of each captital seperated with -
+example
+Abby-Cross
+
+output csv should be named what the option is named + upload
+
+option 7 (named trans Combo2)COLUMN A is different, Column B has a tsrc, column c,d change price,E, new i and j column
+
+A Column
+A1 product_name
+A2 (Name (1st 2 words of file, the file names will be saved with _ ) (1st 2 word letters capital) & (Name (3rd and 4th words of file, the file names will be saved with _ ) (1st 2 word letters capital) signed TS model 8×10 Photo -PROOF-(last 4 numbers of file name)
+example
+Abby Cross & Lena Paul signed TS model 8×10 Photo -PROOF- (A0001)
+
+B Column
+B1 sku
+b2 sku generated from last 4 numbers of file name and tsrc and the date and 1st word and 1 letter of 2nd word 
+(1st Word)(1st letter 2nd word)(last 4 numbers)(date)(tsrc)
+example AbbyC00011162022tsrc
+
+C Column
+C1 price
+C2 94.95
+
+D Column
+D1 sale_price
+D2 74.95
+
+E Column
+E 1 photos
+E 2 photo whole file name | 1st 2 words of file name Proof.jpg | 3rd and 4th words of file name Proof.jpg
+example
+Abby_Cross_Lena_Paul_Signed_8x10_0001.jpg|Abby_Cross_Proof.jpg|Lena_Paul_Proof.jpg
+
+F Column
+f 1 video
+f 2 [video width="360" height="640" mp4="https://stalicali.com/wp-content/uploads/wpallimport/files/(INSERT 1ST 2 WORDS OF FILE NAME + Signing_Autographs_Video.mp4"][/video]
+example
+[video width="360" height="640" mp4="https://stalicali.com/wp-content/uploads/wpallimport/files/Abby_Cross_Signing_Autographs_Video.mp4"][/video]
+
+G Column
+G 1 name
+g2 1st 2 words of file name (1st letters capital)
+example 
+Abby Cross
+
+h column
+h 1 namelink
+h2 1st 2 words of file name, 1st letter of each captital seperated with -
+example
+Abby-Cross
+
+i Column
+i 1 name2
+i2 3rd and 4th words of file name (1st letters capital)
+example 
+Lena Paul
+
+j Column
+i 1 name2link
+i2 3rd and 4th words of file name, 1st letter of each captital seperated with -
+example 
+Lena-Paul
+
+output csv should be named what the option is named + upload
+
+
+option 8 (named tsrbc Combo)COLUMN A is different, Column B has a tsrbc, column c,d,e change price new i and j column
+
+A Column
+A1 product_name
+A2 (Name (1st 2 words of file, the file names will be saved with _ ) (1st 2 word letters capital) & (Name (3rd and 4th names of file, the file names will be saved with _ ) (1st 2 word letters capital) signed TS model B 8×10 Photo -PROOF-(last 4 numbers of file name)
+example
+Abby Cross & Lena Paul signed TS model B 8×10 Photo -PROOF- (A0001)
+
+B Column
+B1 sku
+b2 sku generated from last 4 numbers of file name and tsrbc and the date and 1st word and 1 letter of 2nd word 
+(1st Word)(1st letter 2nd word)(last 4 numbers)(date)(tsrbc)
+example AbbyC00011162022tsrbc
+
+C Column
+C1 price
+C2 94.95
+
+D Column
+D1 sale_price
+D2 74.95
+
+E Column
+E 1 photos
+E 2 photo whole file name | 1st 2 words of file name Proof.jpg | 3rd and 4th words of file name Proof.jpg
+example
+Abby_Cross_Lena_Paul_Signed_8x10_0001.jpg|Abby_Cross_Proof.jpg|Lena_Paul_Proof.jpg
+
+F Column
+f 1 video
+f 2 [video width="360" height="640" mp4="https://stalicali.com/wp-content/uploads/wpallimport/files/(INSERT 1ST 2 WORDS OF FILE NAME + Signing_Autographs_Video.mp4"][/video]
+example
+[video width="360" height="640" mp4="https://stalicali.com/wp-content/uploads/wpallimport/files/Abby_Cross_Signing_Autographs_Video.mp4"][/video]
+
+G Column
+G 1 name
+g2 1st 2 words of file name (1st letters capital)
+example 
+Abby Cross
+
+h column
+h 1 namelink
+h2 1st 2 words of file name, 1st letter of each captital seperated with -
+example
+Abby-Cross
+
+i Column
+i 1 name2
+i2 3rd and 4th words of file name (1st letters capital)
+example 
+Lena Paul
+
+j Column
+i 1 name2link
+i2 3rd and 4th words of file name, 1st letter of each captital seperated with -
+example 
+Lena-Paul
+
+
+output csv should be named what the option is named + upload
+
+
+option 9 (named tsxc Combo)COLUMN A is different, Column B has a tsxc, column c,d,e change price new i and j column
+
+A Column
+A1 product_name
+A2 (Name (1st 2 words of file, the file names will be saved with _ ) (1st 2 word letters capital) & (Name (3rd and 4th names of file, the file names will be saved with _ ) (1st 2 word letters capital) signed TS TRANNY XXX 8×10 Photo -PROOF-(last 4 numbers of file name)
+example
+Abby Cross & Lena Paul signed TS TRANNY XXX 8×10 Photo -PROOF- (A0001)
+
+B Column
+B1 sku
+b2 sku generated from last 4 numbers of file name and TSXC and the date and 1st word and 1 letter of 2nd word 
+(1st Word)(1st letter 2nd word)(last 4 numbers)(date)(tsxc)
+example AbbyC00011162022tsxc
+
+C Column
+C1 price
+C2 94.95
+
+D Column
+D1 sale_price
+D2 74.95
+
+E Column
+E 1 photos
+E 2 photo whole file name | 1st 2 words of file name Proof.jpg | 3rd and 4th words of file name Proof.jpg
+example
+Abby_Cross_Lena_Paul_Signed_8x10_0001.jpg|Abby_Cross_Proof.jpg|Lena_Paul_Proof.jpg
+
+F Column
+f 1 video
+f 2 [video width="360" height="640" mp4="https://stalicali.com/wp-content/uploads/wpallimport/files/(INSERT 1ST 2 WORDS OF FILE NAME + Signing_Autographs_Video.mp4"][/video]
+example
+[video width="360" height="640" mp4="https://stalicali.com/wp-content/uploads/wpallimport/files/Abby_Cross_Signing_Autographs_Video.mp4"][/video]
+
+G Column
+G 1 name
+g2 1st 2 words of file name (1st letters capital)
+example 
+Abby Cross
+
+h column
+h 1 namelink
+h2 1st 2 words of file name, 1st letter of each captital seperated with -
+example
+Abby-Cross
+
+i Column
+i 1 name2
+i2 3rd and 4th words of file name (1st letters capital)
+example 
+Lena Paul
+
+j Column
+i 1 name2link
+i2 3rd and 4th words of file name, 1st letter of each captital seperated with -
+example 
+Lena-Paul
+
+output csv should be named what the option is named + upload
+
+
+option 10 (named tsr Combo3)COLUMN A is different, Column B has a tsrc3, column c,d change price,E, new k and l column
+
+A Column
+A1 product_name
+A2 (Name (1st 2 words of file, the file names will be saved with _ ) (1st 2 word letters capital) & (Name (3rd and 4th words of file, the file names will be saved with _ ) (1st 2 word letters capital) & (Name (5th and 6th words of file, the file names will be saved with _ ) (1st 2 word letters capital)signed TS model B 8×10 (last 4 numbers of file name)
+example
+Abby Cross & Lena Paul & Lexi Belle signed TS model 8×10 Photo -PROOF- (A0001)
+
+B Column
+B1 sku
+b2 sku generated from last 4 numbers of file name and tsrc3 and the date and 1st word and 1 letter of 2nd word 
+(1st Word)(1st letter 2nd word)(last 4 numbers)(date)(tsrc3)
+example AbbyC00011162022tsrc3
+
+C Column
+C1 price
+C2 139.95
+
+D Column
+D1 sale_price
+D2 99.95
+
+E Column
+E 1 photos
+E 2 photo whole file name | 1st 2 words of file name Proof.jpg | 3rd and 4th words of file name Proof.jpg | 5th and 6th words of file name Proof.jpg
+example
+Abby_Cross_Lena_Paul_Lexi_Belle_Signed_8x10_0001.jpg|Abby_Cross_Proof.jpg|Lena_Paul_Proof.jpg|Lexi_Belle_Proof.jpg
+
+F Column
+f 1 video
+f 2 [video width="360" height="640" mp4="https://stalicali.com/wp-content/uploads/wpallimport/files/(INSERT 1ST 2 WORDS OF FILE NAME + Signing_Autographs_Video.mp4"][/video]
+example
+[video width="360" height="640" mp4="https://stalicali.com/wp-content/uploads/wpallimport/files/Abby_Cross_Signing_Autographs_Video.mp4"][/video]
+
+G Column
+G 1 name
+g2 1st 2 words of file name (1st letters capital)
+example 
+Abby Cross
+
+h column
+h 1 namelink
+h2 1st 2 words of file name, 1st letter of each captital seperated with -
+example
+Abby-Cross
+
+i Column
+i 1 name2
+i2 3rd and 4th words of file name (1st letters capital)
+example 
+Lena Paul
+
+j Column
+i 1 name2link
+i2 3rd and 4th words of file name, 1st letter of each captital seperated with -
+example 
+Lena-Paul
+
+k Column
+i 1 name3
+i2 5th and 6th words of file name (1st letters capital)
+example 
+Lexi Belle
+
+l Column
+i 1 name3link
+i2 5th and 6th words of file name (1st letters capital)
+example 
+Lexi-Belle
+
+
+output csv should be named what the option is named + upload
+
+option 11 (named trans Combo boob 3)COLUMN A is different, Column B has a tsrbc3, column c,d,e change price new i and j,k,l column
+
+A Column
+A1 product_name
+A2 (Name (1st 2 words of file, the file names will be saved with _ ) (1st 2 word letters capital) & (Name (3rd and 4th words of file, the file names will be saved with _ ) (1st 2 word letters capital) & (Name (5th and 6th words of file, the file names will be saved with _ ) (1st 2 word letters capital) signed TS model B 8×10 Photo -PROOF-(last 4 numbers of file name)
+example
+Abby Cross & Lena Paul & Lexi Belle signed TS model B 8×10 (A0001)
+
+B Column
+B1 sku
+b2 sku generated from last 4 numbers of file name and tsrbc3 and the date and 1st word and 1 letter of 2nd word 
+(1st Word)(1st letter 2nd word)(last 4 numbers)(date)(tsrbc3)
+example AbbyC00011162022tsrbc3
+
+C Column
+C1 price
+C2 139.95
+
+D Column
+D1 sale_price
+D2 99.95
+
+E Column
+E 1 photos
+E 2 photo whole file name | 1st 2 words of file name Proof.jpg | 3rd and 4th words of file name Proof.jpg | 5th and 6th words of file name Proof.jpg
+example
+Abby_Cross_Lena_Paul_Lexi_Belle_Signed_8x10_0001.jpg|Abby_Cross_Proof.jpg|Lena_Paul_Proof.jpg|Lexi_Belle_Proof.jpg
+
+F Column
+f 1 video
+f 2 [video width="360" height="640" mp4="https://stalicali.com/wp-content/uploads/wpallimport/files/(INSERT 1ST 2 WORDS OF FILE NAME + Signing_Autographs_Video.mp4"][/video]
+example
+[video width="360" height="640" mp4="https://stalicali.com/wp-content/uploads/wpallimport/files/Abby_Cross_Signing_Autographs_Video.mp4"][/video]
+
+G Column
+G 1 name
+g2 1st 2 words of file name (1st letters capital)
+example 
+Abby Cross
+
+h column
+h 1 namelink
+h2 1st 2 words of file name, 1st letter of each captital seperated with -
+example
+Abby-Cross
+
+i Column
+i 1 name2
+i2 3rd and 4th words of file name (1st letters capital)
+example 
+Lena Paul
+
+j Column
+i 1 name2link
+i2 3rd and 4th words of file name, 1st letter of each captital seperated with -
+example 
+Lena-Paul
+
+k Column
+i 1 name3
+i2 5th and 6th words of file name (1st letters capital)
+example 
+Lexi Belle
+
+l Column
+i 1 name3link
+i2 5th and 6th words of file name (1st letters capital)
+example 
+Lexi-Belle
+
+output csv should be named what the option is named + upload
+
+option 12 (named trans xxx Combo 3)COLUMN A is different, Column B has a tsxc3, column c,d,e change price new i and j column
+
+A Column
+A1 product_name
+A2 (Name (1st 2 words of file, the file names will be saved with _ ) (1st 2 word letters capital) & (Name (3rd and 4th words of file, the file names will be saved with _ ) (1st 2 word letters capital) & (Name (5th and 6th words of file, the file names will be saved with _ ) (1st 2 word letters capital) signed TS TRANNY XXX 8×10 Photo -PROOF-(last 4 numbers of file name)
+example
+Abby Cross & Lena Paul & Lexi Belle signed TS TRANNY XXX 8×10 (A0001)
+
+B Column
+B1 sku
+b2 sku generated from last 4 numbers of file name and tsxc3 and the date and 1st word and 1 letter of 2nd word 
+(1st Word)(1st letter 2nd word)(last 4 numbers)(date)(tsxc3)
+example AbbyC00011162022tsxc3
+
+C Column
+C1 price
+C2 139.95
+
+D Column
+D1 sale_price
+D2 99.95
+
+E Column
+E 1 photos
+E 2 photo whole file name | 1st 2 words of file name Proof.jpg | 3rd and 4th words of file name Proof.jpg | 5th and 6th words of file name Proof.jpg
+example
+Abby_Cross_Lena_Paul_Lexi_Belle_Signed_8x10_0001.jpg|Abby_Cross_Proof.jpg|Lena_Paul_Proof.jpg|Lexi_Belle_Proof.jpg
+
+F Column
+f 1 video
+f 2 [video width="360" height="640" mp4="https://stalicali.com/wp-content/uploads/wpallimport/files/(INSERT 1ST 2 WORDS OF FILE NAME + Signing_Autographs_Video.mp4"][/video]
+example
+[video width="360" height="640" mp4="https://stalicali.com/wp-content/uploads/wpallimport/files/Abby_Cross_Signing_Autographs_Video.mp4"][/video]
+
+G Column
+G 1 name
+g2 1st 2 words of file name (1st letters capital)
+example 
+Abby Cross
+
+h column
+h 1 namelink
+h2 1st 2 words of file name, 1st letter of each captital seperated with -
+example
+Abby-Cross
+
+i Column
+i 1 name2
+i2 3rd and 4th words of file name (1st letters capital)
+example 
+Lena Paul
+
+j Column
+i 1 name2link
+i2 3rd and 4th words of file name, 1st letter of each captital seperated with -
+example 
+Lena-Paul
+
+k Column
+i 1 name3
+i2 5th and 6th words of file name (1st letters capital)
+example 
+Lexi Belle
+
+l Column
+i 1 name3link
+i2 5th and 6th words of file name (1st letters capital)
+example 
+Lexi-Belle
+
+output csv should be named what the option is named + upload
+
+option 13 (named reg Combo3)COLUMN A is different, Column B has a rc3, column c,d change price,E, new k and l column
+
+A Column
+A1 product_name
+A2 (Name (1st 2 words of file, the file names will be saved with _ ) (1st 2 word letters capital) & (Name (3rd and 4th words of file, the file names will be saved with _ ) (1st 2 word letters capital) & (Name (5th and 6th words of file, the file names will be saved with _ ) (1st 2 word letters capital)signed model 8×10 (last 4 numbers of file name)
+example
+Abby Cross & Lena Paul & Lexi Belle signed model 8×10 Photo -PROOF- (A0001)
+
+B Column
+B1 sku
+b2 sku generated from last 4 numbers of file name and rc3 and the date and 1st word and 1 letter of 2nd word 
+(1st Word)(1st letter 2nd word)(last 4 numbers)(date)(rc3)
+example AbbyC00011162022rc3
+
+C Column
+C1 price
+C2 139.95
+
+D Column
+D1 sale_price
+D2 99.95
+
+E Column
+E 1 photos
+E 2 photo whole file name | 1st 2 words of file name Proof.jpg | 3rd and 4th words of file name Proof.jpg | 5th and 6th words of file name Proof.jpg
+example
+Abby_Cross_Lena_Paul_Lexi_Belle_Signed_8x10_0001.jpg|Abby_Cross_Proof.jpg|Lena_Paul_Proof.jpg|Lexi_Belle_Proof.jpg
+
+F Column
+f 1 video
+f 2 [video width="360" height="640" mp4="https://stalicali.com/wp-content/uploads/wpallimport/files/(INSERT 1ST 2 WORDS OF FILE NAME + Signing_Autographs_Video.mp4"][/video]
+example
+[video width="360" height="640" mp4="https://stalicali.com/wp-content/uploads/wpallimport/files/Abby_Cross_Signing_Autographs_Video.mp4"][/video]
+
+G Column
+G 1 name
+g2 1st 2 words of file name (1st letters capital)
+example 
+Abby Cross
+
+h column
+h 1 namelink
+h2 1st 2 words of file name, 1st letter of each captital seperated with -
+example
+Abby-Cross
+
+i Column
+i 1 name2
+i2 3rd and 4th words of file name (1st letters capital)
+example 
+Lena Paul
+
+j Column
+i 1 name2link
+i2 3rd and 4th words of file name, 1st letter of each captital seperated with -
+example 
+Lena-Paul
+
+k Column
+i 1 name3
+i2 5th and 6th words of file name (1st letters capital)
+example 
+Lexi Belle
+
+l Column
+i 1 name3link
+i2 5th and 6th words of file name (1st letters capital)
+example 
+Lexi-Belle
+
+output csv should be named what the option is named + upload
+
+
+option 14 (named reg Combo 3 boob)COLUMN A is different, Column B has a rbc3, column c,d,e change price new i and j,k,l column
+
+A Column
+A1 product_name
+A2 (Name (1st 2 words of file, the file names will be saved with _ ) (1st 2 word letters capital) & (Name (3rd and 4th words of file, the file names will be saved with _ ) (1st 2 word letters capital) & (Name (5th and 6th words of file, the file names will be saved with _ ) (1st 2 word letters capital) signed model B 8×10 Photo -PROOF-(last 4 numbers of file name)
+example
+Abby Cross & Lena Paul & Lexi Belle signed model B 8×10 (A0001)
+
+B Column
+B1 sku
+b2 sku generated from last 4 numbers of file name and rbc3 and the date and 1st word and 1 letter of 2nd word 
+(1st Word)(1st letter 2nd word)(last 4 numbers)(date)(rbc3)
+example AbbyC00011162022rbc3
+
+C Column
+C1 price
+C2 139.95
+
+D Column
+D1 sale_price
+D2 99.95
+
+E Column
+E 1 photos
+E 2 photo whole file name | 1st 2 words of file name Proof.jpg | 3rd and 4th words of file name Proof.jpg | 5th and 6th words of file name Proof.jpg
+example
+Abby_Cross_Lena_Paul_Lexi_Belle_Signed_8x10_0001.jpg|Abby_Cross_Proof.jpg|Lena_Paul_Proof.jpg|Lexi_Belle_Proof.jpg
+
+F Column
+f 1 video
+f 2 [video width="360" height="640" mp4="https://stalicali.com/wp-content/uploads/wpallimport/files/(INSERT 1ST 2 WORDS OF FILE NAME + Signing_Autographs_Video.mp4"][/video]
+example
+[video width="360" height="640" mp4="https://stalicali.com/wp-content/uploads/wpallimport/files/Abby_Cross_Signing_Autographs_Video.mp4"][/video]
+
+G Column
+G 1 name
+g2 1st 2 words of file name (1st letters capital)
+example 
+Abby Cross
+
+h column
+h 1 namelink
+h2 1st 2 words of file name, 1st letter of each captital seperated with -
+example
+Abby-Cross
+
+i Column
+i 1 name2
+i2 3rd and 4th words of file name (1st letters capital)
+example 
+Lena Paul
+
+j Column
+i 1 name2link
+i2 3rd and 4th words of file name, 1st letter of each captital seperated with -
+example 
+Lena-Paul
+
+k Column
+i 1 name3
+i2 5th and 6th words of file name (1st letters capital)
+example 
+Lexi Belle
+
+l Column
+i 1 name3link
+i2 5th and 6th words of file name (1st letters capital)
+example 
+Lexi-Belle
+
+output csv should be named what the option is named + upload
+
+option 15 (named reg xx Combo3 )COLUMN A is different, Column B has a rxc3, column c,d,e change price new i and j column
+
+A Column
+A1 product_name
+A2 (Name (1st 2 words of file, the file names will be saved with _ ) (1st 2 word letters capital) & (Name (3rd and 4th words of file, the file names will be saved with _ ) (1st 2 word letters capital) & (Name (5th and 6th words of file, the file names will be saved with _ ) (1st 2 word letters capital) signed XXX 8×10 Photo -PROOF-(last 4 numbers of file name)
+example
+Abby Cross & Lena Paul & Lexi Belle signed XXX 8×10 (A0001)
+
+B Column
+B1 sku
+b2 sku generated from last 4 numbers of file name and RXC3 and the date and 1st word and 1 letter of 2nd word 
+(1st Word)(1st letter 2nd word)(last 4 numbers)(date)(rxc3)
+example AbbyC00011162022rxc3
+
+C Column
+C1 price
+C2 139.95
+
+D Column
+D1 sale_price
+D2 99.95
+
+E Column
+E 1 photos
+E 2 photo whole file name | 1st 2 words of file name Proof.jpg | 3rd and 4th words of file name Proof.jpg | 5th and 6th words of file name Proof.jpg
+example
+Abby_Cross_Lena_Paul_Lexi_Belle_Signed_8x10_0001.jpg|Abby_Cross_Proof.jpg|Lena_Paul_Proof.jpg|Lexi_Belle_Proof.jpg
+
+F Column
+f 1 video
+f 2 [video width="360" height="640" mp4="https://stalicali.com/wp-content/uploads/wpallimport/files/(INSERT 1ST 2 WORDS OF FILE NAME + Signing_Autographs_Video.mp4"][/video]
+example
+[video width="360" height="640" mp4="https://stalicali.com/wp-content/uploads/wpallimport/files/Abby_Cross_Signing_Autographs_Video.mp4"][/video]
+
+G Column
+G 1 name
+g2 1st 2 words of file name (1st letters capital)
+example 
+Abby Cross
+
+h column
+h 1 namelink
+h2 1st 2 words of file name, 1st letter of each captital seperated with -
+example
+Abby-Cross
+
+i Column
+i 1 name2
+i2 3rd and 4th words of file name (1st letters capital)
+example 
+Lena Paul
+
+j Column
+i 1 name2link
+i2 3rd and 4th words of file name, 1st letter of each captital seperated with -
+example 
+Lena-Paul
+
+k Column
+i 1 name3
+i2 5th and 6th words of file name (1st letters capital)
+example 
+Lexi Belle
+
+l Column
+i 1 name3link
+i2 5th and 6th words of file name (1st letters capital)
+example 
+Lexi-Belle
+
+output csv should be named what the option is named + upload
+
+option 16 (named reg Combo 2)COLUMN A is different, Column B has a rc, column c,d change price,E, new i and j column
+
+A Column
+A1 product_name
+A2 (Name (1st 2 words of file, the file names will be saved with _ ) (1st 2 word letters capital) & (Name (3rd and 4th words of file, the file names will be saved with _ ) (1st 2 word letters capital) signed model 8×10 Photo -PROOF-(last 4 numbers of file name)
+example
+Abby Cross & Lena Paul signed model 8×10 Photo -PROOF- (A0001)
+
+B Column
+B1 sku
+b2 sku generated from last 4 numbers of file name and rc and the date and 1st word and 1 letter of 2nd word 
+(1st Word)(1st letter 2nd word)(last 4 numbers)(date)(rc)
+example AbbyC00011162022rc
+
+C Column
+C1 price
+C2 94.95
+
+D Column
+D1 sale_price
+D2 74.95
+
+E Column
+E 1 photos
+E 2 photo whole file name | 1st 2 words of file name Proof.jpg | 3rd and 4th words of file name Proof.jpg
+example
+Abby_Cross_Lena_Paul_Signed_8x10_0001.jpg|Abby_Cross_Proof.jpg|Lena_Paul_Proof.jpg
+
+F Column
+f 1 video
+f 2 [video width="360" height="640" mp4="https://stalicali.com/wp-content/uploads/wpallimport/files/(INSERT 1ST 2 WORDS OF FILE NAME + Signing_Autographs_Video.mp4"][/video]
+example
+[video width="360" height="640" mp4="https://stalicali.com/wp-content/uploads/wpallimport/files/Abby_Cross_Signing_Autographs_Video.mp4"][/video]
+
+G Column
+G 1 name
+g2 1st 2 words of file name (1st letters capital)
+example 
+Abby Cross
+
+h column
+h 1 namelink
+h2 1st 2 words of file name, 1st letter of each captital seperated with -
+example
+Abby-Cross
+
+i Column
+i 1 name2
+i2 3rd and 4th words of file name (1st letters capital)
+example 
+Lena Paul
+
+j Column
+i 1 name2link
+i2 3rd and 4th words of file name, 1st letter of each captital seperated with -
+example 
+Lena-Paul
+
+output csv should be named what the option is named + upload
+
+
+option 17 (named reg boob Combo2 )COLUMN A is different, Column B has a rbc, column c,d,e change price new i and j column
+
+A Column
+A1 product_name
+A2 (Name (1st 2 words of file, the file names will be saved with _ ) (1st 2 word letters capital) & (Name (3rd and 4th names of file, the file names will be saved with _ ) (1st 2 word letters capital) signed model B 8×10 Photo -PROOF-(last 4 numbers of file name)
+example
+Abby Cross & Lena Paul signed model B 8×10 Photo -PROOF- (A0001)
+
+B Column
+B1 sku
+b2 sku generated from last 4 numbers of file name and rbc and the date and 1st word and 1 letter of 2nd word 
+(1st Word)(1st letter 2nd word)(last 4 numbers)(date)(rbc)
+example AbbyC00011162022rbc
+
+C Column
+C1 price
+C2 94.95
+
+D Column
+D1 sale_price
+D2 74.95
+
+E Column
+E 1 photos
+E 2 photo whole file name | 1st 2 words of file name Proof.jpg | 3rd and 4th words of file name Proof.jpg
+example
+Abby_Cross_Lena_Paul_Signed_8x10_0001.jpg|Abby_Cross_Proof.jpg|Lena_Paul_Proof.jpg
+
+F Column
+f 1 video
+f 2 [video width="360" height="640" mp4="https://stalicali.com/wp-content/uploads/wpallimport/files/(INSERT 1ST 2 WORDS OF FILE NAME + Signing_Autographs_Video.mp4"][/video]
+example
+[video width="360" height="640" mp4="https://stalicali.com/wp-content/uploads/wpallimport/files/Abby_Cross_Signing_Autographs_Video.mp4"][/video]
+
+G Column
+G 1 name
+g2 1st 2 words of file name (1st letters capital)
+example 
+Abby Cross
+
+h column
+h 1 namelink
+h2 1st 2 words of file name, 1st letter of each captital seperated with -
+example
+Abby-Cross
+
+i Column
+i 1 name2
+i2 3rd and 4th words of file name (1st letters capital)
+example 
+Lena Paul
+
+j Column
+i 1 name2link
+i2 3rd and 4th words of file name, 1st letter of each captital seperated with -
+example 
+Lena-Paul
+
+output csv should be named what the option is named + upload
+
+option 18 (named xxx Combo)COLUMN A is different, Column B has a rxc, column c,d,e change price new i and j column
+
+A Column
+A1 product_name
+A2 (Name (1st 2 words of file, the file names will be saved with _ ) (1st 2 word letters capital) & (Name (3rd and 4th names of file, the file names will be saved with _ ) (1st 2 word letters capital) signed XXX 8×10 Photo -PROOF-(last 4 numbers of file name)
+example
+Abby Cross & Lena Paul signed XXX 8×10 Photo -PROOF- (A0001)
+
+B Column
+B1 sku
+b2 sku generated from last 4 numbers of file name and RXC and the date and 1st word and 1 letter of 2nd word 
+(1st Word)(1st letter 2nd word)(last 4 numbers)(date)(rxc)
+example AbbyC00011162022rxc
+
+C Column
+C1 price
+C2 94.95
+
+D Column
+D1 sale_price
+D2 74.95
+
+E Column
+E 1 photos
+E 2 photo whole file name | 1st 2 words of file name Proof.jpg | 3rd and 4th words of file name Proof.jpg
+example
+Abby_Cross_Lena_Paul_Signed_8x10_0001.jpg|Abby_Cross_Proof.jpg|Lena_Paul_Proof.jpg
+
+F Column
+f 1 video
+f 2 [video width="360" height="640" mp4="https://stalicali.com/wp-content/uploads/wpallimport/files/(INSERT 1ST 2 WORDS OF FILE NAME + Signing_Autographs_Video.mp4"][/video]
+example
+[video width="360" height="640" mp4="https://stalicali.com/wp-content/uploads/wpallimport/files/Abby_Cross_Signing_Autographs_Video.mp4"][/video]
+
+G Column
+G 1 name
+g2 1st 2 words of file name (1st letters capital)
+example 
+Abby Cross
+
+h column
+h 1 namelink
+h2 1st 2 words of file name, 1st letter of each captital seperated with -
+example
+Abby-Cross
+
+i Column
+i 1 name2
+i2 3rd and 4th words of file name (1st letters capital)
+example 
+Lena Paul
+
+j Column
+i 1 name2link
+i2 3rd and 4th words of file name, 1st letter of each captital seperated with -
+example 
+Lena-Paul
+
+output csv should be named what the option is named + upload
+
+option 19 (named gay xxx)
+1st csv
+A Column
+A1 product_name
+A2 (Name (1st 2 words of file, the file names will be saved with _ ) (1st 2 word letters capital)signed Gay Porn Star 8×10 Photo -PROOF- -CERTIFICATE- (last 4 numbers of file name)
+example
+Abby Cross signed Gay Porn Star 8x10 photo -PROOF- -CERTIFICATE- (A0001)
+
+B Column
+B1 sku
+b2 sku generated from last 4 numbers of file name and gX and the date and 1st word and 1 letter of 2nd word 
+(1st Word)(1st letter 2nd word)(last 4 numbers)(date)(gx)
+example AbbyC00011162022gx
+
+C Column
+C1 price
+C2 59.95
+
+D Column
+D1 sale_price
+D2 44.95
+
+E Column
+E 1 photos
+E 2 photo whole file name | 1st 2 words of file name Proof.jpg
+example
+Abby_Cross_Signed_8x10_0001.jpg|Abby_Cross_Proof.jpg
+
+F Column
+f 1 video
+f 2 [video width="360" height="640" mp4="https://stalicali.com/wp-content/uploads/wpallimport/files/(INSERT 1ST 2 WORDS OF FILE NAME + Signing_Autographs_Video.mp4"][/video]
+example
+[video width="360" height="640" mp4="https://stalicali.com/wp-content/uploads/wpallimport/files/Abby_Cross_Signing_Autographs_Video.mp4"][/video]
+
+G Column
+G 1 name
+g2 1st 2 words of file name (1st letters capital)
+example 
+Abby Cross
+
+h column
+h 1 namelink
+h2 1st 2 words of file name, 1st letter of each captital seperated with -
+example
+Abby-Cross
+
+output csv should be named what the option is named + upload
+
+
+option 20 (named Gay Boob)
+1st csv
+A Column
+A1 product_name
+A2 (Name (1st 2 words of file, the file names will be saved with _ ) (1st 2 word letters capital)signed gay model B 8×10 Photo -PROOF- -CERTIFICATE-  (last 4 numbers of file name)
+example
+Abby Cross signed gay model B 8×10 Photo -PROOF- -CERTIFICATE- (A0001)
+
+B Column
+B1 sku
+b2 sku generated from last 4 numbers of file name and grb and the date and 1st word and 1 letter of 2nd word 
+(1st Word)(1st letter 2nd word)(last 4 numbers)(date)(grb)
+example AbbyC00011162022grb
+
+C Column
+C1 price
+C2 59.95
+
+D Column
+D1 sale_price
+D2 44.95
+
+E Column
+E 1 photos
+E 2 photo whole file name | 1st 2 words of file name Proof.jpg
+example
+Abby_Cross_Signed_8x10_0001.jpg|Abby_Cross_Proof.jpg
+
+F Column
+f 1 video
+f 2 [video width="360" height="640" mp4="https://stalicali.com/wp-content/uploads/wpallimport/files/(INSERT 1ST 2 WORDS OF FILE NAME + Signing_Autographs_Video.mp4"][/video]
+example
+[video width="360" height="640" mp4="https://stalicali.com/wp-content/uploads/wpallimport/files/Abby_Cross_Signing_Autographs_Video.mp4"][/video]
+
+G Column
+G 1 name
+g2 1st 2 words of file name (1st letters capital)
+example 
+Abby Cross
+
+h column
+h 1 namelink
+h2 1st 2 words of file name, 1st letter of each captital seperated with -
+example
+Abby-Cross
+
+output csv should be named what the option is named + upload
+
+
+
+option 21 (named gay REG)
+A Column
+A1 product_name
+A2 (Name (1st 2 words of file, the file names will be saved with _ ) (1st 2 word letters capital)signed gay model 8×10 Photo -PROOF- -CERTIFICATE-  (last 4 numbers of file name)
+example
+Abby Cross signed gay model 8×10 Photo -PROOF- -CERTIFICATE- (A0001)
+
+B Column
+B1 sku
+b2 sku generated from last 4 numbers of file name and GR and the date and 1st word and 1 letter of 2nd word 
+(1st Word)(1st letter 2nd word)(last 4 numbers)(date)(gr)
+example AbbyC00011162022gr
+
+C Column
+C1 price
+C2 59.95
+
+D Column
+D1 sale_price
+D2 44.95
+
+E Column
+E 1 photos
+E 2 photo whole file name | 1st 2 words of file name Proof.jpg
+example
+Abby_Cross_Signed_8x10_0001.jpg|Abby_Cross_Proof.jpg
+
+F Column
+f 1 video
+f 2 [video width="360" height="640" mp4="https://stalicali.com/wp-content/uploads/wpallimport/files/(INSERT 1ST 2 WORDS OF FILE NAME + Signing_Autographs_Video.mp4"][/video]
+example
+[video width="360" height="640" mp4="https://stalicali.com/wp-content/uploads/wpallimport/files/Abby_Cross_Signing_Autographs_Video.mp4"][/video]
+
+G Column
+G 1 name
+g2 1st 2 words of file name (1st letters capital)
+example 
+Abby Cross
+
+h column
+h 1 namelink
+h2 1st 2 words of file name, 1st letter of each captital seperated with -
+example
+Abby-Cross
+
+
+output csv should be named what the option is named + upload
+
+option 22 (named playboy xxx)
+1st csv
+A Column
+A1 product_name
+A2 (Name (1st 2 words of file, the file names will be saved with _ ) (1st 2 word letters capital)signed Playboy 8×10 Photo -PROOF- -CERTIFICATE- (last 4 numbers of file name)
+example
+Abby Cross signed Playboy 8x10 photo -PROOF- -CERTIFICATE- (A0001)
+
+B Column
+B1 sku
+b2 sku generated from last 4 numbers of file name and pX and the date and 1st word and 1 letter of 2nd word 
+(1st Word)(1st letter 2nd word)(last 4 numbers)(date)(px)
+example AbbyC00011162022px
+
+C Column
+C1 price
+C2 59.95
+
+D Column
+D1 sale_price
+D2 44.95
+
+E Column
+E 1 photos
+E 2 photo whole file name | 1st 2 words of file name Proof.jpg
+example
+Abby_Cross_Signed_8x10_0001.jpg|Abby_Cross_Proof.jpg
+
+F Column
+f 1 video
+f 2 [video width="360" height="640" mp4="https://stalicali.com/wp-content/uploads/wpallimport/files/(INSERT 1ST 2 WORDS OF FILE NAME + Signing_Autographs_Video.mp4"][/video]
+example
+[video width="360" height="640" mp4="https://stalicali.com/wp-content/uploads/wpallimport/files/Abby_Cross_Signing_Autographs_Video.mp4"][/video]
+
+G Column
+G 1 name
+g2 1st 2 words of file name (1st letters capital)
+example 
+Abby Cross
+
+h column
+h 1 namelink
+h2 1st 2 words of file name, 1st letter of each captital seperated with -
+example
+Abby-Cross
+
+output csv should be named what the option is named + upload
+
+option 23 (named playboy Boob)
+1st csv
+A Column
+A1 product_name
+A2 (Name (1st 2 words of file, the file names will be saved with _ ) (1st 2 word letters capital)signed Playboy model B 8×10 Photo -PROOF- -CERTIFICATE-  (last 4 numbers of file name)
+example
+Abby Cross signed Playboy model B 8×10 Photo -PROOF- -CERTIFICATE- (A0001)
+
+B Column
+B1 sku
+b2 sku generated from last 4 numbers of file name and rb and the date and 1st word and 1 letter of 2nd word 
+(1st Word)(1st letter 2nd word)(last 4 numbers)(date)(prb)
+example AbbyC00011162022prb
+
+C Column
+C1 price
+C2 59.95
+
+D Column
+D1 sale_price
+D2 44.95
+
+E Column
+E 1 photos
+E 2 photo whole file name | 1st 2 words of file name Proof.jpg
+example
+Abby_Cross_Signed_8x10_0001.jpg|Abby_Cross_Proof.jpg
+
+F Column
+f 1 video
+f 2 [video width="360" height="640" mp4="https://stalicali.com/wp-content/uploads/wpallimport/files/(INSERT 1ST 2 WORDS OF FILE NAME + Signing_Autographs_Video.mp4"][/video]
+example
+[video width="360" height="640" mp4="https://stalicali.com/wp-content/uploads/wpallimport/files/Abby_Cross_Signing_Autographs_Video.mp4"][/video]
+
+G Column
+G 1 name
+g2 1st 2 words of file name (1st letters capital)
+example 
+Abby Cross
+
+h column
+h 1 namelink
+h2 1st 2 words of file name, 1st letter of each captital seperated with -
+example
+Abby-Cross
+
+
+output csv should be named what the option is named + upload
+
+
+option 24 (named playboy REG)
+A Column
+A1 product_name
+A2 (Name (1st 2 words of file, the file names will be saved with _ ) (1st 2 word letters capital)signed Playboy model 8×10 Photo -PROOF- -CERTIFICATE-  (last 4 numbers of file name)
+example
+Abby Cross signed Playboy model 8×10 Photo -PROOF- -CERTIFICATE- (A0001)
+
+B Column
+B1 sku
+b2 sku generated from last 4 numbers of file name and PR and the date and 1st word and 1 letter of 2nd word 
+(1st Word)(1st letter 2nd word)(last 4 numbers)(date)(pr)
+example AbbyC00011162022pr
+
+C Column
+C1 price
+C2 59.95
+
+D Column
+D1 sale_price
+D2 44.95
+
+E Column
+E 1 photos
+E 2 photo whole file name | 1st 2 words of file name Proof.jpg
+example
+Abby_Cross_Signed_8x10_0001.jpg|Abby_Cross_Proof.jpg
+
+F Column
+f 1 video
+f 2 [video width="360" height="640" mp4="https://stalicali.com/wp-content/uploads/wpallimport/files/(INSERT 1ST 2 WORDS OF FILE NAME + Signing_Autographs_Video.mp4"][/video]
+example
+[video width="360" height="640" mp4="https://stalicali.com/wp-content/uploads/wpallimport/files/Abby_Cross_Signing_Autographs_Video.mp4"][/video]
+
+G Column
+G 1 name
+g2 1st 2 words of file name (1st letters capital)
+example 
+Abby Cross
+
+h column
+h 1 namelink
+h2 1st 2 words of file name, 1st letter of each captital seperated with -
+example
+Abby-Cross
+
+
+output csv should be named what the option is named + upload
+
+option 25 (named RP porn REG)
+A Column
+A1 product_name
+A2 (Name (1st 2 words of file, the file names will be saved with _ ) (1st 2 word letters capital)autographed Model RP 8x10 Photo(RP+last 4 numbers of file name)
+example
+Abby Cross autographed Model RP 8x10 Photo RP0001
+
+B Column
+B1 sku
+b2 sku generated from last 4 numbers of file name and RPR and the date and 1st word and 1 letter of 2nd word 
+(1st Word)(1st letter 2nd word)(last 4 numbers)(date)(RPR)
+example AbbyC00011162022RPR
+
+C Column
+C1 price
+C2 9.99
+
+D Column
+D1 stock
+D2 1
+
+E Column
+E 1 photos
+E 2 https://american-autographs.com/toimages//+(photo whole file name) | 
+example
+https://american-autographs.com/toimages//Abby_Cross_Signed_8x10_0001.jpg|
+
+F Column
+will match values from inventory file from
+column H on this option with this option column H
+if they match, it will check columns g to see if its a match
+If both match
+F column will be blank
+if both dont match
+2 values of 24 will be placed
+
+G column
+will match values from inventory file from
+column H on this option with this option column H
+if they match, it will check columns g to see if its a match
+If both match add number from column g from inventory sheet to this sheet
+If no match, cross check the inventory sheet to see a number not used (Column G on inventory)
+
+
+h column
+G 1 name
+g2 1st 2 words of file name (1st letters capital)
+example 
+Abby Cross
+
+
+output csv should be named what the option is named + upload
+
+
+option 26 (named RP porn TS REG ) **same accept a, b
+A Column
+A1 product_name
+A2 (Name (1st 2 words of file, the file names will be saved with _ ) (1st 2 word letters capital)autographed TS Model RP 8x10 Photo(RP+last 4 numbers of file name)
+example
+Abby Cross autographed TS Model RP 8x10 Photo RP0001
+
+B Column
+B1 sku
+b2 sku generated from last 4 numbers of file name and RPRTS and the date and 1st word and 1 letter of 2nd word 
+(1st Word)(1st letter 2nd word)(last 4 numbers)(date)(RPRTS)
+example AbbyC00011162022RPRts
+
+C Column
+C1 price
+C2 9.99
+
+D Column
+D1 stock
+D2 1
+
+E Column
+E 1 photos
+E 2 https://american-autographs.com/toimages//+(photo whole file name) | 
+example
+https://american-autographs.com/toimages//Abby_Cross_Signed_8x10_0001.jpg|
+
+F Column
+will match values from inventory file from
+column H on this option with this option column H
+if they match, it will check columns g to see if its a match
+If both match
+F column will be blank
+if both dont match
+2 values of 24 will be placed
+
+G column
+will match values from inventory file from
+column H on this option with this option column H
+if they match, it will check columns g to see if its a match
+If both match add number from column g from inventory sheet to this sheet
+If no match, cross check the inventory sheet to see a number not used (Column G on inventory)
+
+
+h column
+G 1 name
+g2 1st 2 words of file name (1st letters capital)
+example 
+Abby Cross
+
+option 27 (named RP porn TS REG boob) **same accept a, b, F
+A Column
+A1 product_name
+A2 Model + (Name (1st 2 words of file, the file names will be saved with _ ) (1st 2 word letters capital)autographed TS RP 8x10 Photo(RP+last 4 numbers of file name)
+example
+Model Abby Cross autographed TS RP 8x10 Photo RP0001
+
+B Column
+B1 sku
+b2 sku generated from last 4 numbers of file name and RPRTSB and the date and 1st word and 1 letter of 2nd word 
+(1st Word)(1st letter 2nd word)(last 4 numbers)(date)(RPRTSB)
+example AbbyC00011162022RPRtsb
+
+C Column
+C1 price
+C2 9.99
+
+D Column
+D1 stock
+D2 1
+
+E Column
+E 1 photos
+E 2 https://american-autographs.com/toimages//+(photo whole file name) | 
+example
+https://american-autographs.com/toimages//Abby_Cross_Signed_8x10_0001.jpg|
+
+F Column
+will match values from inventory file from
+column H on this option with this option column H
+if they match, it will check columns g to see if its a match
+If both match
+F column will be blank
+if both dont match
+2 values of 23 will be placed
+
+G column
+will match values from inventory file from
+column H on this option with this option column H
+if they match, it will check columns g to see if its a match
+If both match add number from column g from inventory sheet to this sheet
+If no match, cross check the inventory sheet to see a number not used (Column G on inventory)
+
+
+h column
+G 1 name
+g2 1st 2 words of file name (1st letters capital)
+example 
+Abby Cross
+
+option 28 (named RP porn REG boob) **same accept a, b, F
+A Column
+A1 product_name
+A2 Model(Name (1st 2 words of file, the file names will be saved with _ ) (1st 2 word letters capital)autographed RP 8x10 Photo(RP+last 4 numbers of file name)
+example
+Model Abby Cross autographed RP 8x10 Photo RP0001
+
+B Column
+B1 sku
+b2 sku generated from last 4 numbers of file name and RPRB and the date and 1st word and 1 letter of 2nd word 
+(1st Word)(1st letter 2nd word)(last 4 numbers)(date)(RPRB)
+example AbbyC00011162022RPRB
+
+C Column
+C1 price
+C2 9.99
+
+D Column
+D1 stock
+D2 1
+
+E Column
+E 1 photos
+E 2 https://american-autographs.com/toimages//+(photo whole file name) | 
+example
+https://american-autographs.com/toimages//Abby_Cross_Signed_8x10_0001.jpg|
+
+F Column
+will match values from inventory file from
+column H on this option with this option column H
+if they match, it will check columns g to see if its a match
+If both match
+F column will be blank
+if both dont match
+2 values of 23 will be placed
+
+G column
+will match values from inventory file from
+column H on this option with this option column H
+if they match, it will check columns g to see if its a match
+If both match add number from column g from inventory sheet to this sheet
+If no match, cross check the inventory sheet to see a number not used (Column G on inventory)
+
+
+h column
+G 1 name
+g2 1st 2 words of file name (1st letters capital)
+example 
+Abby Cross
+
+option 29 (named RP porn Gay boob) **same accept a, b, F
+A Column
+A1 product_name
+A2 Model(Name (1st 2 words of file, the file names will be saved with _ ) (1st 2 word letters capital)autographed Gay RP 8x10 Photo(RP+last 4 numbers of file name)
+example
+Model Abby Cross autographed gay RP 8x10 Photo RP0001
+
+B Column
+B1 sku
+b2 sku generated from last 4 numbers of file name and RPGB and the date and 1st word and 1 letter of 2nd word 
+(1st Word)(1st letter 2nd word)(last 4 numbers)(date)(RPGB)
+example AbbyC00011162022RPGB
+
+C Column
+C1 price
+C2 9.99
+
+D Column
+D1 stock
+D2 1
+
+E Column
+E 1 photos
+E 2 https://american-autographs.com/toimages//+(photo whole file name) | 
+example
+https://american-autographs.com/toimages//Abby_Cross_Signed_8x10_0001.jpg|
+
+F Column
+will match values from inventory file from
+column H on this option with this option column H
+if they match, it will check columns g to see if its a match
+If both match
+F column will be blank
+if both dont match
+2 values of 23 will be placed
+
+G column
+will match values from inventory file from
+column H on this option with this option column H
+if they match, it will check columns g to see if its a match
+If both match add number from column g from inventory sheet to this sheet
+If no match, cross check the inventory sheet to see a number not used (Column G on inventory)
+
+
+h column
+G 1 name
+g2 1st 2 words of file name (1st letters capital)
+example 
+Abby Cross
+
+option 30 (named RP porn Gay Reg) **same accept a, b, F
+A Column
+A1 product_name
+A2 (Name (1st 2 words of file, the file names will be saved with _ ) (1st 2 word letters capital)autographed Gay Model RP 8x10 Photo(RP+last 4 numbers of file name)
+example
+Abby Cross autographed gay Model RP 8x10 Photo RP0001
+
+B Column
+B1 sku
+b2 sku generated from last 4 numbers of file name and RPG and the date and 1st word and 1 letter of 2nd word 
+(1st Word)(1st letter 2nd word)(last 4 numbers)(date)(RPG)
+example AbbyC00011162022RPG
+
+C Column
+C1 price
+C2 9.99
+
+D Column
+D1 stock
+D2 1
+
+E Column
+E 1 photos
+E 2 https://american-autographs.com/toimages//+(photo whole file name) | 
+example
+https://american-autographs.com/toimages//Abby_Cross_Signed_8x10_0001.jpg|
+
+F Column
+will match values from inventory file from
+column H on this option with this option column H
+if they match, it will check columns g to see if its a match
+If both match
+F column will be blank
+if both dont match
+2 values of 24 will be placed
+
+G column
+will match values from inventory file from
+column H on this option with this option column H
+if they match, it will check columns g to see if its a match
+If both match add number from column g from inventory sheet to this sheet
+If no match, cross check the inventory sheet to see a number not used (Column G on inventory)
+
+
+h column
+G 1 name
+g2 1st 2 words of file name (1st letters capital)
+example 
+Abby Cross
+
+---------------------------------------------------------------------------------------------------
+some option needs to have a 2nd csv made
+
+
+
+No Headers needed
+
+Column A
+
+Will have the info from Column A in the previous options
+
+Column B
+
+will have the info from Column B in the previous options
+
+Column C
+
+Will have the info from Column C in the previous options
+
+Column D will have all 1's
+
+skip column E
+
+Column F
+
+
+option 1
+nothing
+
+option 2
+the value 39 will be entered to all
+
+option 3
+the value 24 will be entered into half the total
+round up 1 if half is not exact
+the total is found in column G (The Name)
+
+so if thier are 10 Abby Cross values
+5 24s will be added to the cells
+
+the value of 8 will also be applied to 1 cell
+
+
+
+option 4 
+nothing
+
+
+option 5
+the value 22 will be entered to all
+
+Option 6
+the value 38 will be entered to all
+
+option 7-10
+Nothing 
+
+Option 11
+the value 42 will be entered to all
+
+
+option 12 nothing
+
+Option 13
+the value 19 will be entered to all
+
+Option 14
+the value 42 will be entered to all
+
+Option 15
+nothing
+
+option 16
+the value 22 will be entered to all
+
+
+option 17 will have
+38 to all
+
+
+18, 19
+nothing
+
+option 20
+38 to all
+
+option 21
+22 to all
+
+option 22
+nothing
+
+option 23
+38 to all
+
+option 24
+9 to all
+
+option 25-30
+nothing
+
+
+Column G
+This will look thru my inventory file for matching Values
+
+It will match from the inventory sheet column H (inventory sheet) with column G from each option result, if it finds a match it will then, check column I to see if matches the value I will list
+
+If it does match, it will take the inventory column g number for the value on the new option
+If it does not match, it will assign a new number that is not being used on column G on the inventory sheet
+
+
+
+option 1
+no column G value
+
+option 2
+boob
+
+option 3
+reg
+
+
+option 4 
+no column G value
+
+
+option 5
+reg
+
+Option 6
+boob
+
+option 7-10
+no column G value
+
+Option 11
+boob
+
+
+option 12 
+no column G value
+
+Option 13
+reg
+
+Option 14
+boob
+
+Option 15
+no column G value
+
+option 16
+reg
+
+
+option 17 will have
+boob
+
+
+18, 19
+no column G value
+
+option 20
+boob
+
+option 21
+reg
+
+option 22
+no column G value
+
+option 23
+boob
+
+option 24
+reg
+
+option 25-30
+nothing
+
+---------------------------------------------------
+3rd csv per option
+
+Nothing 1,4,7-10,12,15,18,19,22
+
+Coulmn A
+1 is the value
+
+Column B
+
+
+
+option 25-30
+If coulumn F has a value
+we will take the sku(column B) and put the sku in
+
+all other options (besides 1,4,7-10,12,15,18,19,22)
+
+if coulmn F has a value (2nd csv)
+we will take the sku(column B) and put the sku in
