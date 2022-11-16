@@ -5,12 +5,13 @@ import os
 import sys
 import pandas as pd
 from datetime import date
-from options import option_2
+from options import option_2, option_4, option_7, option_8, option_9, option_10
+
 
 NUMBER_OF_ELEMENTS_PER_OPTION = [4]
 # CSV_FIRST_ROW = ["product_name", "sku", "price", "Sale_price", "photo", "video", "name", "name-link"]
 FILE_NAMES = []
-PHOTO = "{}_{}_Proof.jpg|{}_{}_Proof.jpg"
+PHOTO = "{}.jpg|{}_{}_Proof.jpg"
 VIDEO =  '{}_{}_'
 
 def _date():    # to get today's date
@@ -24,20 +25,22 @@ def get_all_file_names(source_path):
             FILE_NAMES.append(os.path.splitext(name)[0])  # To get file names without extension
             FILE_NAMES.sort()
 
-def write_list_to_csv_column_option_1(file_names):
-    pd.DataFrame({'product_name':file_names[0],
-                'sku':file_names[1],
-                'photo':file_names[2],
-                'video':file_names[3],
-                'name':file_names[4],
-                # 'video':file_names[6],
-                # 'name':file_names[7],
-                'namelink':file_names[5]}).to_csv('named xxx.csv', index=False)
+def write_list_to_csv_column(name_of_file, files):
+    pd.DataFrame({'product_name':files[0],
+                'sku':files[1],
+                'price':files[2],
+                'Sale_price':files[3],
+                'photos':files[4],
+                'video':files[5],
+                'name':files[6],
+                'name-link':files[7]}).to_csv((name_of_file + '.csv'), index=False)
     print("csv written...")
 
 def option_1(FILE_NAMES):
     product_list  = []
     sku_list = []
+    price = []
+    Sale_price = []
     photo_list = []
     video_list = []
     name_list = []
@@ -58,9 +61,15 @@ def option_1(FILE_NAMES):
         #sku list
         sku = First_name + Last_name[0] + f"{Last_4}" + date1 + "X"
         sku_list.append(sku)
+        
+        # price
+        price.append(29.95)
+
+        # sale price
+        Sale_price.append(22.95)
 
         # photo list
-        photo_list.append(PHOTO.format(First_name, Last_name, First_name, Last_name))
+        photo_list.append(PHOTO.format(i, First_name, Last_name))
         
         # video list
         video_list.append('[video width="360" height="640" mp4="https://stalicali.com/wp-content/uploads/wpallimport/files/' + VIDEO.format(First_name, Last_name) + 'Signing_Autographs_Video.mp4"][/video]')
@@ -71,7 +80,7 @@ def option_1(FILE_NAMES):
         # namelink list
         name_link.append((First_name+"-"+Last_name))
 
-    return [product_list, sku_list, photo_list, video_list, name_list, name_link]
+    return [product_list, sku_list, price, Sale_price, photo_list, video_list, name_list, name_link]
 
 def main(source, option_number):
     cwd = os.getcwd()
@@ -79,15 +88,27 @@ def main(source, option_number):
     get_all_file_names(source_path)
 
     if option_number == 1:
-        write_list_to_csv_column_option_1(option_1(FILE_NAMES))
-    if option_number == 2:
-        option_2.write_list_to_csv_column_option_2(option_2.option_2(FILE_NAMES))
+        write_list_to_csv_column('xxx', option_1(FILE_NAMES))
+    elif option_number == 2:
+        write_list_to_csv_column('reg Boob', option_2.option_2(FILE_NAMES))
+    elif option_number == 4:
+        write_list_to_csv_column('Trans X', option_4.option_4(FILE_NAMES))
+    elif option_number == 7:
+        option_7.option_7(FILE_NAMES)
+    elif option_number == 8:
+        option_8.option_8(FILE_NAMES)
+    elif option_number == 9:
+        option_9.option_9(FILE_NAMES)
+    elif option_number == 10:
+        option_10.option_10(FILE_NAMES)
+    else:
+        raise Exception("Didn't match any options!")
 
 if __name__ == '__main__':
-    args = sys.argv
-    if len(args) != 3:
-        raise Exception("Only pass the folder name.")
+    args = []
+    args[0] = input('Enter the path : ')
+    args[1] = input('Enter the option number : ')
     
-    source, option_number = args[1:]
 
+    source, option_number = args[1:]
     main(source, int(option_number))

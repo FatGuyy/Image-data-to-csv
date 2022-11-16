@@ -1,5 +1,5 @@
 """
-This file gets the 2nd option.
+This file gets the 4th option.
 """
 from datetime import date
 
@@ -12,7 +12,7 @@ def _date():    # to get today's date
     d1 = today.strftime("%d%m20%y")
     return d1
 
-def option_2(FILE_NAMES):
+def option_4(FILE_NAMES):
     product_list  = []
     sku_list = []
     price = []
@@ -22,7 +22,7 @@ def option_2(FILE_NAMES):
     name_list = []
     name_link = []
 
-    product_name = "{} {}signed model B 8�10 Photo -PROOF- -CERTIFICATE-  (A{})"
+    product_name = "{} {}signed TS TRANNY XXX 8�10 Photo -PROOF-(A{})"
     date1 = _date()
 
     for i in FILE_NAMES:
@@ -35,14 +35,14 @@ def option_2(FILE_NAMES):
         product_list.append(product_name.format(First_name,Last_name,Last_4))
         
         #sku list
-        sku = First_name + Last_name[0] + f"{Last_4}" + date1 + "rb"
+        sku = First_name + Last_name[0] + f"{Last_4}" + date1 + "tsx"  # The end of sku
         sku_list.append(sku)
 
          # price
-        price.append(29.95)
+        price.append(54.95)
 
         # sale price
-        Sale_price.append(22.95)
+        Sale_price.append(37.95)
 
         # photo list
         photo_list.append(PHOTO.format(i, First_name, Last_name))

@@ -1,12 +1,11 @@
-upload
-prices data.
-dates
+Make sure you have python installed in your system first. - https://www.youtube.com/watch?v=Kn1HF3oD19c
+then install requirments - https://www.youtube.com/watch?v=6tn5ow1hImA
+(isntalling python and requirments is one time thing.)
 
-Option 1 - 
 
-product_name = (1st word + 2nd word, initial letters capital)
-                + (signed XXX 8�10 Photo -PROOF- -CERTIFICATE-) 
-                + (last 4 numbers of file name)
-
-E 2 photo whole file name | 1st 2 words of file name Proof.jpg
-E 2 photo whole file name | 1st 2 words of file name Proof.jpg
+How to run - 
+    1. Open the folder where you have all the files stored.
+    2. Right click and open terminal/ command prompt.
+    3. Type:
+            python main.py (path-to-images-folder) (option-number)
+    
