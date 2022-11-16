@@ -105,10 +105,7 @@ def main(source, option_number):
         raise Exception("Didn't match any options!")
 
 if __name__ == '__main__':
-    args = []
-    args[0] = input('Enter the path : ')
-    args[1] = input('Enter the option number : ')
-    
+    source = input('Enter path :')
+    option_number = input('Enter option :')    
 
-    source, option_number = args[1:]
     main(source, int(option_number))
