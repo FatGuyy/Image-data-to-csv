@@ -1,6 +1,7 @@
 """
 This file gets the 7th option.
 """
+import os
 from datetime import date
 import pandas as pd
 
@@ -13,7 +14,7 @@ def _date():    # to get today's date
     d1 = today.strftime("%d%m20%y")
     return d1
 
-def write_list_to_csv_column(files):
+def write_list_to_csv_column(files, folder_path):
     pd.DataFrame({'product_name':files[0],
                 'sku':files[1],
                 'price':files[2],
@@ -23,11 +24,11 @@ def write_list_to_csv_column(files):
                 'name':files[6],
                 'name-link':files[7],
                 'name2':files[8],
-                'name2link':files[9]}).to_csv('trans Combo2.csv', index=False)
+                'name2link':files[9]}).to_csv(os.path.join(folder_path,'trans Combo2.csv'), index=False)
     print("csv written...")
 
 
-def option_7(FILE_NAMES):
+def option_7(FILE_NAMES, csv_folder_path):
     product_list  = []
     sku_list = []
     price = []
@@ -39,15 +40,15 @@ def option_7(FILE_NAMES):
     name2_list = []
     name2_link = []
 
-    product_name = "{} {} & {} {} signed TS model 8�10 Photo -PROOF-(A{})"
+    product_name = "{} {} & {} {} signed TS model 8×10 Photo -PROOF- (A{})"
     date1 = _date()
 
     for i in FILE_NAMES:
         file_ele = i.split('_')
-        First_name = file_ele[0].title()    # This extracts the first element
-        Last_name = file_ele[1].title()     # This extracts the last element
+        First_name = file_ele[0].title()    # This extracts the first name element
+        Last_name = file_ele[1].title()     # This extracts the 2nd name element
         third_name = file_ele[2].title()    # This extracts the 3rd name in the file
-        fourth_name = file_ele[3].title()    # This extracts the 3rd name in the file
+        fourth_name = file_ele[3].title()    # This extracts the 4th name in the file
         Last_4 = file_ele[-1]
 
         # product list
@@ -81,4 +82,5 @@ def option_7(FILE_NAMES):
         # name2 link
         name2_link.append(third_name+ "-" +fourth_name)
 
-    write_list_to_csv_column([product_list, sku_list, price, Sale_price, photo_list, video_list, name_list, name_link, name2_list, name2_link])
+    write_list_to_csv_column([product_list, sku_list, price, Sale_price, photo_list, video_list, name_list, name_link, name2_list, name2_link],
+        folder_path=csv_folder_path)

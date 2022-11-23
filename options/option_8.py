@@ -1,6 +1,7 @@
 """
 This file gets the 8th option.
 """
+import os
 from datetime import date
 import pandas as pd
 
@@ -13,7 +14,7 @@ def _date():    # to get today's date
     d1 = today.strftime("%d%m20%y")
     return d1
 
-def write_list_to_csv_column(files):
+def write_list_to_csv_column(files, csv_folder_path):
     pd.DataFrame({'product_name':files[0],
                 'sku':files[1],
                 'price':files[2],
@@ -23,11 +24,11 @@ def write_list_to_csv_column(files):
                 'name':files[6],
                 'name-link':files[7],
                 'name2':files[8],
-                'name2link':files[9]}).to_csv('tsrbc Combo.csv', index=False)
+                'name2link':files[9]}).to_csv(os.path.join(csv_folder_path,'tsrbc Combo.csv'), index=False)
     print("csv written...")
 
 
-def option_8(FILE_NAMES):
+def option_8(FILE_NAMES, csv_folder_path):
     product_list  = []
     sku_list = []
     price = []
@@ -39,7 +40,7 @@ def option_8(FILE_NAMES):
     name2_list = []
     name2_link = []
 
-    product_name = "{} {} & {} {} signed TS model B 8�10 Photo -PROOF-(A{})"
+    product_name = "{} {} & {} {} signed TS model B 8×10 Photo -PROOF- (A{})"
     date1 = _date()
 
     for i in FILE_NAMES:
@@ -81,4 +82,5 @@ def option_8(FILE_NAMES):
         # name2 link
         name2_link.append(third_name+ "-" +fourth_name)
 
-    write_list_to_csv_column([product_list, sku_list, price, Sale_price, photo_list, video_list, name_list, name_link, name2_list, name2_link])
+    write_list_to_csv_column([product_list, sku_list, price, Sale_price, photo_list, video_list, name_list, name_link, name2_list, name2_link],
+        csv_folder_path=csv_folder_path)

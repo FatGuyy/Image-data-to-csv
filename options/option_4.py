@@ -22,7 +22,7 @@ def option_4(FILE_NAMES):
     name_list = []
     name_link = []
 
-    product_name = "{} {}signed TS TRANNY XXX 8�10 Photo -PROOF-(A{})"
+    product_name = "{} {} signed TS TRANNY XXX 8×10 Photo -PROOF-(A{})"
     date1 = _date()
 
     for i in FILE_NAMES:
