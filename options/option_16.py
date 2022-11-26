@@ -1,5 +1,5 @@
 """
-This file gets the 11th option.
+This file gets the 16th option.
 """
 import os
 from datetime import date
@@ -24,13 +24,15 @@ def write_list_to_csv_column(files, csv_folder_path):
                 'name':files[6],
                 'name-link':files[7],
                 'name2':files[8],
-                'name2link':files[9],
-                'name3':files[10],
-                'name3link':files[11],}).to_csv(os.path.join(csv_folder_path, 'trans Combo boob 3.csv'), index=False)
+                'name2link':files[9]}).to_csv(os.path.join
+                        (csv_folder_path,
+                        'reg Combo 2.csv'),
+                        index=False)
+
     print("csv written...")
 
 
-def option_11(FILE_NAMES, csv_folder_path):
+def option_16(FILE_NAMES, csv_folder_path):
     product_list  = []
     sku_list = []
     price = []
@@ -41,10 +43,8 @@ def option_11(FILE_NAMES, csv_folder_path):
     name_link = []
     name2_list = []
     name2_link = []
-    name3_list = []
-    name3_link = []
 
-    product_name = "{} {} & {} {} & {} {}  signed TS model B 8×10 Photo -PROOF- (A{})"
+    product_name = "{} {} & {} {} & {} {} signed model 8×10 Photo -PROOF- (A{})"
     date1 = _date()
 
     for i in FILE_NAMES:
@@ -61,14 +61,14 @@ def option_11(FILE_NAMES, csv_folder_path):
         product_list.append(product_name.format(First_name, Last_name, third_name, fourth_name, fifth_name, sixth_name, Last_4))
         
         #sku list
-        sku = First_name + Last_name[0] + f"{Last_4}" + date1 + "tsrbc3"  # The end of sku
+        sku = First_name + Last_name[0] + f"{Last_4}" + date1 + "rc"  # The end of sku
         sku_list.append(sku)
 
          # price
-        price.append(139.95)
+        price.append(94.95)
 
         # sale price
-        Sale_price.append(99.95)
+        Sale_price.append(74.95)
 
         # photo list
         photo_list.append(PHOTO.format(i, First_name, Last_name, third_name, fourth_name, fifth_name, sixth_name))
@@ -87,12 +87,6 @@ def option_11(FILE_NAMES, csv_folder_path):
 
         # name2 link
         name2_link.append(third_name+ "-" +fourth_name)
-        
-        # name3 list
-        name3_list.append(fifth_name+ " "+sixth_name)
 
-        # name3 link
-        name3_link.append(fifth_name+ "-" +sixth_name)
-
-    write_list_to_csv_column([product_list, sku_list, price, Sale_price, photo_list, video_list, name_list, name_link, name2_list, name2_link, name3_list, name3_link],
+    write_list_to_csv_column([product_list, sku_list, price, Sale_price, photo_list, video_list, name_list, name_link, name2_list, name2_link],
         csv_folder_path=csv_folder_path)

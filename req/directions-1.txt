@@ -626,7 +626,10 @@ Lexi-Belle
 
 output csv should be named what the option is named + upload
 
-option 12 (named trans xxx Combo 3)COLUMN A is different, Column B has a tsxc3, column c,d,e change price new i and j column
+option 12 (named trans xxx Combo 3)COLUMN A is different, 
+Column B has a tsxc3, 
+column c,d,e change price 
+new i and j column
 
 A Column
 A1 product_name
@@ -698,7 +701,11 @@ Lexi-Belle
 
 output csv should be named what the option is named + upload
 
-option 13 (named reg Combo3)COLUMN A is different, Column B has a rc3, column c,d change price,E, new k and l column
+option 13 (named reg Combo3)COLUMN A is different, 
+Column B has a rc3, 
+column c,d change price,
+E,
+new k and l column
 
 A Column
 A1 product_name
@@ -771,7 +778,10 @@ Lexi-Belle
 output csv should be named what the option is named + upload
 
 
-option 14 (named reg Combo 3 boob)COLUMN A is different, Column B has a rbc3, column c,d,e change price new i and j,k,l column
+option 14 (named reg Combo 3 boob)COLUMN A is different, 
+Column B has a rbc3, 
+column c,d,e change price 
+new i and j,k,l column
 
 A Column
 A1 product_name
@@ -843,7 +853,10 @@ Lexi-Belle
 
 output csv should be named what the option is named + upload
 
-option 15 (named reg xx Combo3 )COLUMN A is different, Column B has a rxc3, column c,d,e change price new i and j column
+option 15 (named reg xx Combo3 )COLUMN A is different, 
+Column B has a rxc3, 
+column c,d,e change price 
+new i and j column
 
 A Column
 A1 product_name
@@ -915,7 +928,11 @@ Lexi-Belle
 
 output csv should be named what the option is named + upload
 
-option 16 (named reg Combo 2)COLUMN A is different, Column B has a rc, column c,d change price,E, new i and j column
+option 16 (named reg Combo 2)COLUMN A is different, 
+Column B has a rc, 
+column c,d change price,
+E, 
+new i and j column
 
 A Column
 A1 product_name
@@ -976,7 +993,10 @@ Lena-Paul
 output csv should be named what the option is named + upload
 
 
-option 17 (named reg boob Combo2 )COLUMN A is different, Column B has a rbc, column c,d,e change price new i and j column
+option 17 (named reg boob Combo2 )COLUMN A is different, 
+Column B has a rbc, 
+column c,d,e change price 
+new i and j column
 
 A Column
 A1 product_name
@@ -1036,7 +1056,10 @@ Lena-Paul
 
 output csv should be named what the option is named + upload
 
-option 18 (named xxx Combo)COLUMN A is different, Column B has a rxc, column c,d,e change price new i and j column
+option 18 (named xxx Combo)COLUMN A is different, 
+Column B has a rxc, 
+column c,d,e change price 
+new i and j column
 
 A Column
 A1 product_name

@@ -1,5 +1,5 @@
 """
-This file gets the 11th option.
+This file gets the 15th option.
 """
 import os
 from datetime import date
@@ -26,11 +26,15 @@ def write_list_to_csv_column(files, csv_folder_path):
                 'name2':files[8],
                 'name2link':files[9],
                 'name3':files[10],
-                'name3link':files[11],}).to_csv(os.path.join(csv_folder_path, 'trans Combo boob 3.csv'), index=False)
+                'name3link':files[11],}).to_csv(os.path.join
+                        (csv_folder_path,
+                        'reg xx Combo3.csv'),
+                        index=False)
+
     print("csv written...")
 
 
-def option_11(FILE_NAMES, csv_folder_path):
+def option_15(FILE_NAMES, csv_folder_path):
     product_list  = []
     sku_list = []
     price = []
@@ -44,7 +48,7 @@ def option_11(FILE_NAMES, csv_folder_path):
     name3_list = []
     name3_link = []
 
-    product_name = "{} {} & {} {} & {} {}  signed TS model B 8×10 Photo -PROOF- (A{})"
+    product_name = "{} {} & {} {} & {} {} signed XXX 8×10 Photo -PROOF- (A{})"
     date1 = _date()
 
     for i in FILE_NAMES:
@@ -61,7 +65,7 @@ def option_11(FILE_NAMES, csv_folder_path):
         product_list.append(product_name.format(First_name, Last_name, third_name, fourth_name, fifth_name, sixth_name, Last_4))
         
         #sku list
-        sku = First_name + Last_name[0] + f"{Last_4}" + date1 + "tsrbc3"  # The end of sku
+        sku = First_name + Last_name[0] + f"{Last_4}" + date1 + "rbc3"  # The end of sku
         sku_list.append(sku)
 
          # price

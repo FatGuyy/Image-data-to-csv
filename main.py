@@ -14,7 +14,20 @@ from options import (
         option_8, 
         option_9, 
         option_10, 
-        option_11)
+        option_11,
+        option_12,
+        option_13,
+        option_14,
+        option_15,
+        option_16,
+        option_17,
+        option_18,
+        option_19,
+        option_20,
+        option_21,
+        option_22,
+        option_23,
+        option_24)
 
 
 NUMBER_OF_ELEMENTS_PER_OPTION = [4]
@@ -97,6 +110,7 @@ def main(source, option_number, CSV_folder_path):
     source_path = os.path.join(cwd, source)
     get_all_file_names(source_path)
 
+    #check the option number and run the function accordingly
     if option_number == 1:
         write_list_to_csv_column('xxx', option_1(FILE_NAMES), folder_path=CSV_folder_path)
     elif option_number == 2:
@@ -119,6 +133,32 @@ def main(source, option_number, CSV_folder_path):
         option_10.option_10(FILE_NAMES, csv_folder_path=CSV_folder_path)
     elif option_number == 11:
         option_11.option_11(FILE_NAMES, csv_folder_path=CSV_folder_path)
+    elif option_number == 12:
+        option_12.option_12(FILE_NAMES, csv_folder_path=CSV_folder_path)
+    elif option_number == 13:
+        option_13.option_13(FILE_NAMES, csv_folder_path=CSV_folder_path)
+    elif option_number == 14:
+        option_14.option_14(FILE_NAMES, csv_folder_path=CSV_folder_path)
+    elif option_number == 15:
+        option_15.option_15(FILE_NAMES, csv_folder_path=CSV_folder_path)
+    elif option_number == 16:
+        option_16.option_16(FILE_NAMES, csv_folder_path=CSV_folder_path)
+    elif option_number == 17:
+        option_17.option_17(FILE_NAMES, csv_folder_path=CSV_folder_path)
+    elif option_number == 18:
+        option_18.option_18(FILE_NAMES, csv_folder_path=CSV_folder_path)
+    elif option_number == 19:
+        write_list_to_csv_column('gay xxx', option_19.option_19(FILE_NAMES), folder_path=CSV_folder_path)
+    elif option_number == 20:
+        write_list_to_csv_column('Gay Boob', option_20.option_20(FILE_NAMES), folder_path=CSV_folder_path)
+    elif option_number == 21:
+        write_list_to_csv_column('gay REG', option_21.option_21(FILE_NAMES), folder_path=CSV_folder_path)
+    elif option_number == 22:
+        write_list_to_csv_column('playboy xxx', option_22.option_22(FILE_NAMES), folder_path=CSV_folder_path)
+    elif option_number == 23:
+        write_list_to_csv_column('playboy Boob', option_23.option_23(FILE_NAMES), folder_path=CSV_folder_path)
+    elif option_number == 24:
+        write_list_to_csv_column('playboy REG', option_24.option_24(FILE_NAMES), folder_path=CSV_folder_path)
     else:
         raise Exception("Didn't match any options!")
 
