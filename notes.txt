@@ -8,4 +8,7 @@ How to run -
     2. Right click and open terminal/ command prompt.
     3. Type:
             python main.py (path-to-images-folder) (option-number)
-    
+
+
+f 2 [video width="360" height="640" mp4="https://stalicali.com/wp-content/uploads/wpallimport/files/(INSERT 1ST 2 WORDS OF FILE NAME + Signing_Autographs_Video.mp4"][/video]
+f 2 [video width="360" height="640" mp4="https://stalicali.com/wp-content/uploads/wpallimport/files/(INSERT 1ST 2 WORDS OF FILE NAME + Signing_Autographs_Video.mp4"][/video]

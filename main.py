@@ -4,7 +4,17 @@ This is the main module of the project, option1 is done.
 import os
 import pandas as pd
 from datetime import date
-from options import option_2, option_4, option_7, option_8, option_9, option_10
+from options import (
+        option_2,
+        option_3,
+        option_4, 
+        option_5, 
+        option_6, 
+        option_7, 
+        option_8, 
+        option_9, 
+        option_10, 
+        option_11)
 
 
 NUMBER_OF_ELEMENTS_PER_OPTION = [4]
@@ -91,8 +101,14 @@ def main(source, option_number, CSV_folder_path):
         write_list_to_csv_column('xxx', option_1(FILE_NAMES), folder_path=CSV_folder_path)
     elif option_number == 2:
         write_list_to_csv_column('reg Boob', option_2.option_2(FILE_NAMES), folder_path=CSV_folder_path)
+    elif option_number == 3:
+        write_list_to_csv_column('REG', option_3.option_3(FILE_NAMES), folder_path=CSV_folder_path)
     elif option_number == 4:
         write_list_to_csv_column('Trans X', option_4.option_4(FILE_NAMES), folder_path=CSV_folder_path)
+    elif option_number == 5:
+        write_list_to_csv_column('trans r', option_5.option_5(FILE_NAMES), folder_path=CSV_folder_path)
+    elif option_number == 6:
+        write_list_to_csv_column('trans boob', option_6.option_6(FILE_NAMES), folder_path=CSV_folder_path)
     elif option_number == 7:
         option_7.option_7(FILE_NAMES, csv_folder_path=CSV_folder_path)
     elif option_number == 8:
@@ -101,14 +117,19 @@ def main(source, option_number, CSV_folder_path):
         option_9.option_9(FILE_NAMES, csv_folder_path=CSV_folder_path)
     elif option_number == 10:
         option_10.option_10(FILE_NAMES, csv_folder_path=CSV_folder_path)
+    elif option_number == 11:
+        option_11.option_11(FILE_NAMES, csv_folder_path=CSV_folder_path)
     else:
         raise Exception("Didn't match any options!")
 
 if __name__ == '__main__':
-    source = input('Enter path :')
+    # source = input('Enter path :')
+    source = r'/home/fatguy/Desktop/codes/fiver/image_to_csv/images'
     option_number = input('Enter option :')
-    CSV_folder_path = input('Enter the path of csv folder(to store CSVs) :') 
-    CSV_folder_path = fr'{CSV_folder_path}'
-    print(CSV_folder_path)
+    # CSV_folder_path = input('Enter the path of csv folder(to store CSVs) :')
+    # CSV_folder_path = fr'{CSV_folder_path}'
+    # print(CSV_folder_path)
+    CSV_folder_path = r'/home/fatguy/Desktop/codes/fiver/image_to_csv/CSVs'
+
 
     main(source, int(option_number), CSV_folder_path)
