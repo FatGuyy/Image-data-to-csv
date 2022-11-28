@@ -1,0 +1,21 @@
+Column G (2nd csv
+
+all options
+
+This will look thru my inventory sheet (the sample inventory sheet i sent) (I will have a full one later on) for matching Values
+
+I want to place my inventory sheet in a folder, or name it something (whatever is easiest for me to change it out
+
+It will match from the (inventory sheet) column H and column i(inventory sheet) with column G and the 2 or 3 letter in the sku from each (option 1 csv result)(example (1st Word)(1st letter 2nd word)(last 4 numbers)(date)(rb)
+example AbbyC00011162022rb )<---the rb (or whatever letters are added on the sku)
+
+If it does match, it will take the (inventory sheet) column g number for the value on the new option
+If it does not match, it will assign the next number that is not being used on column G on the inventory sheet (of the whole inventory sheet)
+
+if no matches it will search the whole inventory sheet column G for the next number not being used
+
+example so inventory sheet has values in h of
+1,2,3,5,7,8,10,111
+
+it wll place 4 for the value
+
