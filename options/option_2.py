@@ -6,6 +6,7 @@ from datetime import date
 FILE_NAMES = []
 PHOTO = "{}.jpg|{}_{}_Proof.jpg"
 VIDEO =  '{}_{}_'
+sku_list = []
 
 def _date():    # to get today's date
     today = date.today()
@@ -14,7 +15,6 @@ def _date():    # to get today's date
 
 def option_2(FILE_NAMES):
     product_list  = []
-    sku_list = []
     price = []
     Sale_price = []
     photo_list = []
@@ -60,6 +60,9 @@ def option_2(FILE_NAMES):
 
 
 def option_2_2nd_csv(FILE_NAMES):
+    '''
+    This option creates returns data for 2nd csv.
+    '''
     product_list = []
     sku_list = []
     price =[]
@@ -104,4 +107,13 @@ def option_2_2nd_csv(FILE_NAMES):
         # sku last part
         last_sku.append("rb")
 
-    return [product_list, sku_list, price, column_d, column_e, column_g, last_sku]
+    return [product_list, sku_list, price, column_d, column_e, column_f, column_g, last_sku]
+
+def option_2_3rd_csv(FILE_NAMES):
+    column_a = []
+
+    for _ in FILE_NAMES:
+        # column a
+        column_a.append(1)
+
+    return ([column_a, sku_list])

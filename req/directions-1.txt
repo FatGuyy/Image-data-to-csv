@@ -1720,6 +1720,9 @@ Abby Cross
 some option needs to have a 2nd csv made
 
 options 1,4,7,8,9,10,12,15,18,19,22,25-30
+
+13,14,16,17,20,21,23,24
+
 do not need this to be made
 
 No Headers needed
@@ -1858,6 +1861,8 @@ whater the letters are from the end of sku (1st csv) (Column B)
 3rd csv per option
 
 Nothing 1,4,7-10,12,15,18,19,22
+
+2,3,5,6,11,13,14,16,20,21,23,24,25
 
 Coulmn A
 1 is the value in all options

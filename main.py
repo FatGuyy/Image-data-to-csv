@@ -27,7 +27,13 @@ from options import (
         option_21,
         option_22,
         option_23,
-        option_24)
+        option_24,
+        option_25,
+        option_26,
+        option_27,
+        option_28,
+        option_29,
+        option_30)
 
 
 NUMBER_OF_ELEMENTS_PER_OPTION = [4]
@@ -46,6 +52,23 @@ def get_all_file_names(source_path):
         for name in files:
             FILE_NAMES.append(os.path.splitext(name)[0])  # To get file names without extension
             FILE_NAMES.sort()
+
+def write_list_to_3rd_csv(name_of_file, files, folder_path):
+    df = pd.DataFrame(list(zip(*[files[0],
+        files[1]]))).to_csv(os.path.join(folder_path,(name_of_file + '.csv')), index=False, header=False)
+    
+    print("3rd csv written")
+
+def write_list_to_2nd_csv_column(name_of_file, files, folder_path):
+    df = pd.DataFrame(list(zip(*[files[0],
+        files[1],
+        files[2],
+        files[3],
+        files[4],
+        files[5],
+        files[6],
+        files[7]]))).to_csv(os.path.join(folder_path,(name_of_file + '.csv')), index=False, header=False)
+    print("2nd csv written...")
 
 def write_list_to_csv_column(name_of_file, files, folder_path):
     df = pd.DataFrame({'product_name':files[0],
@@ -115,14 +138,22 @@ def main(source, option_number, CSV_folder_path):
         write_list_to_csv_column('xxx', option_1(FILE_NAMES), folder_path=CSV_folder_path)
     elif option_number == 2:
         write_list_to_csv_column('reg Boob', option_2.option_2(FILE_NAMES), folder_path=CSV_folder_path)
+        write_list_to_2nd_csv_column('2nd-option-2nd-csv', option_2.option_2_2nd_csv(FILE_NAMES), folder_path=CSV_folder_path)
+        write_list_to_3rd_csv('2nd-option-2nd-csv', option_2.option_2_3rd_csv(FILE_NAMES), folder_path=CSV_folder_path)
     elif option_number == 3:
         write_list_to_csv_column('REG', option_3.option_3(FILE_NAMES), folder_path=CSV_folder_path)
+        write_list_to_2nd_csv_column('3rd-option-2nd-csv', option_3.option_3_2nd_csv(FILE_NAMES), folder_path=CSV_folder_path)
+        write_list_to_3rd_csv('3rd-option-2nd-csv', option_3.option_3_3rd_csv(FILE_NAMES), folder_path=CSV_folder_path)
     elif option_number == 4:
         write_list_to_csv_column('Trans X', option_4.option_4(FILE_NAMES), folder_path=CSV_folder_path)
     elif option_number == 5:
         write_list_to_csv_column('trans r', option_5.option_5(FILE_NAMES), folder_path=CSV_folder_path)
+        write_list_to_2nd_csv_column('5th-option-2nd-csv', option_5.option_5_2nd_csv(FILE_NAMES), folder_path=CSV_folder_path)
+        write_list_to_3rd_csv('5th-option-2nd-csv', option_5.option_5_3rd_csv(FILE_NAMES), folder_path=CSV_folder_path)
     elif option_number == 6:
         write_list_to_csv_column('trans boob', option_6.option_6(FILE_NAMES), folder_path=CSV_folder_path)
+        write_list_to_2nd_csv_column('6th-option-2nd-csv', option_6.option_6_2nd_csv(FILE_NAMES), folder_path=CSV_folder_path)
+        write_list_to_3rd_csv('6th-option-2nd-csv', option_6.option_6_3rd_csv(FILE_NAMES), folder_path=CSV_folder_path)
     elif option_number == 7:
         option_7.option_7(FILE_NAMES, csv_folder_path=CSV_folder_path)
     elif option_number == 8:
@@ -133,32 +164,67 @@ def main(source, option_number, CSV_folder_path):
         option_10.option_10(FILE_NAMES, csv_folder_path=CSV_folder_path)
     elif option_number == 11:
         option_11.option_11(FILE_NAMES, csv_folder_path=CSV_folder_path)
+        write_list_to_2nd_csv_column('11th-option-2nd-csv', option_11.option_11_2nd_csv(FILE_NAMES), folder_path=CSV_folder_path)
+        write_list_to_3rd_csv('11th-option-2nd-csv', option_11.option_11_3rd_csv(FILE_NAMES), folder_path=CSV_folder_path)
     elif option_number == 12:
         option_12.option_12(FILE_NAMES, csv_folder_path=CSV_folder_path)
     elif option_number == 13:
         option_13.option_13(FILE_NAMES, csv_folder_path=CSV_folder_path)
+        write_list_to_2nd_csv_column('13th-option-2nd-csv', option_13.option_13_2nd_csv(FILE_NAMES), folder_path=CSV_folder_path)
+        write_list_to_3rd_csv('13th-option-2nd-csv', option_13.option_13_3rd_csv(FILE_NAMES), folder_path=CSV_folder_path)
     elif option_number == 14:
         option_14.option_14(FILE_NAMES, csv_folder_path=CSV_folder_path)
+        write_list_to_2nd_csv_column('14th-option-2nd-csv', option_14.option_14_2nd_csv(FILE_NAMES), folder_path=CSV_folder_path)
+        write_list_to_3rd_csv('14th-option-2nd-csv', option_14.option_14_3rd_csv(FILE_NAMES), folder_path=CSV_folder_path)
     elif option_number == 15:
         option_15.option_15(FILE_NAMES, csv_folder_path=CSV_folder_path)
     elif option_number == 16:
         option_16.option_16(FILE_NAMES, csv_folder_path=CSV_folder_path)
+        write_list_to_2nd_csv_column('16th-option-2nd-csv', option_16.option_16_2nd_csv(FILE_NAMES), folder_path=CSV_folder_path)
+        write_list_to_3rd_csv('16th-option-2nd-csv', option_16.option_16_3rd_csv(FILE_NAMES), folder_path=CSV_folder_path)
     elif option_number == 17:
         option_17.option_17(FILE_NAMES, csv_folder_path=CSV_folder_path)
+        write_list_to_2nd_csv_column('17th-option-2nd-csv', option_17.option_17_2nd_csv(FILE_NAMES), folder_path=CSV_folder_path)
     elif option_number == 18:
         option_18.option_18(FILE_NAMES, csv_folder_path=CSV_folder_path)
     elif option_number == 19:
         write_list_to_csv_column('gay xxx', option_19.option_19(FILE_NAMES), folder_path=CSV_folder_path)
     elif option_number == 20:
         write_list_to_csv_column('Gay Boob', option_20.option_20(FILE_NAMES), folder_path=CSV_folder_path)
+        write_list_to_2nd_csv_column('20th-option-2nd-csv', option_20.option_20_2nd_csv(FILE_NAMES), folder_path=CSV_folder_path)
+        write_list_to_3rd_csv('20th-option-2nd-csv', option_20.option_20_3rd_csv(FILE_NAMES), folder_path=CSV_folder_path)
     elif option_number == 21:
         write_list_to_csv_column('gay REG', option_21.option_21(FILE_NAMES), folder_path=CSV_folder_path)
+        write_list_to_2nd_csv_column('21th-option-2nd-csv', option_21.option_21_2nd_csv(FILE_NAMES), folder_path=CSV_folder_path)
+        write_list_to_3rd_csv('21th-option-2nd-csv', option_21.option_21_3rd_csv(FILE_NAMES), folder_path=CSV_folder_path)
     elif option_number == 22:
         write_list_to_csv_column('playboy xxx', option_22.option_22(FILE_NAMES), folder_path=CSV_folder_path)
     elif option_number == 23:
         write_list_to_csv_column('playboy Boob', option_23.option_23(FILE_NAMES), folder_path=CSV_folder_path)
+        write_list_to_2nd_csv_column('23rd-option-2nd-csv', option_23.option_23_2nd_csv(FILE_NAMES), folder_path=CSV_folder_path)
+        write_list_to_3rd_csv('23rd-option-2nd-csv', option_23.option_23_3rd_csv(FILE_NAMES), folder_path=CSV_folder_path)
     elif option_number == 24:
         write_list_to_csv_column('playboy REG', option_24.option_24(FILE_NAMES), folder_path=CSV_folder_path)
+        write_list_to_2nd_csv_column('24th-option-2nd-csv', option_24.option_24_2nd_csv(FILE_NAMES), folder_path=CSV_folder_path)
+        write_list_to_3rd_csv('24th-option-2nd-csv', option_24.option_24_3rd_csv(FILE_NAMES), folder_path=CSV_folder_path)
+    elif option_number==25:
+        option_25.option_25(FILE_NAMES=FILE_NAMES, csv_folder_path=CSV_folder_path)
+        write_list_to_3rd_csv('25th-option-2nd-csv', option_25.option_25_3rd_csv(FILE_NAMES), folder_path=CSV_folder_path)
+    elif option_number==26:
+        option_26.option_26(FILE_NAMES=FILE_NAMES, csv_folder_path=CSV_folder_path)
+        write_list_to_3rd_csv('26th-option-2nd-csv', option_26.option_26_3rd_csv(FILE_NAMES), folder_path=CSV_folder_path)
+    elif option_number==27:
+        option_27.option_27(FILE_NAMES=FILE_NAMES, csv_folder_path=CSV_folder_path)
+        write_list_to_3rd_csv('27th-option-2nd-csv', option_27.option_27_3rd_csv(FILE_NAMES), folder_path=CSV_folder_path)
+    elif option_number==28:
+        option_28.option_28(FILE_NAMES=FILE_NAMES, csv_folder_path=CSV_folder_path)
+        write_list_to_3rd_csv('28th-option-2nd-csv', option_28.option_28_3rd_csv(FILE_NAMES), folder_path=CSV_folder_path)
+    elif option_number==29:
+        option_29.option_29(FILE_NAMES=FILE_NAMES, csv_folder_path=CSV_folder_path)
+        write_list_to_3rd_csv('29th-option-2nd-csv', option_29.option_29_3rd_csv(FILE_NAMES), folder_path=CSV_folder_path)
+    elif option_number==30:
+        option_30.option_30(FILE_NAMES=FILE_NAMES, csv_folder_path=CSV_folder_path)
+        write_list_to_3rd_csv('30th-option-2nd-csv', option_30.option_30_3rd_csv(FILE_NAMES), folder_path=CSV_folder_path)
     else:
         raise Exception("Didn't match any options!")
 

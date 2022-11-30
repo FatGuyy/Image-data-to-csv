@@ -8,6 +8,8 @@ import pandas as pd
 FILE_NAMES = []
 PHOTO = "{}.jpg|{}_{}_Proof.jpg|{}_{}_Proof.jpg|{}_{}_Proof.jpg"
 VIDEO =  '{}_{}_'
+product_list  = []
+sku_list = []
 
 def _date():    # to get today's date
     today = date.today()
@@ -33,8 +35,6 @@ def write_list_to_csv_column(files, csv_folder_path):
 
 
 def option_17(FILE_NAMES, csv_folder_path):
-    product_list  = []
-    sku_list = []
     price = []
     Sale_price = []
     photo_list = []
@@ -90,3 +90,35 @@ def option_17(FILE_NAMES, csv_folder_path):
 
     write_list_to_csv_column([product_list, sku_list, price, Sale_price, photo_list, video_list, name_list, name_link, name2_list, name2_link],
         csv_folder_path=csv_folder_path)
+
+def option_17_2nd_csv(FILE_NAMES):
+    '''
+    This option creates returns data for 2nd csv.
+    '''
+    price =[]
+    column_d = []
+    column_e = []
+    column_f = []
+    column_g = []
+    last_sku =[]        
+    
+    for _ in FILE_NAMES:         
+        # price
+        price.append(29.95)
+
+        # column d
+        column_d.append(1)
+
+        # column e
+        column_e.append("")
+
+        # column f
+        column_f.append(38)
+
+        # column g
+        column_g.append('')
+
+        # sku last part
+        last_sku.append("rbc")
+
+    return [product_list, sku_list, price, column_d, column_e, column_f, column_g, last_sku]
