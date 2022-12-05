@@ -1,0 +1,132 @@
+Column F - (25-30)
+it will match from inventory file H with G from 1st csv made
+
+then look inventory file column I to match 1st csv and 2 or 3 letter in the sku from each (option 1 csv result)(example (1st Word)(1st letter 2nd word)(last 4 numbers)(date)(rb)
+example AbbyC00011162022rb )<---the rb (or whatever letters are added on the sku)
+
+Ok.
+Then can you explain the if matches adn not matches part?
+match means both H-G and I-sku_last should matche right?
+correct. If one matches and other one doesn't, then its not a match
+.correct. OK
+
+ok
+if it does match
+no values entered in Column F (New csv being made)
+
+If it does match
+2 values of 24 will be entered column F (New csv)
+
+so example
+for every 10 matches, I add 2 24 values.
+no
+if its 5,20, 100 etc whatever
+its only 2 24s. 
+ok, So even if its 1 match only, I add 2 24 
+
+that would be impossible. Ok but just confirming
+.
+thier would be no where to put another 24
+
+but it will never be 1 match anyways.
+Ok and where do I add these 2 24s , at start of F column ?
+
+it can be random (to the matches) or the 1st 2 matches
+
+whatever is easier for you.
+so If I find matches at row 5 and another one at 8, I can still add
+2 24s at start of csv i.e 1st and 2nd row
+
+it wont be like that
+
+example
+10 abby cross matches - here you mean total 10 matches right?
+correct. ok go ahead complete your sentece
+only 2 24's will be added to column F
+and the other 8 will be blank
+
+1-5 rows would be abby cross match
+6-20 rows would be Aubrey kate match
+
+24 would be entered in 2 rows (Column F) any where rows 1-5
+
+24 would be entered in 2 rows (Column F) any where rows 6-20
+Ok.
+same is with G column right?
+
+what do you mean?
+I have to do the same with column G as I do with F, right?
+
+different
+
+So you understand F now?.Yes, I'll comeplete this in 12 hours, If I have any doubt while making this, I'll contact you. You are available today rigth?
+
+yes I should be for the next 8-10 hrs.
+OK.
+
+------------------------------------------------
+column G -
+It will check the inventory sheet
+column H and column G
+for matches with 
+Coolumn H of new csv and cpolumn B (the letters)
+
+Column H (inventory) must match column H of new csv
+and
+Column I (inventory) must match the 2 or 3 letter in the sku (new csv)
+
+understand so far? yes
+
+ok
+if its a match (both)
+
+the new csv will enter the value of Column G (inventory)
+to all matches Column G of new csv, right?
+correct.
+
+
+**Note all the values of the matches will be the same number
+
+example
+10 abby cross matches
+all value in G will be the same number from inventory sheet
+
+10 of whatever the value is on inventory to coulmn G
+
+understand the if it matches? yes.
+
+we still need to explain if this doesnt match
+
+if it doesnt match
+
+new csv will take the next number (not being used) 
+
+check the whole inventory file column G
+
+and place the next unused number into column g of new csv
+
+example
+We are using the row of
+10 aubrey kate
+
+inventory file
+5 abby cross
+value of 1 is used in column G (inventory file)
+13 John Smith with the value of 3 in column G (inventory file)
+
+the number 2 would be place in coulumn G of new inventory file
+In all of that person
+
+underdstand? yes.
+this might take a bit of time though.
+
+----------------------------------
+wait. this column G of 2nd csv.
+
+this is same as I just expalined to you.
+Ok, so the same as 25-30 option column G
+
+yep.
+Ok I'll start the work and get it finished today.
+just be online and answer quickly if I message.
+

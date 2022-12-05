@@ -208,7 +208,9 @@ def main(source, option_number, CSV_folder_path):
         write_list_to_2nd_csv_column('24th-option-2nd-csv', option_24.option_24_2nd_csv(FILE_NAMES), folder_path=CSV_folder_path)
         write_list_to_3rd_csv('24th-option-2nd-csv', option_24.option_24_3rd_csv(FILE_NAMES), folder_path=CSV_folder_path)
     elif option_number==25:
-        option_25.option_25(FILE_NAMES=FILE_NAMES, csv_folder_path=CSV_folder_path)
+        inventory_csv_path = input("Enter the inventory sheet path")
+        # inventory_csv_path = "sample inventory sheet(1).csv"
+        option_25.option_25(FILE_NAMES=FILE_NAMES, csv_folder_path=CSV_folder_path, inventory_csv_path=inventory_csv_path)
         write_list_to_3rd_csv('25th-option-2nd-csv', option_25.option_25_3rd_csv(FILE_NAMES), folder_path=CSV_folder_path)
     elif option_number==26:
         option_26.option_26(FILE_NAMES=FILE_NAMES, csv_folder_path=CSV_folder_path)

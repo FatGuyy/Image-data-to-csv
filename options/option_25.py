@@ -3,12 +3,20 @@ This file gets the 25th option. (back to one name only)
 """
 import os
 from datetime import date
+import csv
+from itertools import groupby, count
 import pandas as pd
+from pandas import read_csv
 
+with open("sample inventory sheet(1).csv", "r") as file:
+    data = list(csv.reader(file))
 FILE_NAMES = []
 PHOTO = "https://american-autographs.com/toimages//{}.jpg|"
 VIDEO =  '{}_{}_'
 sku_list = []
+sku_letters = "xxx"
+Full_name = "Abby Cross"
+data1 = data[0]
 
 def _date():    # to get today's date
     today = date.today()
@@ -27,12 +35,42 @@ def write_list_to_csv_column(files, csv_folder_path):
 
     print("csv written...")
 
-def option_25(FILE_NAMES, csv_folder_path):
+def col_f(colData, _sku, _name, max):
+    sku_indices = []
+    name_index = []
+    ret = []
+    app_list = []
+    col_I = colData[data1[8]].head(max).tolist()
+    col_H = colData[data1[7]].head(max).tolist()
+    for idx, value in enumerate(col_I):  # type: ignore
+        if value == _sku:
+            sku_indices.append(idx)
+    for idx, value in enumerate(col_H):
+        if(value.lower() == _name.lower()):
+            name_index.append(idx)
+    match = list(set(sku_indices).intersection(name_index))
+    
+    # sorts the start and end of data
+    c = count()
+    result = [list(g) for i, g in groupby(match, key=lambda x: x-next(c))]
+    for i in result:
+        ret.append([i[0],i[-1]])
+
+    for i in range(max):
+        app_list.append('')
+
+    for i in ret:
+        for j in i:
+            app_list[j] = 24
+
+    return(app_list)
+
+def option_25(FILE_NAMES, csv_folder_path, inventory_csv_path):
+    colData = read_csv(inventory_csv_path) # read inventory
     product_list  = []
     price = []
     stock = []
     photo = []
-    column_f = []
     column_g = []
     name_list = []
 
@@ -60,15 +98,14 @@ def option_25(FILE_NAMES, csv_folder_path):
 
         # photo list
         photo.append(PHOTO.format(i))
-
-        # column f
-        column_f.append('')
         
         # column g
         column_g.append('')        
 
         # name list
         name_list.append((First_name+" "+Last_name))
+
+    column_f = col_f(colData, sku_letters, Full_name, len(product_list))
 
     write_list_to_csv_column([product_list, sku_list, price, stock, photo, column_f, column_g, name_list], csv_folder_path=csv_folder_path)
 
