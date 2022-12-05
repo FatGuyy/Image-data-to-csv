@@ -211,33 +211,33 @@ def main(source, option_number, CSV_folder_path):
         inventory_csv_path = input("Enter the inventory sheet path")
         # inventory_csv_path = "sample inventory sheet(1).csv"
         option_25.option_25(FILE_NAMES=FILE_NAMES, csv_folder_path=CSV_folder_path, inventory_csv_path=inventory_csv_path)
-        write_list_to_3rd_csv('25th-option-2nd-csv', option_25.option_25_3rd_csv(FILE_NAMES), folder_path=CSV_folder_path)
+        write_list_to_3rd_csv('25th-option-3rd-csv', option_25.option_25_3rd_csv(FILE_NAMES, inventory_csv_path=inventory_csv_path), folder_path=CSV_folder_path)
     elif option_number==26:
         option_26.option_26(FILE_NAMES=FILE_NAMES, csv_folder_path=CSV_folder_path)
-        write_list_to_3rd_csv('26th-option-2nd-csv', option_26.option_26_3rd_csv(FILE_NAMES), folder_path=CSV_folder_path)
+        write_list_to_3rd_csv('26th-option-3rd-csv', option_26.option_26_3rd_csv(FILE_NAMES), folder_path=CSV_folder_path)
     elif option_number==27:
         option_27.option_27(FILE_NAMES=FILE_NAMES, csv_folder_path=CSV_folder_path)
-        write_list_to_3rd_csv('27th-option-2nd-csv', option_27.option_27_3rd_csv(FILE_NAMES), folder_path=CSV_folder_path)
+        write_list_to_3rd_csv('27th-option-3rd-csv', option_27.option_27_3rd_csv(FILE_NAMES), folder_path=CSV_folder_path)
     elif option_number==28:
         option_28.option_28(FILE_NAMES=FILE_NAMES, csv_folder_path=CSV_folder_path)
-        write_list_to_3rd_csv('28th-option-2nd-csv', option_28.option_28_3rd_csv(FILE_NAMES), folder_path=CSV_folder_path)
+        write_list_to_3rd_csv('28th-option-3rd-csv', option_28.option_28_3rd_csv(FILE_NAMES), folder_path=CSV_folder_path)
     elif option_number==29:
         option_29.option_29(FILE_NAMES=FILE_NAMES, csv_folder_path=CSV_folder_path)
-        write_list_to_3rd_csv('29th-option-2nd-csv', option_29.option_29_3rd_csv(FILE_NAMES), folder_path=CSV_folder_path)
+        write_list_to_3rd_csv('29th-option-3rd-csv', option_29.option_29_3rd_csv(FILE_NAMES), folder_path=CSV_folder_path)
     elif option_number==30:
         option_30.option_30(FILE_NAMES=FILE_NAMES, csv_folder_path=CSV_folder_path)
-        write_list_to_3rd_csv('30th-option-2nd-csv', option_30.option_30_3rd_csv(FILE_NAMES), folder_path=CSV_folder_path)
+        write_list_to_3rd_csv('30th-option-3rd-csv', option_30.option_30_3rd_csv(FILE_NAMES), folder_path=CSV_folder_path)
     else:
         raise Exception("Didn't match any options!")
 
 if __name__ == '__main__':
-    # source = input('Enter path :')
-    source = r'/home/fatguy/Desktop/codes/fiver/image_to_csv/images'
+    source = input('Enter path :')
+    # source = r'/home/fatguy/Desktop/codes/fiver/image_to_csv/images'
     option_number = input('Enter option :')
-    # CSV_folder_path = input('Enter the path of csv folder(to store CSVs) :')
-    # CSV_folder_path = fr'{CSV_folder_path}'
+    CSV_folder_path = input('Enter the path of csv folder(to store CSVs) :')
+    CSV_folder_path = fr'{CSV_folder_path}'
     # print(CSV_folder_path)
-    CSV_folder_path = r'/home/fatguy/Desktop/codes/fiver/image_to_csv/CSVs'
+    # CSV_folder_path = r'/home/fatguy/Desktop/codes/fiver/image_to_csv/CSVs'
 
 
     main(source, int(option_number), CSV_folder_path)
