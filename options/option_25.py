@@ -14,9 +14,10 @@ FILE_NAMES = []
 PHOTO = "https://american-autographs.com/toimages//{}.jpg|"
 VIDEO =  '{}_{}_'
 sku_list = []
-sku_letters = "xxx"
+sku_letters = "RPR"
 Full_name = "Abby Cross"
 data1 = data[0]
+name_list = []
 
 def _date():    # to get today's date
     today = date.today()
@@ -119,7 +120,6 @@ def option_25(FILE_NAMES, csv_folder_path, inventory_csv_path):
     price = []
     stock = []
     photo = []
-    name_list = []
 
     product_name = "{} {} autographed Model RP 8×10 Photo RP{}"
 
@@ -148,9 +148,8 @@ def option_25(FILE_NAMES, csv_folder_path, inventory_csv_path):
         # name list
         name_list.append((First_name+" "+Last_name))
 
-    column_f = col_f(colData, sku_letters, Full_name, len(product_list))
-    column_g = col_g(colData, sku_letters, Full_name, len(product_list))
-
+    column_f = col_f(colData, sku_letters, name_list[0], len(product_list))
+    column_g = col_g(colData, sku_letters, name_list[0], len(product_list))
 
     write_list_to_csv_column([product_list, sku_list, price, stock, photo, column_f, column_g, name_list], csv_folder_path=csv_folder_path)
 
@@ -159,7 +158,7 @@ def option_25_3rd_csv(FILE_NAMES, inventory_csv_path):
     column_b = []
     sku_2 = []
     colData = read_csv(inventory_csv_path) # read inventory
-    column_f = col_f(colData, sku_letters, Full_name, len(FILE_NAMES))
+    column_f = col_f(colData, sku_letters, name_list[0], len(FILE_NAMES))
     for i in FILE_NAMES:
         file_ele = i.split('_')
         First_name = file_ele[0].title()    # This extracts the first element
