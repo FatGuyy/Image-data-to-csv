@@ -7,16 +7,14 @@ import csv
 from itertools import groupby, count
 import pandas as pd
 from pandas import read_csv
+from functools import reduce
 
-with open("sample inventory sheet(1).csv", "r") as file:
-    data = list(csv.reader(file))
 FILE_NAMES = []
 PHOTO = "https://american-autographs.com/toimages//{}.jpg|"
 VIDEO =  '{}_{}_'
 sku_list = []
 sku_letters = "RPR"
-Full_name = "Abby Cross"
-data1 = data[0]
+# Full_name = "Abby Cross"
 name_list = []
 
 def _date():    # to get today's date
@@ -38,37 +36,54 @@ def write_list_to_csv_column(files, csv_folder_path):
 
     print("csv written...")
 
-def col_f(colData, _sku, _name, max):
-    sku_indices = []
-    name_index = []
-    ret = []
+def col_f(colData, _sku, names, inventory_csv_path):
+    with open(inventory_csv_path, "r") as file:
+        data = list(csv.reader(file))
+    data1 = data[0]
     app_list = []
-    col_I = colData[data1[8]].head(max).tolist()
-    col_H = colData[data1[7]].head(max).tolist()
-    for idx, value in enumerate(col_I):  # type: ignore
-        if value == _sku:
-            sku_indices.append(idx)
-    for idx, value in enumerate(col_H):
-        if(value.lower() == _name.lower()):
-            name_index.append(idx)
-    match = list(set(sku_indices).intersection(name_index))
-
-    # sorts the start and end of data
-    c = count()
-    result = [list(g) for i, g in groupby(match, key=lambda x: x-next(c))]
-    for i in result:
-        ret.append([i[0],i[-1]])
-
-    for i in range(max):
+    ret = []
+    col_I = colData[data1[8]].tolist()
+    col_H = colData[data1[7]].tolist()
+    for _ in range(len(col_I)):
         app_list.append('')
+    names = reduce(lambda re, x: re+[x] if x not in re else re, names, []) # gets all unique elemnts of list
+    for name in names:
+        sku_index = []
+        name_index = []
+        for idx, value in enumerate(col_I):  # type: ignore
+            if value.lower() == _sku.lower():
+                sku_index.append(idx)
+        for idx, value in enumerate(col_H):
+            if(value.lower() == name.lower()):
+                name_index.append(idx)
 
-    for i in ret:
-        for j in i:
-            app_list[j] = 24
+        match = list(set(sku_index).intersection(name_index))
+        match.sort()
+        print("match - ", match)
+
+        # if len(match) > 0:
+        #     app_list[match[0]] = 24
+        #     app_list[match[1]] = 24
+
+        # sorts the start and end of data - of all matches.
+        c = count()
+        result = [list(g) for i, g in groupby(match, key=lambda x: x-next(c))]
+        for i in result:
+            ret.append([i[0],i[-1]])
+
+        print("ret - ", ret)
+
+        for i in ret:
+            for j in i:
+                app_list[j] = 24
+        print("writing app list : ", app_list)
 
     return(app_list)
 
-def col_g(colData, _sku, _name, max):
+def col_g(colData, _sku, _name, max, inventory_csv_path):
+    with open(inventory_csv_path, "r") as file:
+        data = list(csv.reader(file))
+    data1 = data[0]
     sku_indices = []
     name_index = []
     app_list = []
@@ -84,12 +99,10 @@ def col_g(colData, _sku, _name, max):
         if(value.lower() == _name.lower()):
             name_index.append(idx)
     match = list(set(sku_indices).intersection(name_index))
-    print(match)
 
     for i in range(max):
         app_list.append('')
 
-    number_to_be_appended = None
     counter = 0
     test =[]
     while counter < len(match):
@@ -99,7 +112,6 @@ def col_g(colData, _sku, _name, max):
                 counter+=1
                 break
 
-    print(test)
     for i in match:
         j = test[i]
         app_list[i] = j
@@ -111,13 +123,14 @@ def col_g(colData, _sku, _name, max):
     # for i in result:
     #     ret.append([i[0],i[-1]])
 
+    print(app_list)
     return(app_list)
-
 
 def option_25(FILE_NAMES, csv_folder_path, inventory_csv_path):
     colData = read_csv(inventory_csv_path) # read inventory
     product_list  = []
     price = []
+    column_f = []
     stock = []
     photo = []
 
@@ -145,20 +158,23 @@ def option_25(FILE_NAMES, csv_folder_path, inventory_csv_path):
         # photo list
         photo.append(PHOTO.format(i))
 
+        # column_f 
+        # column_f = col_f(colData, sku_letters, name_list[0], len(product_list),inventory_csv_path=inventory_csv_path)
+
         # name list
         name_list.append((First_name+" "+Last_name))
 
-    column_f = col_f(colData, sku_letters, name_list[0], len(product_list))
-    column_g = col_g(colData, sku_letters, name_list[0], len(product_list))
-
-    write_list_to_csv_column([product_list, sku_list, price, stock, photo, column_f, column_g, name_list], csv_folder_path=csv_folder_path)
+    column_f = col_f(colData, sku_letters, name_list,inventory_csv_path=inventory_csv_path)
+    # column_g = col_g(colData, sku_letters, name_list, len(product_list),inventory_csv_path=inventory_csv_path)
+    # print([product_list, sku_list, price, stock, photo, column_f, column_f, name_list])
+    write_list_to_csv_column([product_list, sku_list, price, stock, photo, column_f, column_f, name_list], csv_folder_path=csv_folder_path)
 
 def option_25_3rd_csv(FILE_NAMES, inventory_csv_path):
     column_a = []
     column_b = []
     sku_2 = []
     colData = read_csv(inventory_csv_path) # read inventory
-    column_f = col_f(colData, sku_letters, name_list[0], len(FILE_NAMES))
+    # column_f = col_f(colData, sku_letters, name_list[0], len(FILE_NAMES), inventory_csv_path=inventory_csv_path)
     for i in FILE_NAMES:
         file_ele = i.split('_')
         First_name = file_ele[0].title()    # This extracts the first element
@@ -172,10 +188,10 @@ def option_25_3rd_csv(FILE_NAMES, inventory_csv_path):
         # column a
         column_a.append(1)
 
-    for i in range(len(column_f)):
-        if column_f[i] == 24:
-            column_b.append(sku_2[i])
-        else:
-            column_b.append('')
+    # for i in range(len(column_f)):
+    #     if column_f[i] == 24:
+    #         column_b.append(sku_2[i])
+    #     else:
+    #         column_b.append('')
 
     return ([column_a, column_b])
