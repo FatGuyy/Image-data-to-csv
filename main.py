@@ -54,10 +54,13 @@ def get_all_file_names(source_path):
             FILE_NAMES.sort()
 
 def write_list_to_3rd_csv(name_of_file, files, folder_path):
-    df = pd.DataFrame(list(zip(*[files[0],
+    # d = dict(list(zip(*[files[0],
+        # files[1]])))
+    # pd.DataFrame(dict([ (k,pd.Series(v)) for k,v in d.items() ])).to_csv(os.path.join(folder_path,(name_of_file + '.csv')), index=False, header=False)
+    pd.DataFrame(list(zip(*[files[0],
         files[1]]))).to_csv(os.path.join(folder_path,(name_of_file + '.csv')), index=False, header=False)
     
-    print("3rd csv written")
+    print("3rd csv written...")
 
 def write_list_to_2nd_csv_column(name_of_file, files, folder_path):
     df = pd.DataFrame(list(zip(*[files[0],

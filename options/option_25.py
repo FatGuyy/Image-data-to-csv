@@ -6,6 +6,7 @@ from datetime import date
 import csv
 from itertools import groupby, count
 import pandas as pd
+import numpy as np
 from pandas import read_csv
 from functools import reduce
 
@@ -25,14 +26,15 @@ def _date():    # to get today's date
 date1 = _date()
 
 def write_list_to_csv_column(files, csv_folder_path):
-    pd.DataFrame({'product_name':files[0],
+    d = dict({'product_name':files[0],
                 'sku':files[1],
                 'price':files[2],
                 'stock':files[3],
                 'photos':files[4],
                 'column f':files[5],
                 'column g':files[6],
-                'name':files[7]}).to_csv(os.path.join(csv_folder_path,'RP porn REG.csv'),index=False)
+                'name':files[7]})
+    pd.DataFrame(dict([ (k,pd.Series(v)) for k,v in d.items() ])).to_csv(os.path.join(csv_folder_path,'RP porn REG.csv'),index=False)
 
     print("csv written...")
 
@@ -59,11 +61,7 @@ def col_f(colData, _sku, names, inventory_csv_path):
 
         match = list(set(sku_index).intersection(name_index))
         match.sort()
-        print("match - ", match)
-
-        # if len(match) > 0:
-        #     app_list[match[0]] = 24
-        #     app_list[match[1]] = 24
+        # print("match - ", match)
 
         # sorts the start and end of data - of all matches.
         c = count()
@@ -71,12 +69,12 @@ def col_f(colData, _sku, names, inventory_csv_path):
         for i in result:
             ret.append([i[0],i[-1]])
 
-        print("ret - ", ret)
+        # print("ret - ", ret)
 
         for i in ret:
             for j in i:
                 app_list[j] = 24
-        print("writing app list : ", app_list)
+        # print("writing app list : ", app_list)
 
     return(app_list)
 
@@ -174,7 +172,7 @@ def option_25_3rd_csv(FILE_NAMES, inventory_csv_path):
     column_b = []
     sku_2 = []
     colData = read_csv(inventory_csv_path) # read inventory
-    # column_f = col_f(colData, sku_letters, name_list[0], len(FILE_NAMES), inventory_csv_path=inventory_csv_path)
+    column_f = col_f(colData, sku_letters, name_list, inventory_csv_path=inventory_csv_path)
     for i in FILE_NAMES:
         file_ele = i.split('_')
         First_name = file_ele[0].title()    # This extracts the first element
@@ -188,10 +186,13 @@ def option_25_3rd_csv(FILE_NAMES, inventory_csv_path):
         # column a
         column_a.append(1)
 
-    # for i in range(len(column_f)):
-    #     if column_f[i] == 24:
-    #         column_b.append(sku_2[i])
-    #     else:
-    #         column_b.append('')
+    for i in range(len(column_f)):
+        if column_f[i] == 24:
+            try:
+                column_b.append(sku_2[i])
+            except:
+                column_b.append('')
+        else:
+            column_b.append('')
 
     return ([column_a, column_b])
