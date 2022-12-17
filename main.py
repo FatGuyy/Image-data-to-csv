@@ -63,7 +63,7 @@ def write_list_to_3rd_csv(name_of_file, files, folder_path):
     print("3rd csv written...")
 
 def write_list_to_2nd_csv_column(name_of_file, files, folder_path):
-    df = pd.DataFrame(list(zip(*[files[0],
+    pd.DataFrame(list(zip(*[files[0],
         files[1],
         files[2],
         files[3],
@@ -211,25 +211,35 @@ def main(source, option_number, CSV_folder_path):
         write_list_to_2nd_csv_column('24th-option-2nd', option_24.option_24_2nd_csv(FILE_NAMES), folder_path=CSV_folder_path)
         write_list_to_3rd_csv('24th-option-2nd', option_24.option_24_3rd_csv(FILE_NAMES), folder_path=CSV_folder_path)
     elif option_number==25:
-        inventory_csv_path = input("Enter the inventory sheet path : ")
-        # inventory_csv_path = "sample inventory sheet(1).csv"
+        # inventory_csv_path = input("Enter the inventory sheet path : ")
+        inventory_csv_path = "/home/fatguy/Desktop/codes/fiver/image_to_csv/new sample inventory.csv"
         option_25.option_25(FILE_NAMES=FILE_NAMES, csv_folder_path=CSV_folder_path, inventory_csv_path=inventory_csv_path)
         write_list_to_3rd_csv('25th-option-3rd', option_25.option_25_3rd_csv(FILE_NAMES, inventory_csv_path=inventory_csv_path), folder_path=CSV_folder_path)
     elif option_number==26:
-        option_26.option_26(FILE_NAMES=FILE_NAMES, csv_folder_path=CSV_folder_path)
-        write_list_to_3rd_csv('26th-option-3rd', option_26.option_26_3rd_csv(FILE_NAMES), folder_path=CSV_folder_path)
+        # inventory_csv_path = input("Enter the inventory sheet path : ")
+        inventory_csv_path = "/home/fatguy/Desktop/codes/fiver/image_to_csv/new sample inventory.csv"
+        option_26.option_26(FILE_NAMES=FILE_NAMES, csv_folder_path=CSV_folder_path, inventory_csv_path=inventory_csv_path)
+        write_list_to_3rd_csv('26th-option-3rd', option_26.option_26_3rd_csv(FILE_NAMES, inventory_csv_path=inventory_csv_path), folder_path=CSV_folder_path)
     elif option_number==27:
-        option_27.option_27(FILE_NAMES=FILE_NAMES, csv_folder_path=CSV_folder_path)
-        write_list_to_3rd_csv('27th-option-3rd', option_27.option_27_3rd_csv(FILE_NAMES), folder_path=CSV_folder_path)
+        # inventory_csv_path = input("Enter the inventory sheet path : ")
+        inventory_csv_path = "/home/fatguy/Desktop/codes/fiver/image_to_csv/new sample inventory.csv"
+        option_27.option_27(FILE_NAMES=FILE_NAMES, csv_folder_path=CSV_folder_path, inventory_csv_path=inventory_csv_path)
+        write_list_to_3rd_csv('27th-option-3rd', option_27.option_27_3rd_csv(FILE_NAMES, inventory_csv_path=inventory_csv_path), folder_path=CSV_folder_path)
     elif option_number==28:
-        option_28.option_28(FILE_NAMES=FILE_NAMES, csv_folder_path=CSV_folder_path)
-        write_list_to_3rd_csv('28th-option-3rd', option_28.option_28_3rd_csv(FILE_NAMES), folder_path=CSV_folder_path)
+        # inventory_csv_path = input("Enter the inventory sheet path : ")
+        inventory_csv_path = "/home/fatguy/Desktop/codes/fiver/image_to_csv/new sample inventory.csv"
+        option_28.option_28(FILE_NAMES=FILE_NAMES, csv_folder_path=CSV_folder_path, inventory_csv_path=inventory_csv_path)
+        write_list_to_3rd_csv('28th-option-3rd', option_28.option_28_3rd_csv(FILE_NAMES, inventory_csv_path=inventory_csv_path), folder_path=CSV_folder_path)
     elif option_number==29:
-        option_29.option_29(FILE_NAMES=FILE_NAMES, csv_folder_path=CSV_folder_path)
-        write_list_to_3rd_csv('29th-option-3rd', option_29.option_29_3rd_csv(FILE_NAMES), folder_path=CSV_folder_path)
+        # inventory_csv_path = input("Enter the inventory sheet path : ")
+        inventory_csv_path = "/home/fatguy/Desktop/codes/fiver/image_to_csv/new sample inventory.csv"
+        option_29.option_29(FILE_NAMES=FILE_NAMES, csv_folder_path=CSV_folder_path, inventory_csv_path=inventory_csv_path)
+        write_list_to_3rd_csv('29th-option-3rd', option_29.option_29_3rd_csv(FILE_NAMES, inventory_csv_path=inventory_csv_path), folder_path=CSV_folder_path)
     elif option_number==30:
-        option_30.option_30(FILE_NAMES=FILE_NAMES, csv_folder_path=CSV_folder_path)
-        write_list_to_3rd_csv('30th-option-3rd', option_30.option_30_3rd_csv(FILE_NAMES), folder_path=CSV_folder_path)
+        # inventory_csv_path = input("Enter the inventory sheet path : ")
+        inventory_csv_path = "/home/fatguy/Desktop/codes/fiver/image_to_csv/new sample inventory.csv"
+        option_30.option_30(FILE_NAMES=FILE_NAMES, csv_folder_path=CSV_folder_path, inventory_csv_path=inventory_csv_path)
+        write_list_to_3rd_csv('30th-option-3rd', option_30.option_30_3rd_csv(FILE_NAMES, inventory_csv_path=inventory_csv_path), folder_path=CSV_folder_path)
     else:
         raise Exception("Didn't match any options!")
 
