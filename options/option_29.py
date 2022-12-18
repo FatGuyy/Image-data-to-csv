@@ -162,7 +162,8 @@ def option_29(FILE_NAMES, csv_folder_path, inventory_csv_path):
 
         # name list
         name_list.append((First_name+" "+Last_name))
-    
+
+    global product_list_length
     product_list_length = len(product_list)
     column_f = col_f(colData, sku_letters, name_list, len(product_list),inventory_csv_path=inventory_csv_path)
     column_g = col_g(colData, sku_letters, name_list, len(product_list),inventory_csv_path=inventory_csv_path)
@@ -188,7 +189,7 @@ def option_29_3rd_csv(FILE_NAMES, inventory_csv_path):
         # column a
         column_a.append(1)
 
-    for i in range(len(column_f)):
+    for i in range(product_list_length):
         if column_f[i] == 24:
             try:
                 column_b.append(sku_2[i])
