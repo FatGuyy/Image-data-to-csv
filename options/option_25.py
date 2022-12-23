@@ -97,7 +97,7 @@ def col_g(colData, _sku, names, max, inventory_csv_path):
             if(value.lower() == _sku.lower()):
                 sku_index.append(idx)
         match = list(set(name_index).intersection(sku_index))
-        
+        nomatchSku = list(set(name_index).difference(sku_index))
         for idx, value in enumerate(col_G):
             g_index.append(idx)
         match = list(set(g_index).intersection(match))

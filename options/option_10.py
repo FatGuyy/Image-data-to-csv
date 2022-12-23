@@ -44,7 +44,7 @@ def option_10(FILE_NAMES, csv_folder_path):
     name3_list = []
     name3_link = []
 
-    product_name = "{} {} & {} {} & {} {} signed TS model 8×10 Photo -PROOF- (A{})"
+    product_name = "{} {} & {} {} & {} {} signed TS model 8x10 Photo -PROOF- (A{})"
     date1 = _date()
 
     for i in FILE_NAMES:

@@ -21,7 +21,7 @@ def option_19(FILE_NAMES):
     video_list = []
     name_list = []
     name_link = []
-    product_name = "{} {} signed Gay Porn Star 8×10 photo -PROOF- -CERTIFICATE- (A{})"
+    product_name = "{} {} signed Gay Porn Star 8x10 photo -PROOF- -CERTIFICATE- (A{})"
     date1 = _date()
 
     for i in FILE_NAMES:
