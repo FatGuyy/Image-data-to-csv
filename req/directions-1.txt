@@ -1058,7 +1058,7 @@ output csv should be named what the option is named + upload
 
 option 18 (named xxx Combo)COLUMN A is different, 
 Column B has a rxc, 
-column c,d,e change price 
+column c,d,e change price
 new i and j column
 
 A Column

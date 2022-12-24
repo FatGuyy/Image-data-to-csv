@@ -44,7 +44,7 @@ def option_17(FILE_NAMES, csv_folder_path):
     name2_list = []
     name2_link = []
 
-    product_name = "{} {} & {} {} & {} {} signed model B 8×10 Photo -PROOF- (A{})"
+    product_name = "{} {} & {} {} & {} {} signed model B 8x10 Photo -PROOF- (A{})"
     date1 = _date()
 
     for i in FILE_NAMES:
@@ -53,12 +53,12 @@ def option_17(FILE_NAMES, csv_folder_path):
         Last_name = file_ele[1].title()     # This extracts the last element
         third_name = file_ele[2].title()    # This extracts the 3rd name in the file
         fourth_name = file_ele[3].title()   # This extracts the 4th name in the file
-        fifth_name = file_ele[4].title()    # This extracts the 5th name in the file
-        sixth_name = file_ele[5].title()    # This extracts the 6th name in the file
+        # fifth_name = file_ele[4].title()    # This extracts the 5th name in the file
+        # sixth_name = file_ele[5].title()    # This extracts the 6th name in the file
         Last_4 = file_ele[-1]
 
         # product list
-        product_list.append(product_name.format(First_name, Last_name, third_name, fourth_name, fifth_name, sixth_name, Last_4))
+        product_list.append(product_name.format(First_name, Last_name, third_name, fourth_name, Last_4))
         
         #sku list
         sku = First_name + Last_name[0] + f"{Last_4}" + date1 + "rbc"  # The end of sku
@@ -71,7 +71,7 @@ def option_17(FILE_NAMES, csv_folder_path):
         Sale_price.append(74.95)
 
         # photo list
-        photo_list.append(PHOTO.format(i, First_name, Last_name, third_name, fourth_name, fifth_name, sixth_name))
+        photo_list.append(PHOTO.format(i, First_name, Last_name, third_name, fourth_name))
         
         # video list
         video_list.append('[video width="360" height="640" mp4="https://stalicali.com/wp-content/uploads/wpallimport/files/' + VIDEO.format(First_name, Last_name) + 'Signing_Autographs_Video.mp4"][/video]')
