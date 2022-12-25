@@ -48,7 +48,7 @@ def option_13(FILE_NAMES, csv_folder_path):
     name3_list = []
     name3_link = []
 
-    product_name = "{} {} & {} {} & {} {} signed model 8×10 (A{})"
+    product_name = "{} {} & {} {} & {} {} signed model 8x10 (A{})"
     date1 = _date()
 
     for i in FILE_NAMES:

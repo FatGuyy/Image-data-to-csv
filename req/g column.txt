@@ -1,0 +1,55 @@
+Column G instructions 25-30 csv 1
+
+(Column G I call the group number)
+We need to find what group (number) to put the names in
+(all same names and same last 3 letters go into 1 group number
+
+example
+1st csv
+10 rows of abby cross, rpr
+
+inventory has 1-9999 rows of Abby Cross rpr and
+its group number is (G column) is 19
+(all matching name and 3 letter code will be in same group)
+
+1st csv 
+will take that number (Group number) from inventory
+and place it into G (19) (all 10 of them, they are all in the same "group"
+
+another example
+
+1st csv
+10 rows of abby cross, rpr 
+
+inventory has 1 row of Abby Cross rpr and
+its group number is (G column) is 19
+(all matching name and 3 letter code will be in same group)
+
+1st csv 
+will take that number (Group number) from inventory and 
+place it into G (19) (all 10 of them, they are all in the same "group"
+
+
+no matches (no matching groups)
+
+example
+
+1st csv
+10 rows of abby cross, rpr
+
+inventory has 0 rows of Abby Cross rpr to match
+
+now you will look at column G of inventory file
+assign the next unused group number to the 10 rows (on 1st csv)
+
+so if the number 5 is not used on the inventory sheet
+
+5 will be assigned to all 10 rows of abby cross
+(1st csv)
+
+I think you kinda got it this time, only got confussed a little
+
+
+ 
+
+

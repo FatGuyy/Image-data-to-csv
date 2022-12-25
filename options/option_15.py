@@ -48,7 +48,7 @@ def option_15(FILE_NAMES, csv_folder_path):
     name3_list = []
     name3_link = []
 
-    product_name = "{} {} & {} {} & {} {} signed XXX 8×10 Photo -PROOF- (A{})"
+    product_name = "{} {} & {} {} & {} {} signed XXX 8x10 Photo -PROOF- (A{})"
     date1 = _date()
 
     for i in FILE_NAMES:
@@ -65,7 +65,7 @@ def option_15(FILE_NAMES, csv_folder_path):
         product_list.append(product_name.format(First_name, Last_name, third_name, fourth_name, fifth_name, sixth_name, Last_4))
         
         #sku list
-        sku = First_name + Last_name[0] + f"{Last_4}" + date1 + "rbc3"  # The end of sku
+        sku = First_name + Last_name[0] + f"{Last_4}" + date1 + "rxc3"  # The end of sku
         sku_list.append(sku)
 
          # price

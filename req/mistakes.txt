@@ -1,0 +1,212 @@
+﻿options 1,4,7,8,9,10,12,15,18,19,22,25-30
+do not need 2nd or 3 rd this to be made
+
+option 1
+this is still coming out in column A 
+8×10
+should be 8x10
+
+option 2
+
+G Column
+Sorry I forgot to tell you this should be same as instructions as 1st CSV for options 25-30 2nd sheet csv
+
+
+Option 3
+
+2nd CSV
+F Column
+I Put 23 pictures 1 name and 2 pictures different name
+13 values of 24 went to the (23 same name)
+0 values to the 2 pictures
+
+
+2nd csv
+G Column
+Sorry I forgot to tell you this should be same as instructions as 1st CSV for options 25-30 2nd sheet csv
+
+3rd csv
+column B
+only the skus from the (2nd csv) that had a value in F column should be here 
+
+option 4
+good
+
+option 5
+
+csv 2
+G Column
+Sorry I forgot to tell you this should be same as instructions as 1st CSV for options 25-30 2nd sheet csv
+
+option 6
+
+csv 2
+G Column
+Sorry I forgot to tell you this should be same as instructions as 1st CSV for options 25-30 2nd sheet csv
+
+option 7
+good
+
+option 8
+good
+
+option 9
+good
+
+option 10
+good
+
+option 11
+csv 1
+column A
+extra space in front of "signed"
+
+csv 2
+G Column
+Sorry I forgot to tell you this should be same as instructions as 1st CSV for options 25-30 2nd sheet csv
+
+option 12
+ 
+good
+
+option 13
+csv 2
+G Column
+Sorry I forgot to tell you this should be same as instructions as 1st CSV for options 25-30 2nd sheet csv
+
+option 14
+
+csv 2
+G Column
+Sorry I forgot to tell you this should be same as instructions as 1st CSV for options 25-30 2nd sheet csv
+
+
+Option 15
+
+1st csv
+column B
+sku mistake
+B Column
+B1 sku
+b2 sku generated from last 4 numbers of file name and RXC3 and the date and 1st word and 1 letter of 2nd word 
+(1st Word)(1st letter 2nd word)(last 4 numbers)(date)(rxc3)
+example AbbyC00011162022rxc3
+
+you have wrong letters at back
+
+option 16
+
+csv 2
+G Column
+Sorry I forgot to tell you this should be same as instructions as 1st CSV for options 25-30 2nd sheet csv
+
+option 17
+csv 1
+a column
+it is pulling 3 names instead of 2
+
+C coulumn
+same problem
+
+csv 2
+G Column
+Sorry I forgot to tell you this should be same as instructions as 1st CSV for options 25-30 2nd sheet csv
+
+csv 3
+doesnt work
+
+option 18
+
+csv 1
+a column
+it is pulling 3 names instead of 2
+
+C coulumn
+same problem
+
+option 19
+good
+
+option 20
+
+csv 2
+G Column
+Sorry I forgot to tell you this should be same as instructions as 1st CSV for options 25-30 2nd sheet csv
+
+option 21
+csv 2
+G Column
+Sorry I forgot to tell you this should be same as instructions as 1st CSV for options 25-30 2nd sheet csv
+
+option 22
+
+good
+
+option 23
+
+good
+
+option 24
+
+only 2 csv made
+
+the 1st and 3rd
+
+*** the 2nd
+will need
+G Column
+Sorry I forgot to tell you this should be same as instructions as 1st CSV for options 25-30 2nd sheet csv
+
+option 25
+
+1st csv
+column G
+wrong (see note i sent)
+
+3rd csv
+I just need the skus
+not thoses extra 1s and spaces
+
+option 26
+1st csv
+column G
+wrong (see note i sent)
+
+3rd csv
+nothing came out accept 1 s
+
+option 27
+1st csv
+column G
+wrong (see note i sent)
+
+3rd csv
+nothing came out accept 1 s
+
+
+option 28
+1st csv
+column G
+wrong (see note i sent)
+
+3rd csv
+nothing came out accept 1 s
+
+option 29
+1st csv
+column G
+wrong (see note i sent)
+
+3rd csv
+nothing came out accept 1 s
+
+option 30
+1st csv
+column G
+wrong (see note i sent)
+
+3rd csv
+nothing came out accept 1 s
+
+
+
