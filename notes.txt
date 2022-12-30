@@ -1,11 +1,128 @@
-Make sure you have python installed in your system first. - https://www.youtube.com/watch?v=Kn1HF3oD19c
-then install requirments - https://www.youtube.com/watch?v=6tn5ow1hImA
-(isntalling python and requirments is one time thing.)
-
-
 How to run - 
     1. Open the folder where you have all the files stored.
     2. Right click and open terminal/ command prompt.
     3. Type:
             python main.py (path-to-images-folder) (option-number)
+col_G:
+1. Get all the matching names. - DONE
+2. While making return list, just check if it is in matching list. - DONE
 
+# def col_g(colData, _sku, names, max, inventory_csv_path):
+#     with open(inventory_csv_path, "r") as file:
+#         data = list(csv.reader(file))
+#     data1 = data[0]
+#     # app_list = []
+#     colData = read_csv(inventory_csv_path)
+#     col_G = colData[data1[6]].tolist()
+#     col_H = colData[data1[7]].tolist()
+#     col_I = colData[data1[8]].tolist()
+#     match = []
+#     real_match = []
+#     match_g = []
+#     for _ in range(len(col_G)):
+#         match_g.append("")
+
+#     # get unique from list
+#     # for _ in range(len(col_I)):
+#     #     app_list.append('')
+    
+#     particular_names = reduce(lambda re, x: re+[x] if x not in re else re, names, [])
+    
+#     for name in names:
+#         name_index = []
+#         g_index = []
+#         sku_index = []
+#         for idx, value in enumerate(col_H): 
+#             if(value.lower() == name.lower()):
+#                 name_index.append(idx)
+#         for idx, value in enumerate(col_I):
+#             if(value.lower() == _sku.lower()):
+#                 sku_index.append(idx)
+#         match = list(set(name_index).intersection(sku_index))
+#         # print(match)
+#         if match not in real_match:
+#             real_match.append(match)
+#         for idx, value in enumerate(col_G):
+#             g_index.append(idx)
+#         match = list(set(g_index).intersection(match))
+
+#     # getting the matches indexes 
+#     for i in real_match:
+#         for j in i:
+#                 match.append(j)
+
+#     # Find out if the name got match.
+#     match.sort()
+#     print("Matches list - ",match)
+#     for i in match:
+#         pass
+
+
+#     return (match_g[:max])
+
+
+
+def old_g(colData, _sku, names, max, inventory_csv_path):
+    with open(inventory_csv_path, "r") as file:
+        data = list(csv.reader(file))
+    data1 = data[0]
+    app_list = []
+    colData = read_csv(inventory_csv_path)
+    col_G = colData[data1[6]].tolist()
+    col_H = colData[data1[7]].tolist()
+    col_I = colData[data1[8]].tolist()
+    match = []
+    real_match = []
+    match_g = []
+    for _ in range(len(col_G)):
+        match_g.append("")
+
+    # get unique from list
+    for _ in range(len(col_I)):
+        app_list.append('')
+    
+    particular_names = reduce(lambda re, x: re+[x] if x not in re else re, names, [])
+    
+    for name in names:
+        name_index = []
+        g_index = []
+        sku_index = []
+        for idx, value in enumerate(col_H): 
+            if(value.lower() == name.lower()):
+                name_index.append(idx)
+        for idx, value in enumerate(col_I):
+            if(value.lower() == _sku.lower()):
+                sku_index.append(idx)
+        match = list(set(name_index).intersection(sku_index))
+        # print(match)
+        if match not in real_match:
+            real_match.append(match)
+        for idx, value in enumerate(col_G):
+            g_index.append(idx)
+        match = list(set(g_index).intersection(match))
+
+        corresponding_values = [col_G[i] for i in match]
+        for index, i in enumerate(match):
+            match_g[i] = int(corresponding_values[index])
+        # *****Done with matching part*****
+        
+        number = 0
+        for index,i in enumerate(match_g):
+            if isinstance(i, int):
+                continue
+            else:
+                match_g[index] = match_g[index-1]
+
+    # getting the matches indexes 
+    for i in real_match:
+        for j in i:
+                match.append(j)
+
+    # Find out if the name got match.
+    match.sort()
+    print(match)
+    for i in match:
+        pass
+
+
+    return (match_g[:max])
