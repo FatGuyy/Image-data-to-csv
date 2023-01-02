@@ -38,6 +38,39 @@ def write_list_to_csv_column(files, csv_folder_path):
 
     print("csv written...")
 
+def new_col_G(colData, names, inventory_csv_path):
+    with open(inventory_csv_path, "r") as file:
+        data = list(csv.reader(file))
+    data1 = data[0]
+    colData = read_csv(inventory_csv_path)
+    ret_list = ["" for _ in names]
+    col_G = colData[data1[6]].tolist() # inventory numbers col
+    col_H = colData[data1[7]].tolist() # names columns
+    col_I = colData[data1[8]].tolist() # sku columns
+
+    # remove the doubles from list 
+    particular_names = reduce(lambda re, x: re+[x] if x not in re else re, names, [])
+    names_in_inventory_col_H_with_index = []
+    for name in particular_names:
+
+        # Matching the names and getting their index
+        for index,lower_col_H in enumerate(col_H):
+            if (name.lower() == lower_col_H.lower() 
+                and col_I[index] == sku_letters 
+                and name not in names_in_inventory_col_H_with_index):
+                names_in_inventory_col_H_with_index.append([name,col_G[index]])
+
+    # print(names_in_inventory_col_H_with_index)
+    # preparing return list
+    for index, _ in enumerate(names_in_inventory_col_H_with_index):
+        try:
+            ret_list[names_in_inventory_col_H_with_index[index][1]] = str(24)
+            ret_list[names_in_inventory_col_H_with_index[index+1][1]] = str(24)
+        except:
+            pass
+    # print(ret_list)
+    return ret_list
+
 def col_f(colData, _sku, names, max, inventory_csv_path):
     with open(inventory_csv_path, "r") as file:
         data = list(csv.reader(file))
@@ -55,7 +88,7 @@ def col_f(colData, _sku, names, max, inventory_csv_path):
     for name in names:
         sku_index = []
         name_index = []
-        for idx, value in enumerate(col_I):  # type: ignore
+        for idx, value in enumerate(col_I):
             if value.lower() == _sku.lower():
                 sku_index.append(idx)
         for idx, value in enumerate(col_H):
@@ -69,7 +102,7 @@ def col_f(colData, _sku, names, max, inventory_csv_path):
 
         # sorts the start and end of data - of all matches.
         c = count()
-        result = [list(g) for i, g in groupby(match, key=lambda x: x-next(c))]
+        result = [list(g) for _, g in groupby(match, key=lambda x: x-next(c))]
         for i in result:
             ret.append([i[0],i[-1]])
 
@@ -92,30 +125,26 @@ def col_g(colData, names, inventory_csv_path):
 
     # remove the doubles from list 
     particular_names = reduce(lambda re, x: re+[x] if x not in re else re, names, [])
-    names_in_inventory_col_H = []
-    matching_col_G_numbers = []
+    names_in_inventory_col_H_with_index = []
     for name in particular_names:
 
         # Matching the names and getting their index
         for index,lower_col_H in enumerate(col_H):
             if (name.lower() == lower_col_H.lower() 
-                and col_I[index] == sku_letters 
-                and name not in names_in_inventory_col_H):
-                names_in_inventory_col_H.append([name,col_G[index]])
-                matching_col_G_numbers.append(col_G[index])
+                and col_I[index].lower() == sku_letters.lower() 
+                and name not in names_in_inventory_col_H_with_index):
+                names_in_inventory_col_H_with_index.append([name,col_G[index]])
 
     # Getting random numbers to use for non matches
-    number = randint(0, col_G[-1])
-    random_non_present_numbers_in_col_G = []
-    while(len(random_non_present_numbers_in_col_G) != len(names) 
-            and number not in random_non_present_numbers_in_col_G):
-        random_non_present_numbers_in_col_G.append(number)
-        number = randint(0, col_G[-1])
+    non_present_numbers_in_col_G = []
+    for i in range(1, max(col_G)+10):
+        if i not in col_G:
+            non_present_numbers_in_col_G.append(i)
 
     # Creating the return list by checking the matches and non matches
     for index,name in enumerate(names):
         number = 0
-        for i in names_in_inventory_col_H:
+        for i in names_in_inventory_col_H_with_index:
             if name == i[0]:
                 ret_list[index] = i[1]
             else:
@@ -124,11 +153,12 @@ def col_g(colData, names, inventory_csv_path):
                 while current_name == name:
                     try:
                         current_name = names[index + another_number]
-                        ret_list[index + another_number +1] = random_non_present_numbers_in_col_G[number]
+                        ret_list[index + another_number ] = non_present_numbers_in_col_G[number]
                         another_number += 1
                     except:
                         break
-                number += 1
+                # number += 1
+
     return (ret_list)
 
 def option_25(FILE_NAMES, csv_folder_path, inventory_csv_path):
@@ -170,6 +200,7 @@ def option_25(FILE_NAMES, csv_folder_path, inventory_csv_path):
     product_list_length = int(len(product_list))
     column_f = col_f(colData, sku_letters, name_list, len(product_list),inventory_csv_path=inventory_csv_path)
     column_g = col_g(colData, name_list, inventory_csv_path=inventory_csv_path)
+    # column_f = new_col_G(colData, name_list, inventory_csv_path=inventory_csv_path)
 
     write_list_to_csv_column([product_list, sku_list, price, stock, photo, column_f, column_g, name_list], csv_folder_path=csv_folder_path)
 

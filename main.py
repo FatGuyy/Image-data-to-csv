@@ -252,7 +252,7 @@ def main(source, option_number, CSV_folder_path):
         write_list_to_3rd_csv('24th-option-2nd', option_24.option_24_3rd_csv(FILE_NAMES), folder_path=CSV_folder_path)
     elif option_number==25:
         # inventory_csv_path = input("Enter the inventory sheet path : ")
-        inventory_csv_path = "/home/fatguy/Desktop/codes/fiver/image_to_csv/new sample inventory.csv"
+        inventory_csv_path = "/home/fatguy/Desktop/codes/fiver/image_to_csv/inventory-1.csv"
         option_25.option_25(FILE_NAMES=FILE_NAMES, csv_folder_path=CSV_folder_path, inventory_csv_path=inventory_csv_path)
         write_list_to_3rd_csv('25th-option-3rd', option_25.option_25_3rd_csv(FILE_NAMES, inventory_csv_path=inventory_csv_path), folder_path=CSV_folder_path)
     elif option_number==26:
@@ -286,7 +286,7 @@ def main(source, option_number, CSV_folder_path):
 
 if __name__ == '__main__':
     # source = input('Enter path :')
-    source = r'/home/fatguy/Desktop/codes/fiver/image_to_csv/iamges2'
+    source = r'/home/fatguy/Desktop/codes/fiver/image_to_csv/client-images'
     option_number = input('Enter option :')
     # CSV_folder_path = input('Enter the path of csv folder(to store CSVs) :')
     # CSV_folder_path = fr'{CSV_folder_path}'
