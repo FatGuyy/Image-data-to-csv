@@ -2,13 +2,12 @@
 This file gets the 25th option. (back to one name only)
 """
 import os
-from random import randint
-from datetime import date
 import csv
-from itertools import groupby, count
 import pandas as pd
+from datetime import date
 from pandas import read_csv
 from functools import reduce
+from itertools import groupby, count
 
 FILE_NAMES = []
 PHOTO = "https://american-autographs.com/toimages//{}.jpg|"
@@ -221,7 +220,7 @@ def option_25_3rd_csv(FILE_NAMES, inventory_csv_path):
         sku_2.append(sku)
 
         # column a
-        column_a.append(1)
+        column_a.append('')
 
     for i in range(product_list_length):
         if column_f[i] == 24:
@@ -232,4 +231,4 @@ def option_25_3rd_csv(FILE_NAMES, inventory_csv_path):
         else:
             column_b.append("")
 
-    return [column_a, column_b[:product_list_length]]
+    return [column_b[:product_list_length], column_a]

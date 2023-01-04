@@ -6,7 +6,7 @@ from datetime import date
 import pandas as pd
 
 FILE_NAMES = []
-PHOTO = "{}.jpg|{}_{}_Proof.jpg|{}_{}_Proof.jpg|{}_{}_Proof.jpg"
+PHOTO = "{}.jpg|{}_{}_Proof.jpg|{}_{}_Proof.jpg"
 VIDEO =  '{}_{}_'
 
 def _date():    # to get today's date
@@ -44,7 +44,7 @@ def option_18(FILE_NAMES, csv_folder_path):
     name2_list = []
     name2_link = []
 
-    product_name = "{} {} & {} {} & {} {} signed XXX 8x10 Photo -PROOF- (A{})"
+    product_name = "{} {} & {} {} signed XXX 8x10 Photo -PROOF- (A{})"
     date1 = _date()
 
     for i in FILE_NAMES:

@@ -4,13 +4,13 @@ do not need 2nd or 3 rd this to be made
 option 1
 this is still coming out in column A 
 8×10
-should be 8x10
+should be 8x10 - DONE
 
 option 2
 
 G Column
 Sorry I forgot to tell you this should be same as instructions as 1st CSV for options 25-30 2nd sheet csv
-
+-DONE
 
 Option 3
 
@@ -19,15 +19,17 @@ F Column
 I Put 23 pictures 1 name and 2 pictures different name
 13 values of 24 went to the (23 same name)
 0 values to the 2 pictures
-
+-DONE
 
 2nd csv
 G Column
 Sorry I forgot to tell you this should be same as instructions as 1st CSV for options 25-30 2nd sheet csv
+-DONE
 
 3rd csv
 column B
 only the skus from the (2nd csv) that had a value in F column should be here 
+-DONE
 
 option 4
 good
@@ -37,12 +39,14 @@ option 5
 csv 2
 G Column
 Sorry I forgot to tell you this should be same as instructions as 1st CSV for options 25-30 2nd sheet csv
+-DONE
 
 option 6
 
 csv 2
 G Column
 Sorry I forgot to tell you this should be same as instructions as 1st CSV for options 25-30 2nd sheet csv
+-DONE
 
 option 7
 good
@@ -60,10 +64,12 @@ option 11
 csv 1
 column A
 extra space in front of "signed"
+-DONE
 
 csv 2
 G Column
 Sorry I forgot to tell you this should be same as instructions as 1st CSV for options 25-30 2nd sheet csv
+-DONE
 
 option 12
  
@@ -73,13 +79,14 @@ option 13
 csv 2
 G Column
 Sorry I forgot to tell you this should be same as instructions as 1st CSV for options 25-30 2nd sheet csv
+-DONE
 
 option 14
 
 csv 2
 G Column
 Sorry I forgot to tell you this should be same as instructions as 1st CSV for options 25-30 2nd sheet csv
-
+-DONE
 
 Option 15
 
@@ -93,36 +100,43 @@ b2 sku generated from last 4 numbers of file name and RXC3 and the date and 1st 
 example AbbyC00011162022rxc3
 
 you have wrong letters at back
+-DONE
 
 option 16
 
 csv 2
 G Column
 Sorry I forgot to tell you this should be same as instructions as 1st CSV for options 25-30 2nd sheet csv
+-DONE
 
 option 17
 csv 1
 a column
 it is pulling 3 names instead of 2
+-DONE
 
 C coulumn
 same problem
+-DONE
 
 csv 2
 G Column
 Sorry I forgot to tell you this should be same as instructions as 1st CSV for options 25-30 2nd sheet csv
+-DONE
 
 csv 3
-doesnt work
+doesnt work - there is no 3rd csv to 17th
 
 option 18
 
 csv 1
 a column
 it is pulling 3 names instead of 2
+-DONE
 
 C coulumn
 same problem
+-DONE
 
 option 19
 good
@@ -132,11 +146,13 @@ option 20
 csv 2
 G Column
 Sorry I forgot to tell you this should be same as instructions as 1st CSV for options 25-30 2nd sheet csv
+-DONE
 
 option 21
 csv 2
 G Column
 Sorry I forgot to tell you this should be same as instructions as 1st CSV for options 25-30 2nd sheet csv
+-DONE
 
 option 22
 
@@ -149,13 +165,13 @@ good
 option 24
 
 only 2 csv made
-
 the 1st and 3rd
 
 *** the 2nd
 will need
 G Column
 Sorry I forgot to tell you this should be same as instructions as 1st CSV for options 25-30 2nd sheet csv
+-DONE
 
 option 25
 
@@ -166,47 +182,56 @@ wrong (see note i sent)
 3rd csv
 I just need the skus
 not thoses extra 1s and spaces
+-DONE
 
 option 26
 1st csv
 column G
 wrong (see note i sent)
+-DONE
 
 3rd csv
 nothing came out accept 1 s
+-DONE
 
 option 27
 1st csv
 column G
 wrong (see note i sent)
+-DONE
 
 3rd csv
 nothing came out accept 1 s
-
+-DONE
 
 option 28
 1st csv
 column G
 wrong (see note i sent)
+-DONE
 
 3rd csv
 nothing came out accept 1 s
+-DONE
 
 option 29
 1st csv
 column G
 wrong (see note i sent)
+-DONE
 
 3rd csv
 nothing came out accept 1 s
+-DONE
 
 option 30
 1st csv
 column G
 wrong (see note i sent)
+-DONE
 
 3rd csv
 nothing came out accept 1 s
-
+-DONE
 
 

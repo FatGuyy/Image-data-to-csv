@@ -2,14 +2,20 @@
 This file gets the 13th option.
 """
 import os
-from datetime import date
+import csv
 import pandas as pd
+from datetime import date
+from pandas import read_csv
+from functools import reduce
 
 FILE_NAMES = []
 PHOTO = "{}.jpg|{}_{}_Proof.jpg|{}_{}_Proof.jpg|{}_{}_Proof.jpg"
 VIDEO =  '{}_{}_'
 product_list  = []
 sku_list = []
+sku_letters = "rc3"
+name_list = []
+
 
 def _date():    # to get today's date
     today = date.today()
@@ -35,13 +41,60 @@ def write_list_to_csv_column(files, csv_folder_path):
 
     print("csv written...")
 
+def col_g(colData, names, inventory_csv_path):
+    with open(inventory_csv_path, "r") as file:
+        data = list(csv.reader(file))
+    data1 = data[0]
+    colData = read_csv(inventory_csv_path)
+    ret_list = ["" for _ in names]
+    col_G = colData[data1[6]].tolist() # inventory numbers col
+    col_H = colData[data1[7]].tolist() # names columns
+    col_I = colData[data1[8]].tolist() # sku columns
+
+    # remove the doubles from list 
+    particular_names = reduce(lambda re, x: re+[x] if x not in re else re, names, [])
+    names_in_inventory_col_H_with_index = []
+    for name in particular_names:
+
+        # Matching the names and getting their index
+        for index,lower_col_H in enumerate(col_H):
+            if (name.lower() == lower_col_H.lower() 
+                and col_I[index].lower() == sku_letters.lower() 
+                and name not in names_in_inventory_col_H_with_index):
+                names_in_inventory_col_H_with_index.append([name,col_G[index]])
+
+    # Getting random numbers to use for non matches
+    non_present_numbers_in_col_G = []
+    for i in range(1, max(col_G)+10):
+        if i not in col_G:
+            non_present_numbers_in_col_G.append(i)
+
+    # Creating the return list by checking the matches and non matches
+    for index,name in enumerate(names):
+        number = 0
+        for i in names_in_inventory_col_H_with_index:
+            if name == i[0]:
+                ret_list[index] = i[1]
+            else:
+                another_number = 0
+                current_name = names[index]
+                while current_name == name:
+                    try:
+                        current_name = names[index + another_number]
+                        ret_list[index + another_number ] = non_present_numbers_in_col_G[number]
+                        another_number += 1
+                    except:
+                        break
+                # number += 1
+    # print(ret_list)
+    return (ret_list)
 
 def option_13(FILE_NAMES, csv_folder_path):
     price = []
     Sale_price = []
     photo_list = []
     video_list = []
-    name_list = []
+    global name_list
     name_link = []
     name2_list = []
     name2_link = []
@@ -101,15 +154,15 @@ def option_13(FILE_NAMES, csv_folder_path):
     write_list_to_csv_column([product_list, sku_list, price, Sale_price, photo_list, video_list, name_list, name_link, name2_list, name2_link, name3_list, name3_link],
         csv_folder_path=csv_folder_path)
 
-def option_13_2nd_csv(FILE_NAMES):
+def option_13_2nd_csv(FILE_NAMES, inventory_csv_path):
     '''
     This option creates returns data for 2nd csv.
     '''
+    colData = read_csv(inventory_csv_path) # read inventory
     price =[]
     column_d = []
     column_e = []
     column_f = []
-    column_g = []
     last_sku =[]        
     
     for _ in FILE_NAMES:         
@@ -126,11 +179,12 @@ def option_13_2nd_csv(FILE_NAMES):
         column_f.append(19)
 
         # column g
-        column_g.append('')
+        # column_g.append('')
 
         # sku last part
         last_sku.append("rc3")
 
+    column_g = col_g(colData, name_list, inventory_csv_path=inventory_csv_path)
     return [product_list, sku_list, price, column_d, column_e, column_f, column_g, last_sku]
 
 def option_13_3rd_csv(FILE_NAMES):

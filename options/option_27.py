@@ -79,58 +79,54 @@ def col_f(colData, _sku, names, max, inventory_csv_path):
 
     return(app_list[:max])
 
-def col_g(colData, _sku, names, max, inventory_csv_path):
+def col_g(colData, names, inventory_csv_path):
     with open(inventory_csv_path, "r") as file:
         data = list(csv.reader(file))
     data1 = data[0]
     colData = read_csv(inventory_csv_path)
-    col_G = colData[data1[6]].tolist()
-    col_H = colData[data1[7]].tolist()
-    col_I = colData[data1[8]].tolist()
-    name_index = []
-    g_index = []
-    sku_index = []
-    for name in names:
-        for idx, value in enumerate(col_H): 
-            if(value.lower() == name.lower()):
-                name_index.append(idx)
-        for idx, value in enumerate(col_I):
-            if(value.lower() == _sku.lower()):
-                sku_index.append(idx)
-        match = list(set(name_index).intersection(sku_index))
-        
-        for idx, value in enumerate(col_G):
-            g_index.append(idx)
-        match = list(set(g_index).intersection(match))
-        # print(match)
+    ret_list = ["" for _ in names]
+    col_G = colData[data1[6]].tolist() # inventory numbers col
+    col_H = colData[data1[7]].tolist() # names columns
+    col_I = colData[data1[8]].tolist() # sku columns
+
+    # remove the doubles from list 
+    particular_names = reduce(lambda re, x: re+[x] if x not in re else re, names, [])
     
-        match_g = []
-        for _ in range(len(col_G)):
-            match_g.append("")
-        corresponding_values = [col_G[i] for i in match]
-        for index, i in enumerate(match):
-            match_g[i] = int(corresponding_values[index])
-        # print(match_g)
-        
-        # getting the not in col G numbers
-        col_G.sort()
-        b = [x for x in range(col_G[0], col_G[-1] + 1)]
-        a = set(col_G)
-        not_in_col_G = list(a ^ set(b))
-    
-        counter_for_match_G = 0
-        for i in not_in_col_G:
-            if isinstance(match_g[counter_for_match_G], int):
-                counter_for_match_G += 1
-                if counter_for_match_G >= len(match_g):
-                    break 
+    names_in_inventory_col_H_with_index = []
+    for name in particular_names:
+
+        # Matching the names and getting their index
+        for index,lower_col_H in enumerate(col_H):
+            if (name.lower() == lower_col_H.lower() 
+                and col_I[index].lower() == sku_letters.lower() 
+                and name not in names_in_inventory_col_H_with_index):
+                names_in_inventory_col_H_with_index.append([name,col_G[index]])
+
+    # Getting random numbers to use for non matches
+    non_present_numbers_in_col_G = []
+    for i in range(1, max(col_G)+10):
+        if i not in col_G:
+            non_present_numbers_in_col_G.append(i)
+
+    # Creating the return list by checking the matches and non matches
+    for index,name in enumerate(names):
+        number = 0
+        for i in names_in_inventory_col_H_with_index:
+            if name == i[0]:
+                ret_list[index] = i[1]
             else:
-                match_g[counter_for_match_G] = i
-                counter_for_match_G += 1
-                if counter_for_match_G >= len(match_g):
-                    break
-                
-        return (match_g[:max])
+                another_number = 0
+                current_name = names[index]
+                while current_name == name:
+                    try:
+                        current_name = names[index + another_number]
+                        ret_list[index + another_number ] = non_present_numbers_in_col_G[number]
+                        another_number += 1
+                    except:
+                        break
+                # number += 1
+    # print(ret_list)
+    return (ret_list)
 
 
 def option_27(FILE_NAMES, csv_folder_path, inventory_csv_path):
@@ -170,7 +166,7 @@ def option_27(FILE_NAMES, csv_folder_path, inventory_csv_path):
     global product_list_length
     product_list_length = len(product_list)
     column_f = col_f(colData, sku_letters, name_list, len(product_list),inventory_csv_path=inventory_csv_path)
-    column_g = col_g(colData, sku_letters, name_list, len(product_list),inventory_csv_path=inventory_csv_path)
+    column_g = col_g(colData, name_list,inventory_csv_path=inventory_csv_path)
 
     write_list_to_csv_column([product_list, sku_list, price, stock, photo, column_f, column_g, name_list], csv_folder_path=csv_folder_path)
 
