@@ -47,6 +47,9 @@ def col_g(colData, names, inventory_csv_path):
             non_present_numbers_in_col_G.append(i)
 
     # Creating the return list by checking the matches and non matches
+    if len(names_in_inventory_col_H_with_index) == 0:
+        names_in_inventory_col_H_with_index = [[names[0],non_present_numbers_in_col_G[0]]]
+        non_present_numbers_in_col_G.remove(non_present_numbers_in_col_G[0])
     for index,name in enumerate(names):
         number = 0
         for i in names_in_inventory_col_H_with_index:

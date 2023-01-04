@@ -107,13 +107,17 @@ def col_g(colData, names, inventory_csv_path):
             non_present_numbers_in_col_G.append(i)
 
     # Creating the return list by checking the matches and non matches
+    if len(names_in_inventory_col_H_with_index) == 0:
+        names_in_inventory_col_H_with_index = [[names[0],non_present_numbers_in_col_G[0]]]
+        non_present_numbers_in_col_G.remove(non_present_numbers_in_col_G[0])
     for index,name in enumerate(names):
-        number = 0
+        # current_name = names[index]
         for i in names_in_inventory_col_H_with_index:
+            number = 0
+            another_number = 0
             if name == i[0]:
                 ret_list[index] = i[1]
             else:
-                another_number = 0
                 current_name = names[index]
                 while current_name == name:
                     try:
@@ -123,7 +127,17 @@ def col_g(colData, names, inventory_csv_path):
                     except:
                         break
                 # number += 1
-    # print(ret_list)
+        # else:
+        #     while current_name == name:
+        #         try:
+        #             current_name = names[index + another_number]
+        #             ret_list[index + another_number] = non_present_numbers_in_col_G[number]
+        #             another_number += 1
+        #         except:
+        #             break
+        #     continue
+        #     # number += 1
+    print(ret_list)
     return (ret_list)
 
 def option_26(FILE_NAMES, csv_folder_path, inventory_csv_path):
