@@ -69,7 +69,6 @@ def col_g(colData, names, inventory_csv_path):
     # print(ret_list)
     return (ret_list)
 
-
 def option_2(FILE_NAMES, inventory_csv_path):
     colData = read_csv(inventory_csv_path) # read inventory
     product_list  = []
@@ -116,7 +115,6 @@ def option_2(FILE_NAMES, inventory_csv_path):
 
     column_g = col_g(colData, name_list, inventory_csv_path=inventory_csv_path)
     return [product_list, sku_list, price, Sale_price, photo_list, video_list, column_g, name_link]
-
 
 def option_2_2nd_csv(FILE_NAMES):
     '''
