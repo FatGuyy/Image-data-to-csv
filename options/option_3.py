@@ -96,7 +96,7 @@ def option_3(FILE_NAMES):
     name_list = []
     name_link = []
 
-    product_name = "{} {} signed model 8×10 Photo -PROOF- -CERTIFICATE-  (A{})"
+    product_name = "{} {} signed model 8x10 Photo -PROOF- -CERTIFICATE- (A{})"
     date1 = _date()
 
     for i in FILE_NAMES:
@@ -148,7 +148,7 @@ def option_3_2nd_csv(FILE_NAMES, inventory_csv_path):
     name_list = []
 
 
-    product_name = "{} {} signed model 8x10 Photo -PROOF- -CERTIFICATE-  (A{})"    
+    product_name = "{} {} signed model 8x10 Photo -PROOF- -CERTIFICATE- (A{})"    
     date1 = _date()
     
     for i in FILE_NAMES:

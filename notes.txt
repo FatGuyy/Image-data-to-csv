@@ -126,3 +126,40 @@ def old_g(colData, _sku, names, max, inventory_csv_path):
 
 
     return (match_g[:max])
+
+
+
+
+
+def new_col_G(colData, names, inventory_csv_path):
+    with open(inventory_csv_path, "r") as file:
+        data = list(csv.reader(file))
+    data1 = data[0]
+    colData = read_csv(inventory_csv_path)
+    ret_list = ["" for _ in names]
+    col_G = colData[data1[6]].tolist() # inventory numbers col
+    col_H = colData[data1[7]].tolist() # names columns
+    col_I = colData[data1[8]].tolist() # sku columns
+
+    # remove the doubles from list 
+    particular_names = reduce(lambda re, x: re+[x] if x not in re else re, names, [])
+    names_in_inventory_col_H_with_index = []
+    for name in particular_names:
+
+        # Matching the names and getting their index
+        for index,lower_col_H in enumerate(col_H):
+            if (name.lower() == lower_col_H.lower() 
+                and col_I[index] == sku_letters 
+                and name not in names_in_inventory_col_H_with_index):
+                names_in_inventory_col_H_with_index.append([name,col_G[index]])
+
+    # print(names_in_inventory_col_H_with_index)
+    # preparing return list
+    for index, _ in enumerate(names_in_inventory_col_H_with_index):
+        try:
+            ret_list[names_in_inventory_col_H_with_index[index][1]] = str(24)
+            ret_list[names_in_inventory_col_H_with_index[index+1][1]] = str(24)
+        except:
+            pass
+    # print(ret_list)
+    return ret_list

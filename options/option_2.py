@@ -133,7 +133,7 @@ def option_2_2nd_csv(FILE_NAMES):
     last_sku =[]
 
         
-    product_name = "{} {} signed model B 8×10 Photo -PROOF- -CERTIFICATE-  (A{})"
+    product_name = "{} {} signed model B 8x10 Photo -PROOF- -CERTIFICATE- (A{})"
     date1 = _date()
     
     for i in FILE_NAMES:

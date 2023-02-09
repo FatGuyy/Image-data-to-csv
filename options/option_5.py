@@ -127,7 +127,7 @@ def option_5_2nd_csv(FILE_NAMES, inventory_csv_path):
     last_sku =[]
     name_list = []
 
-    product_name = "{} {} signed TS model 8×10 Photo -PROOF- -CERTIFICATE- (A{})"    
+    product_name = "{} {} signed TS model 8x10 Photo -PROOF- -CERTIFICATE- (A{})"    
     date1 = _date()
     
     for i in FILE_NAMES:

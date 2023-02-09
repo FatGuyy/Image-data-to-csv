@@ -1,0 +1,88 @@
+Didn't get -
+
+option 2
+1st csv
+Column G
+Suppose to be the name, not numbers
+
+option 3
+2nd csv
+looks good accept
+when it finds a new number value in column g (no matches on inventory)
+it doesnt add values to column F
+It should keep the same rule for column F, no matter what happens in column g
+
+
+option 17
+no 3rd csv
+
+mistakes
+
+------------------------------------------------------------
+not problem.
+
+option 16
+1st csv
+column a
+its doing 3 names instead of 2
+column E
+same problem
+------------------------------------------------------------
+solved
+
+column A (All)
+1st,2nd csvs
+
+
+thier is an extra space after -CERTIFICATE-
+or thier is no space on some
+its suppose to have one space
+
+
+2nd csv
+column a
+8×10 problem again
+
+option 3
+1st csv
+8×10 problem again
+
+option 5
+2nd csv
+8×10
+
+option 25
+column a
+8×10
+
+option 24
+2nd csv made is actually the 3rd
+the 2nd (that is suppose to be made, is not made at all)
+------------------------------------------------------------
+
+option 7
+should have 2, 3 csv
+I think I made a mistake and said no
+2,3 csvs
+made exact same as option 6
+
+option 8
+should have 2, 3 csv
+I think I made a mistake and said no
+2,3 csvs
+made exact same as option 6
+
+option 10
+should have 2, 3 csv
+I think I made a mistake and said no
+2,3 csvs
+made exact same as option 6
+
+
+2nd csv
+column A
+same problem
+
+option 25-30
+Column F
+not placing a value for non matches
