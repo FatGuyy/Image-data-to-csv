@@ -35,57 +35,58 @@ def write_list_to_csv_column(files, csv_folder_path):
     print("csv written...")
 
 
-def col_g(colData, names, inventory_csv_path):
-    with open(inventory_csv_path, "r") as file:
-        data = list(csv.reader(file))
-    data1 = data[0]
-    colData = read_csv(inventory_csv_path)
+def col_g(col_G, col_H, col_I, names):
     ret_list = ["" for _ in names]
-    col_G = colData[data1[6]].tolist() # inventory numbers col
-    col_H = colData[data1[7]].tolist() # names columns
-    col_I = colData[data1[8]].tolist() # sku columns
 
-    # remove the doubles from list 
+    # remove the doubles from list
     particular_names = reduce(lambda re, x: re+[x] if x not in re else re, names, [])
-    names_in_inventory_col_H_with_index = []
-    for name in particular_names:
-
-        # Matching the names and getting their index
-        for index,lower_col_H in enumerate(col_H):
-            if (name.lower() == lower_col_H.lower() 
-                and col_I[index].lower() == sku_letters.lower() 
-                and name not in names_in_inventory_col_H_with_index):
-                names_in_inventory_col_H_with_index.append([name,col_G[index]])
 
     # Getting random numbers to use for non matches
     non_present_numbers_in_col_G = []
     for i in range(1, max(col_G)+10):
         if i not in col_G:
             non_present_numbers_in_col_G.append(i)
+        if len(non_present_numbers_in_col_G) == len(particular_names):
+            break
 
+    matching_names = []
+    names_in_inventory_col_H_with_index = []
+    for name in particular_names:
+        # Getting matching names and their index
+        for index,lower_col_H in enumerate(col_H):
+            if (name.lower() == lower_col_H.lower() 
+                and col_I[index].lower() == sku_letters.lower()): # and name not in names_in_inventory_col_H_with_index 
+                names_in_inventory_col_H_with_index.append([name,col_G[index]])
+                matching_names.append(name)
+
+    # Getting non matching name & index
+    for i in particular_names:
+        if i in matching_names:
+            particular_names.remove(i)
+
+    for name in particular_names:
+        names_in_inventory_col_H_with_index.append([name, non_present_numbers_in_col_G[0]])
+        non_present_numbers_in_col_G.pop(0)
+
+    # remvoing duplicates from names_in_inventory_col_H_with_index
+    temp_list = []
+    for i in names_in_inventory_col_H_with_index:
+        if i not in temp_list:
+            temp_list.append(i)
+    names_in_inventory_col_H_with_index = temp_list
+    
     # Creating the return list by checking the matches and non matches
     if len(names_in_inventory_col_H_with_index) == 0:
         names_in_inventory_col_H_with_index = [[names[0],non_present_numbers_in_col_G[0]]]
         non_present_numbers_in_col_G.remove(non_present_numbers_in_col_G[0])
+
+    # Making the return list
     for index,name in enumerate(names):
-        number = 0
         for i in names_in_inventory_col_H_with_index:
             if name == i[0]:
                 ret_list[index] = i[1]
-            else:
-                another_number = 0
-                current_name = names[index]
-                while current_name == name:
-                    try:
-                        current_name = names[index + another_number]
-                        ret_list[index + another_number ] = non_present_numbers_in_col_G[number]
-                        another_number += 1
-                    except:
-                        break
-                # number += 1
-    # print(ret_list)
-    return (ret_list)
 
+    return (ret_list)
 
 def option_10(FILE_NAMES, csv_folder_path):
     product_list  = []
@@ -159,14 +160,19 @@ def option_10_2nd_csv(FILE_NAMES, inventory_csv_path):
     '''
     This option creates returns data for 2nd csv.
     '''
+    with open(inventory_csv_path, "r") as file:
+        data = list(csv.reader(file))
     colData = read_csv(inventory_csv_path) # read inventory
+    data1 = data[0]
+    col_G = colData[data1[6]].tolist() # inventory numbers col
+    col_H = colData[data1[7]].tolist() # names columns
+    col_I = colData[data1[8]].tolist() # sku columns
     product_list = []
     sku_list = []
     price =[]
     column_d = []
     column_e = []
     column_f = []
-    # column_g = []
     last_sku =[]
     name_list = []
 
@@ -204,7 +210,7 @@ def option_10_2nd_csv(FILE_NAMES, inventory_csv_path):
         # name-list part
         name_list.append((First_name+" "+Last_name))
 
-    column_g = col_g(colData, name_list, inventory_csv_path=inventory_csv_path)
+    column_g = col_g(col_G, col_H, col_I, name_list)
     return [product_list, sku_list, price, column_d, column_e, column_f, column_g, last_sku]
 
 def option_10_3rd_csv(FILE_NAMES):
