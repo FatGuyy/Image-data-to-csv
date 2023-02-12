@@ -50,15 +50,12 @@ def col_f(col_H, col_I, names):
                 and col_I[index].lower() == sku_letters.lower()): # and name not in names_in_inventory_col_H_with_index 
                 matching_names.append(name)
 
-    # print("mathces - ", matching_names)
     # Getting non matching names
     matching_names = list(set(matching_names))
     for name in particular_names:
         if name in matching_names:
             particular_names.remove(name)
 
-    # print(particular_names)
-    # print(col_H)
     result = []
     for i, name1 in enumerate(particular_names):
         for j, name2 in enumerate(names):
@@ -66,13 +63,11 @@ def col_f(col_H, col_I, names):
                 result.append(j)
                 break
 
-    # print(result)
     for i, _ in enumerate(ret_list):
         for j in result:
             if i == j:
                 ret_list[i] = 24 # type: ignore
                 ret_list[i+1] = 24 # type: ignore
-    print(ret_list)
     return ret_list
 
 def col_g(col_G, col_H, col_I, names):
@@ -114,20 +109,27 @@ def col_g(col_G, col_H, col_I, names):
         if i not in temp_list:
             temp_list.append(i)
     names_in_inventory_col_H_with_index = temp_list
-    
+
     # Creating the return list by checking the matches and non matches
     if len(names_in_inventory_col_H_with_index) == 0:
         names_in_inventory_col_H_with_index = [[names[0],non_present_numbers_in_col_G[0]]]
         non_present_numbers_in_col_G.remove(non_present_numbers_in_col_G[0])
 
+    namex = []
+    result = []
+    for sublist in names_in_inventory_col_H_with_index:
+        name = sublist[0]
+        if name not in namex:
+            namex.append(name)
+            result.append(sublist)
+
     # Making the return list
     for index,name in enumerate(names):
-        for i in names_in_inventory_col_H_with_index:
-            if name == i[0]:
+        for i in result:
+            if name.lower().strip() == i[0].lower().strip():
                 ret_list[index] = i[1]
 
     return (ret_list)
-
 
 def option_28(FILE_NAMES, csv_folder_path, inventory_csv_path):
     with open(inventory_csv_path, "r") as file:

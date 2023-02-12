@@ -72,19 +72,28 @@ def col_g(col_G, col_H, col_I, names):
         if i not in temp_list:
             temp_list.append(i)
     names_in_inventory_col_H_with_index = temp_list
-    
+
     # Creating the return list by checking the matches and non matches
     if len(names_in_inventory_col_H_with_index) == 0:
         names_in_inventory_col_H_with_index = [[names[0],non_present_numbers_in_col_G[0]]]
         non_present_numbers_in_col_G.remove(non_present_numbers_in_col_G[0])
 
+    namex = []
+    result = []
+    for sublist in names_in_inventory_col_H_with_index:
+        name = sublist[0]
+        if name not in namex:
+            namex.append(name)
+            result.append(sublist)
+
     # Making the return list
     for index,name in enumerate(names):
-        for i in names_in_inventory_col_H_with_index:
-            if name == i[0]:
+        for i in result:
+            if name.lower().strip() == i[0].lower().strip():
                 ret_list[index] = i[1]
 
     return (ret_list)
+
 
 def option_8(FILE_NAMES, csv_folder_path):
     product_list  = []
