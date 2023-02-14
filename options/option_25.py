@@ -52,9 +52,7 @@ def col_f(col_H, col_I, names):
 
     # Getting non matching names
     matching_names = list(set(matching_names))
-    for name in particular_names:
-        if name in matching_names:
-            particular_names.remove(name)
+    particular_names = [name for name in particular_names if name not in matching_names]
 
     result = []
     for i, name1 in enumerate(particular_names):
@@ -76,9 +74,9 @@ def col_g(col_G, col_H, col_I, names):
     # remove the doubles from list
     particular_names = reduce(lambda re, x: re+[x] if x not in re else re, names, [])
 
-    # Getting random numbers to use for non matches
+    # Getting non used numbers to use for non matches
     non_present_numbers_in_col_G = []
-    for i in range(1, max(col_G)+10):
+    for i in range(1, max(col_G)+1000):
         if i not in col_G:
             non_present_numbers_in_col_G.append(i)
         if len(non_present_numbers_in_col_G) == len(particular_names):

@@ -52,9 +52,7 @@ def col_f(col_H, col_I, names):
 
     # Getting non matching names
     matching_names = list(set(matching_names))
-    for name in particular_names:
-        if name in matching_names:
-            particular_names.remove(name)
+    particular_names = [name for name in particular_names if name not in matching_names]
 
     result = []
     for i, name1 in enumerate(particular_names):
