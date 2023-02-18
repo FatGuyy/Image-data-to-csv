@@ -323,7 +323,7 @@ if __name__ == '__main__':
     CSV_folder_path = input('Enter the path of csv folder(to store CSVs) :')
     # CSV_folder_path = fr'{CSV_folder_path}'
     # print(CSV_folder_path)
-    CSV_folder_path = r'/home/fatguy/Desktop/codes/fiver/image_to_csv/CSVs'
+    # CSV_folder_path = r'/home/fatguy/Desktop/codes/fiver/image_to_csv/CSVs'
 
 
     main(source, int(option_number), CSV_folder_path)

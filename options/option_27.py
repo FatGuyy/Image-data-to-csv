@@ -41,7 +41,7 @@ def write_list_to_csv_column(files, csv_folder_path):
 def col_f(col_H, col_I, names):
     ret_list = ["" for _ in names]
     # remove the doubles from list 
-    particular_names = reduce(lambda re, x: re+[x] if x not in re else re, names, [])
+    particular_names = list(set(names))
 
     matching_names = []
     for name in particular_names:
