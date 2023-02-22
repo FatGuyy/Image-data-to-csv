@@ -182,27 +182,17 @@ def option_25(FILE_NAMES, csv_folder_path, inventory_csv_path):
 def option_25_3rd_csv(FILE_NAMES):
     column_a = []
     column_b = []
-    sku_2 = []
     for i in FILE_NAMES:
-        file_ele = i.split('_')
-        First_name = file_ele[0].title()    # This extracts the first element
-        Last_name = file_ele[1].title()     # This extracts the last element
-        Last_4 = file_ele[-1]
-
-        # getting sku
-        sku = First_name + Last_name[0] + f"{Last_4}" + date1 + "RPR"
-        sku_2.append(sku)
-
         # column a
-        column_a.append('')
+        column_a.append(1)
 
     for i in range(product_list_length):
         if column_f[i] == 24:
             try:
-                column_b.append(sku_2[i])
+                column_b.append(sku_list[i])
             except:
                 column_b.append("")
         else:
             column_b.append("")
 
-    return [column_b[:product_list_length], column_a]
+    return [column_a, column_b[:product_list_length]]

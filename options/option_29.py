@@ -196,7 +196,7 @@ def option_29_3rd_csv(FILE_NAMES):
         column_a.append(1)
 
     for i in range(product_list_length):
-        if column_f[i] == 24:
+        if column_f[i] == 23:
             try:
                 column_b.append(sku_2[i])
             except:

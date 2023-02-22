@@ -132,7 +132,7 @@ def option_2(FILE_NAMES, inventory_csv_path):
         name_link.append((First_name+"-"+Last_name))
 
     column_g = col_g(col_G, col_H, col_I, name_list)
-    return [product_list, sku_list, price, Sale_price, photo_list, video_list, column_g, name_link]
+    return [product_list, sku_list, price, Sale_price, photo_list, video_list, column_g, name_list, name_link]
 
 def option_2_2nd_csv(FILE_NAMES):
     '''

@@ -56,13 +56,11 @@ def get_all_file_names(source_path):
             FILE_NAMES.append(os.path.splitext(name)[0])
             FILE_NAMES.sort()
 
-
 def write_list_to_3rd_csv(name_of_file, files, folder_path):
     pd.DataFrame(list(zip(*[files[0],
                             files[1]]))).to_csv(os.path.join(folder_path, (name_of_file + '.csv')), index=False, header=False)
 
     print("3rd csv written...")
-
 
 def write_list_to_2nd_csv_column(name_of_file, files, folder_path):
     pd.DataFrame(list(zip(*[files[0],
@@ -74,7 +72,6 @@ def write_list_to_2nd_csv_column(name_of_file, files, folder_path):
                             files[6],
                             files[7]]))).to_csv(os.path.join(folder_path, (name_of_file + '.csv')), index=False, header=False)
     print("2nd csv written...")
-
 
 def write_list_to_csv_column(name_of_file, files, folder_path):
     df = pd.DataFrame({'product_name': files[0],
@@ -88,6 +85,18 @@ def write_list_to_csv_column(name_of_file, files, folder_path):
     df.to_csv(os.path.join(folder_path, (name_of_file + '.csv')), index=False)
     print("csv written...")
 
+def write_list_to_csv_column_2nd_option(name_of_file, files, folder_path):
+    df = pd.DataFrame({'product_name': files[0],
+                       'sku': files[1],
+                       'price': files[2],
+                       'Sale_price': files[3],
+                       'photos': files[4],
+                       'video': files[5],
+                       'column G' : files[6],
+                       'name': files[7],
+                       'name-link': files[8]})
+    df.to_csv(os.path.join(folder_path, (name_of_file + '.csv')), index=False)
+    print("csv written...")
 
 def option_1(FILE_NAMES):
     product_list = []
@@ -147,16 +156,16 @@ def main(source, option_number, CSV_folder_path):
         write_list_to_csv_column('xxx', option_1(
             FILE_NAMES), folder_path=CSV_folder_path)
     elif option_number == 2:
-        inventory_csv_path = input("Enter the inventory sheet path : ")
-        # inventory_csv_path = "/home/fatguy/Desktop/codes/fiver/image_to_csv/inventory-1.csv"
-        write_list_to_csv_column('reg Boob', option_2.option_2(FILE_NAMES, inventory_csv_path=inventory_csv_path), folder_path=CSV_folder_path)
+        # inventory_csv_path = input("Enter the inventory sheet path : ")
+        inventory_csv_path = "/home/fatguy/Desktop/codes/fiver/image_to_csv/inventory-1.csv"
+        write_list_to_csv_column_2nd_option('reg Boob', option_2.option_2(FILE_NAMES, inventory_csv_path=inventory_csv_path), folder_path=CSV_folder_path)
         write_list_to_2nd_csv_column(
             '2nd-option-2nd', option_2.option_2_2nd_csv(FILE_NAMES), folder_path=CSV_folder_path)
         write_list_to_3rd_csv(
             '2nd-option-3rd', option_2.option_2_3rd_csv(FILE_NAMES), folder_path=CSV_folder_path)
     elif option_number == 3:
-        inventory_csv_path = input("Enter the inventory sheet path : ")
-        # inventory_csv_path = "/home/fatguy/Desktop/codes/fiver/image_to_csv/inventory-1.csv"
+        # inventory_csv_path = input("Enter the inventory sheet path : ")
+        inventory_csv_path = "/home/fatguy/Desktop/codes/fiver/image_to_csv/inventory-1.csv"
         write_list_to_csv_column('REG', option_3.option_3(
             FILE_NAMES), folder_path=CSV_folder_path)
         write_list_to_2nd_csv_column(
@@ -283,13 +292,13 @@ def main(source, option_number, CSV_folder_path):
         write_list_to_2nd_csv_column('24th-option-2nd', option_24.option_24_2nd_csv(FILE_NAMES, inventory_csv_path), folder_path=CSV_folder_path)
         write_list_to_3rd_csv('24th-option-3rd', option_24.option_24_3rd_csv(FILE_NAMES), folder_path=CSV_folder_path)
     elif option_number==25:
-        inventory_csv_path = input("Enter the inventory sheet path : ")
-        # inventory_csv_path = "/home/fatguy/Desktop/codes/fiver/image_to_csv/rp-inventory.csv"
+        # inventory_csv_path = input("Enter the inventory sheet path : ")
+        inventory_csv_path = "/home/fatguy/Desktop/codes/fiver/image_to_csv/rp-inventory.csv"
         option_25.option_25(FILE_NAMES=FILE_NAMES, csv_folder_path=CSV_folder_path, inventory_csv_path=inventory_csv_path)
         write_list_to_3rd_csv('25th-option-3rd', option_25.option_25_3rd_csv(FILE_NAMES), folder_path=CSV_folder_path)
     elif option_number==26:
-        inventory_csv_path = input("Enter the inventory sheet path : ")
-        # inventory_csv_path = "/home/fatguy/Desktop/codes/fiver/image_to_csv/inventory-1.csv"
+        # inventory_csv_path = input("Enter the inventory sheet path : ")
+        inventory_csv_path = "/home/fatguy/Desktop/codes/fiver/image_to_csv/inventory-1.csv"
         option_26.option_26(FILE_NAMES=FILE_NAMES, csv_folder_path=CSV_folder_path, inventory_csv_path=inventory_csv_path)
         write_list_to_3rd_csv('26th-option-3rd', option_26.option_26_3rd_csv(FILE_NAMES), folder_path=CSV_folder_path)
     elif option_number==27:
@@ -317,13 +326,13 @@ def main(source, option_number, CSV_folder_path):
 
 
 if __name__ == '__main__':
-    source = input('Enter path :')
-    # source = r'/home/fatguy/Desktop/codes/fiver/image_to_csv/temp'
+    # source = input('Enter path :')
+    source = r'/home/fatguy/Desktop/codes/fiver/image_to_csv/temp'
     option_number = input('Enter option :')
-    CSV_folder_path = input('Enter the path of csv folder(to store CSVs) :')
+    # CSV_folder_path = input('Enter the path of csv folder(to store CSVs) :')
     # CSV_folder_path = fr'{CSV_folder_path}'
     # print(CSV_folder_path)
-    # CSV_folder_path = r'/home/fatguy/Desktop/codes/fiver/image_to_csv/CSVs'
+    CSV_folder_path = r'/home/fatguy/Desktop/codes/fiver/image_to_csv/CSVs'
 
 
     main(source, int(option_number), CSV_folder_path)

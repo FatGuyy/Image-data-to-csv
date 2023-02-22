@@ -80,25 +80,17 @@ def col_g(col_G, col_H, col_I, names):
 
     return (ret_list)
 
-
 def get_f_for_2nd_csv(FILE_NAMES):
-    ret_list = []
-    if len(FILE_NAMES)%2 == 0:
-        half = int(len(FILE_NAMES)/2)
-        for _ in range(1,(half+1)):
-            ret_list.append(24)
-        ret_list.append(8)
-        while len(ret_list) != len(FILE_NAMES):
-            ret_list.append('')
-        return ret_list
-    else:
-        half = int((len(FILE_NAMES)+1)/2)
-        for _ in range(1,(half+1)):
-            ret_list.append(24)
-        ret_list.append(8)
-        while len(ret_list) != len(FILE_NAMES):
-            ret_list.append('')
-        return ret_list
+    ret_list = ['' for _ in range(len(FILE_NAMES))]
+    particular_names = list(set(FILE_NAMES))
+    for i in particular_names:
+        count = 0
+        index = 0
+        while FILE_NAMES[index] == i:
+            count += 1
+            
+
+    return ret_list
 
 def option_3(FILE_NAMES):
     product_list  = []
@@ -162,7 +154,6 @@ def option_3_2nd_csv(FILE_NAMES, inventory_csv_path):
     column_d = []
     column_e = []
     column_f = get_f_for_2nd_csv(FILE_NAMES)
-    # column_g = []
     last_sku =[]
     name_list = []
 
