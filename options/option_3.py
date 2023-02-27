@@ -11,6 +11,7 @@ PHOTO = "{}.jpg|{}_{}_Proof.jpg"
 VIDEO =  '{}_{}_'
 sku_list = []
 sku_letters = "r"
+column_f = []
 
 def _date():    # to get today's date
     today = date.today()
@@ -80,16 +81,43 @@ def col_g(col_G, col_H, col_I, names):
 
     return (ret_list)
 
-def get_f_for_2nd_csv(FILE_NAMES):
-    ret_list = ['' for _ in range(len(FILE_NAMES))]
-    particular_names = list(set(FILE_NAMES))
-    for i in particular_names:
-        count = 0
-        index = 0
-        while FILE_NAMES[index] == i:
-            count += 1
-            
+def get_f_for_2nd_csv(names):
+    ret_list = ['' for _ in range(len(names))]
+    particular_names = list(set(names))
+    list_with_start_and_end_index = []
+    length = len(names)
+    for j in particular_names:
+        for index, val in enumerate(names):
+            if j == val:
+                app_lt = []
+                # app_lt.append(int(j))
+                app_lt.append(index)
 
+                #loop for getting end index
+                loop_itr = index
+                try:
+                    while j == names[loop_itr] and loop_itr <= length:
+                        loop_itr += 1
+                except:
+                    pass
+                app_lt.append(int(loop_itr-1))
+                list_with_start_and_end_index.append(app_lt)
+                break
+
+    # print(list_with_start_and_end_index)
+    # get the number of times for one name
+    for i in list_with_start_and_end_index:
+        if i[1]-i[0] == 0:
+            ret_list[i[0]] = 24
+        if i[1]-i[0] == 1:
+            ret_list[i[0]] = 24
+            ret_list[i[0]+1] = 8
+        if i[1]-i[0] > 1:
+            for j in range(int(int(i[1]-i[0])/2)):
+                ret_list[i[0]+j] = 24
+            ret_list[int(i[0]+((int(i[1]-i[0])/2)))] = 8
+
+    # print(ret_list)
     return ret_list
 
 def option_3(FILE_NAMES):
@@ -153,7 +181,6 @@ def option_3_2nd_csv(FILE_NAMES, inventory_csv_path):
     price =[]
     column_d = []
     column_e = []
-    column_f = get_f_for_2nd_csv(FILE_NAMES)
     last_sku =[]
     name_list = []
 
@@ -189,19 +216,26 @@ def option_3_2nd_csv(FILE_NAMES, inventory_csv_path):
         # name list for col G
         name_list.append((First_name+" "+Last_name))
 
+    global column_f
+    column_f = get_f_for_2nd_csv(name_list)
     column_g = col_g(col_G, col_H, col_I, name_list)
     return [product_list, sku_list, price, column_d, column_e, column_f, column_g, last_sku]
 
 def option_3_3rd_csv(FILE_NAMES):
-    column_f = get_f_for_2nd_csv(FILE_NAMES)
+    # column_f = get_f_for_2nd_csv(FILE_NAMES)
     column_a = []
-    column_b = []
+    column_b = ["" for _ in FILE_NAMES]
 
     for index,_ in enumerate(FILE_NAMES):
         # column a
         column_a.append(1)
 
         # column b
-        if "" != column_f[index]:
-            column_b.append(sku_list[index])
+        try:
+            if "" != column_f[index]:
+                column_b[index] = (sku_list[index])
+        except:
+            pass
+
+    # print(column_b)
     return ([column_a, column_b])
