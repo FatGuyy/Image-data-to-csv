@@ -4,10 +4,8 @@ This file gets the 25th option. (back to one name only)
 import os
 from datetime import date
 import csv
-from itertools import groupby, count
 import pandas as pd
 from pandas import read_csv
-from functools import reduce
 
 FILE_NAMES = []
 PHOTO = "https://american-autographs.com/toimages//{}.jpg|"
@@ -40,7 +38,7 @@ def write_list_to_csv_column(files, csv_folder_path):
 def col_f(col_H, col_I, names):
     ret_list = ["" for _ in names]
     # remove the doubles from list 
-    particular_names = reduce(lambda re, x: re+[x] if x not in re else re, names, [])
+    particular_names = list(set(names))
 
     matching_names = []
     for name in particular_names:

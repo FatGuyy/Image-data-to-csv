@@ -6,8 +6,6 @@ import csv
 import pandas as pd
 from datetime import date
 from pandas import read_csv
-from functools import reduce
-from itertools import groupby, count
 
 FILE_NAMES = []
 PHOTO = "https://american-autographs.com/toimages//{}.jpg|"
@@ -135,7 +133,7 @@ def option_25(FILE_NAMES, csv_folder_path, inventory_csv_path):
     with open(inventory_csv_path, "r") as file:
         data = list(csv.reader(file))
     colData = read_csv(inventory_csv_path) # read inventory
-    data1 = data[0]
+    data1 = data[0] # Gets all the titles from the csv i.e. 1st row
     col_G = colData[data1[6]].tolist() # inventory numbers col
     col_H = colData[data1[7]].tolist() # names columns
     col_I = colData[data1[8]].tolist() # sku columns

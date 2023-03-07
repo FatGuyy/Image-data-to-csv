@@ -6,7 +6,6 @@ import csv
 from datetime import date
 import pandas as pd
 from pandas import read_csv
-from functools import reduce
 
 FILE_NAMES = []
 PHOTO = "{}.jpg|{}_{}_Proof.jpg|{}_{}_Proof.jpg"

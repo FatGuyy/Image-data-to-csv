@@ -4,7 +4,6 @@ This file gets the 2nd option.
 from datetime import date
 from pandas import read_csv
 import csv
-from functools import reduce
 
 
 FILE_NAMES = []

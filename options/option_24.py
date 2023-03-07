@@ -2,7 +2,6 @@
 This file gets the 24th option. (back to one name only)
 """
 import csv
-from functools import reduce
 from pandas import read_csv
 from datetime import date
 

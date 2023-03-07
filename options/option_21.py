@@ -4,7 +4,6 @@ This file gets the 20th option. (back to one name only)
 import csv
 from datetime import date
 from pandas import read_csv
-from functools import reduce
 
 FILE_NAMES = []
 PHOTO = "{}.jpg|{}_{}_Proof.jpg"

@@ -4,10 +4,8 @@ This file gets the 26th option. (back to one name only)
 import os
 from datetime import date
 import csv
-from itertools import groupby, count
 import pandas as pd
 from pandas import read_csv
-from functools import reduce
 
 FILE_NAMES = []
 PHOTO = "https://american-autographs.com/toimages//{}.jpg|"
