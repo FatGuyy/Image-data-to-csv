@@ -93,17 +93,11 @@ def col_g(col_G, col_H, col_I, names):
                 matching_names.append(name)
 
     matching_names = list(set(matching_names))
-    # Getting non matching name & index
-    # # some = particular_names
-    # for i in particular_names:
-    #     if i in matching_names:
-    #         particular_names.remove(i)
 
     particular_names = [name for name in particular_names if name not in matching_names]
 
     for name in particular_names:
         names_in_inventory_col_H_with_index.append([name, non_present_numbers_in_col_G[0]])
-        # print([name, non_present_numbers_in_col_G[0]])
         non_present_numbers_in_col_G.pop(0)
 
     # remvoing duplicates from names_in_inventory_col_H_with_index
@@ -132,8 +126,6 @@ def col_g(col_G, col_H, col_I, names):
             if name.lower().strip() == i[0].lower().strip():
                 ret_list[index] = i[1]
 
-    # if 16 in ret_list:
-        # print("yes")
     return (ret_list)
 
 def option_28(FILE_NAMES, csv_folder_path, inventory_csv_path):

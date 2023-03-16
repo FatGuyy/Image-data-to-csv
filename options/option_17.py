@@ -65,9 +65,6 @@ def col_g(col_G, col_H, col_I, names):
 
     # Getting non matching name & index
     particular_names = [name for name in particular_names if name not in matching_names]
-    # for i in particular_names:
-    #     if i in matching_names:
-    #         particular_names.remove(i)
 
     for name in particular_names:
         names_in_inventory_col_H_with_index.append([name, non_present_numbers_in_col_G[0]])

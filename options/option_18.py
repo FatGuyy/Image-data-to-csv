@@ -53,8 +53,6 @@ def option_18(FILE_NAMES, csv_folder_path):
         Last_name = file_ele[1].title()     # This extracts the last element
         third_name = file_ele[2].title()    # This extracts the 3rd name in the file
         fourth_name = file_ele[3].title()   # This extracts the 4th name in the file
-        # fifth_name = file_ele[4].title()    # This extracts the 5th name in the file
-        # sixth_name = file_ele[5].title()    # This extracts the 6th name in the file
         Last_4 = file_ele[-1]
 
         # product list
